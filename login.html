@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobsin Saudai</title>
+    <link rel="shortcut icon" href="assets/images/fav.svg" type="image/x-icon">
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/jquery.ccpicker.css">
+</head>
+
+<body>
+    <!-- loader -->
+    <div class="preloader">
+        <div class="preloaderImg"></div>
+    </div>
+    <!-- header -->
+    <header>
+        <!-- nav bar menu -->
+        <nav class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.svg" alt="logo">
+            </a>
+            <ul class="nav-links">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="index.html">Explore</a>
+                </li>
+                <li>
+                    <a href="index.html">About Us</a>
+                </li>
+                <li>
+                    <a href="index.html">Contact Us</a>
+                </li>
+            </ul>
+            <ul class="util">
+                <li>
+                    <div id="showNotification">
+                        <small class="count">2</small>
+                        <span>
+                            <i class="fa-duotone fa-bell"></i>
+                        </span>
+                    </div>
+                    <div class="notification_dropDown">
+                        <div class="inner">
+                            <h6><i class="fa-duotone fa-bell"></i> Notifications</h6>
+                            <ul>
+                                <li>
+                                    <div class="img">
+                                        <img src="assets/images/no1.png" alt="">
+                                    </div>
+                                    <div class="content">
+                                        <h6>System</h6>
+                                        <p>Welcome to Jobsin Saudai</p>
+                                        <small>1 hour ago</small>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="img">
+                                        <img src="assets/images/no1.png" alt="">
+                                    </div>
+                                    <div class="content">
+                                        <h6>System</h6>
+                                        <p>Welcome to Jobsin Saudai</p>
+                                        <small>1 hour ago</small>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="img">
+                                        <img src="assets/images/no1.png" alt="">
+                                    </div>
+                                    <div class="content">
+                                        <h6>System</h6>
+                                        <p>Welcome to Jobsin Saudai</p>
+                                        <small>1 hour ago</small>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="img">
+                                        <img src="assets/images/no1.png" alt="">
+                                    </div>
+                                    <div class="content">
+                                        <h6>System</h6>
+                                        <p>Welcome to Jobsin Saudai</p>
+                                        <small>1 hour ago</small>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="img">
+                                        <img src="assets/images/no1.png" alt="">
+                                    </div>
+                                    <div class="content">
+                                        <h6>System</h6>
+                                        <p>Welcome to Jobsin Saudai</p>
+                                        <small>1 hour ago</small>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="login.html" class="login">
+                        <i class="fa-duotone fa-user"></i>
+                    </a>
+                </li>
+                <li class="toggler">
+                    <span>
+                        <small></small>
+                        <small></small>
+                    </span>
+                </li>
+            </ul>
+        </nav>
+        <!-- search wrapper -->
+        <div class="search_wrapper">
+            <div class="container">
+                <form action="">
+                    <div class="search_field">
+                        <button>
+                            <img src="assets/images/searchIcon.svg" alt="">
+                        </button>
+                        <input type="text" placeholder="Search for employees...">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+    <!-- main wrapper -->
+    <main>
+        <section class="auth_section">
+            <div class="container">
+                <div class="row m-0 justify-content-center">
+                    <div class="col-lg-8 col-12 p-2">
+                        <div class="auth_form">
+                            <div class="title">
+                                <h4>Welcome Back</h4>
+                                <p>Please enter your mobile number or email to complete the login process.</p>
+                            </div>
+                            <form action="otp.html">
+                                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="pills-phone-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-phone" type="button" role="tab"
+                                            aria-controls="pills-phone" aria-selected="true">
+                                            Phone Number
+                                        </button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="pills-email-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-email" type="button" role="tab"
+                                            aria-controls="pills-email" aria-selected="false">
+                                            Email Address
+                                        </button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="pills-tabContent">
+                                    <div class="tab-pane fade show active" id="pills-phone" role="tabpanel"
+                                        aria-labelledby="pills-phone-tab">
+                                        <div class="d-flex gap-2">
+                                            <div class="input_field">
+                                                <div class="country_code_select">
+                                                    <label for="country" class="h">Country</label>
+                                                    <input type="text" id="phoneField1" name="countryPicker"
+                                                        class="country-picker">
+                                                </div>
+                                            </div>
+                                            <div class="input_field w-100">
+                                                <label for="phone"> Phone Number</label>
+                                                <input type="tel" id="phone" name="phone" onfocus="highlight(this)"
+                                                    onblur="unhighlight(this)">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-email" role="tabpanel"
+                                        aria-labelledby="pills-email-tab">
+                                        <div class="input_field">
+                                            <label for="email">Email Address</label>
+                                            <input type="email" id="email" name="email" onfocus="highlight(this)"
+                                                onblur="unhighlight(this)">
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="continue">
+                                    By continuing, you agree to the
+                                    <a href="terms-conditions.html">terms of use</a>
+                                    and
+                                    <a href="privacy-policy.html">privacy policy</a>
+                                    of the application
+                                </p>
+                                <button class="save_btn">Login</button>
+                                <div class="orSignwith">
+                                    <span>or sign with</span>
+                                </div>
+                                <div class="platForms">
+                                    <a href="javascript:void(0)">
+                                        <img src="assets/images/google.svg" alt="google">
+                                        <p>Continue with Google </p>
+                                    </a>
+                                    <a href="javascript:void(0)">
+                                        <img src="assets/images/apple.svg" alt="">
+                                        <p>Continue with Apple </p>
+                                    </a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- footer -->
+    <footer>
+
+    </footer>
+    <!-- js -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/jquery.ccpicker.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script>
+        // country code picker
+        $(document).ready(function () {
+            $("#phoneField1").CcPicker();
+            $("#phoneField1").CcPicker("setCountryByCode", "sa");
+        });
+    </script>
+</body>
+
+</html>

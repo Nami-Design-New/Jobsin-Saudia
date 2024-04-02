@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobsin Saudai</title>
+    <link rel="shortcut icon" href="assets/images/fav.svg" type="image/x-icon">
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/jquery.ccpicker.css">
+</head>
+
+<body>
+    <!-- loader -->
+    <div class="preloader">
+        <div class="preloaderImg"></div>
+    </div>
+    <!-- header -->
+    <header>
+        <!-- nav bar menu -->
+        <nav class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.svg" alt="logo">
+            </a>
+            <ul class="nav-links">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="index.html">Explore</a>
+                </li>
+                <li>
+                    <a href="index.html">About Us</a>
+                </li>
+                <li>
+                    <a href="index.html">Contact Us</a>
+                </li>
+            </ul>
+            <ul class="util">
+                <li>
+                    <div id="showNotification">
+                        <small class="count">2</small>
+                        <span>
+                            <i class="fa-duotone fa-bell"></i>
+                        </span>
+                    </div>
+                    <div class="notification_dropDown">
+                        <div class="inner">
+                            <h6><i class="fa-duotone fa-bell"></i> Notifications</h6>
+                            <ul>
+                                <li>
+                                    <div class="img">
+                                        <img src="assets/images/no1.png" alt="">
+                                    </div>
+                                    <div class="content">
+                                        <h6>System</h6>
+                                        <p>Welcome to Jobsin Saudai</p>
+                                        <small>1 hour ago</small>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="img">
+                                        <img src="assets/images/no1.png" alt="">
+                                    </div>
+                                    <div class="content">
+                                        <h6>System</h6>
+                                        <p>Welcome to Jobsin Saudai</p>
+                                        <small>1 hour ago</small>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="img">
+                                        <img src="assets/images/no1.png" alt="">
+                                    </div>
+                                    <div class="content">
+                                        <h6>System</h6>
+                                        <p>Welcome to Jobsin Saudai</p>
+                                        <small>1 hour ago</small>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="img">
+                                        <img src="assets/images/no1.png" alt="">
+                                    </div>
+                                    <div class="content">
+                                        <h6>System</h6>
+                                        <p>Welcome to Jobsin Saudai</p>
+                                        <small>1 hour ago</small>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="img">
+                                        <img src="assets/images/no1.png" alt="">
+                                    </div>
+                                    <div class="content">
+                                        <h6>System</h6>
+                                        <p>Welcome to Jobsin Saudai</p>
+                                        <small>1 hour ago</small>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="login.html" class="login">
+                        <i class="fa-duotone fa-user"></i>
+                    </a>
+                </li>
+                <li class="toggler">
+                    <span>
+                        <small></small>
+                        <small></small>
+                    </span>
+                </li>
+            </ul>
+        </nav>
+        <!-- search wrapper -->
+        <div class="search_wrapper">
+            <div class="container">
+                <form action="">
+                    <div class="search_field">
+                        <button>
+                            <img src="assets/images/searchIcon.svg" alt="">
+                        </button>
+                        <input type="text" placeholder="Search for employees...">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+    <!-- main wrapper -->
+    <main>
+        <section class="auth_section">
+            <div class="container">
+                <div class="row m-0 justify-content-center">
+                    <div class="col-lg-7 col-12 p-2">
+                        <div class="auth_form">
+                            <div class="title">
+                                <h4>Individual Account</h4>
+                                <p>Please enter your personal information to complete the registration process.</p>
+                            </div>
+                            <form action="">
+                                <div class="row m-0">
+                                    <div class="col-12 p-2 mb-1">
+                                        <div class="image_change">
+                                            <div class="image_upload">
+                                                <img src="assets/images/avatar.svg" alt="" id="uploadedImage">
+                                                <input type="file" name="file" id="img-upload" >
+                                                <label for="img-upload">
+                                                    <i class="fa-light fa-plus"></i>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 p-2 mb-1">
+                                        <div class="input_field">
+                                            <label for="name" class="label">User Name</label>
+                                            <input type="text" name="name" id="name" onfocus="highlight(this)"
+                                                onblur="unhighlight(this)">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 p-2 mb-1">
+                                        <div class="input_field">
+                                            <label for="gender" class="label">Gender</label>
+                                            <select name="gender" id="gender" onfocus="highlight(this)"
+                                                onblur="unhighlight(this)">
+                                                <option value="">select</option>
+                                                <option value="male">Male</option>
+                                                <option value="female">Female</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 p-2 mb-1">
+                                        <div class="input_field">
+                                            <label for="birthdate" class="label">Birthdate</label>
+                                            <input type="date" name="birthdate" id="birthdate" onfocus="highlight(this)"
+                                                onblur="unhighlight(this)">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 p-2">
+                                        <button class="save_btn">
+                                            Confirm
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- footer -->
+    <footer>
+
+    </footer>
+    <!-- js -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script>
+      
+        let inputImg = document.getElementById("img-upload");
+        let uploadedImage = document.getElementById("uploadedImage");
+        inputImg.addEventListener("change", () => {
+            if (inputImg.files && inputImg.files[0]) {
+                const reader = new FileReader();
+                reader.onload = e => {
+                    uploadedImage.src = e.target.result;
+                };
+                reader.readAsDataURL(inputImg.files[0]);
+            }
+        });
+    </script>
+</body>
+
+</html>
