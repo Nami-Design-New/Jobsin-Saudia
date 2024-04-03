@@ -399,6 +399,7 @@ main {
         }
         p {
           color: $text;
+          text-align: center;
           span {
             color: $main;
             font-weight: 500;
@@ -459,7 +460,8 @@ main {
           }
         }
         input,
-        select {
+        select,
+        textarea {
           @include clearInput();
           width: 100%;
           height: 54px;
@@ -467,6 +469,14 @@ main {
           border: 1px solid $inputStroke;
           padding: 0 16px;
           font-size: 14px;
+        }
+        textarea {
+          padding-top: 16px;
+          height: 132px;
+        }
+        .location {
+          @include centerFlex();
+          cursor: pointer;
         }
         .country_code_select {
           width: 160px;
@@ -498,12 +508,18 @@ main {
           position: relative;
           border-radius: 50%;
           border: 1.5px solid $inputStroke;
+          @include centerFlex();
           cursor: pointer;
-
           img {
             width: 100%;
             height: 100%;
             object-fit: contain;
+          }
+          h4 {
+            font-size: 28px;
+            margin: 0;
+            font-weight: 900;
+            color: $inputHint;
           }
           input {
             display: none;
@@ -653,6 +669,652 @@ main {
           }
         }
       }
+      .plans {
+        margin-bottom: 24px;
+        display: flex;
+        overflow: scroll;
+        gap: 16px;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        .plan {
+          min-width: 300px;
+          padding: 16px 12px;
+          border-radius: 12px;
+          border: 1px solid $gray;
+          .img {
+            @include centerFlex();
+            gap: 16px;
+            flex-direction: column;
+            border-bottom: 1px solid $inputStroke;
+            img {
+              height: 80px;
+            }
+            h5 {
+              color: $dark;
+              font-size: 16px;
+              font-weight: 700;
+            }
+          }
+          ul {
+            padding: 16px 0;
+            border-bottom: 1px solid $inputStroke;
+            li {
+              @include space-between();
+              .benefit {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                line-height: 24px;
+                color: $dark;
+                font-weight: 500;
+              }
+              span {
+                color: $dark;
+                font-weight: 600;
+              }
+              &.dashed {
+                .benefit {
+                  text-decoration: line-through;
+                  color: $text;
+                  i {
+                    visibility: hidden;
+                  }
+                }
+                span {
+                  display: none;
+                }
+              }
+            }
+          }
+          .price {
+            @include space-between();
+            padding: 16px 0 0;
+            h5 {
+              font-size: 22px;
+              font-weight: 700;
+              color: $main;
+              margin: 0;
+              span {
+                color: $dark;
+                margin-left: 4px;
+                font-size: 16px;
+                font-weight: 700;
+                &:nth-child(2) {
+                  font-size: 14px;
+                  font-weight: 400;
+                  line-height: 16.41px;
+                  margin: 4px;
+                }
+              }
+            }
+            button {
+              @include clearInput();
+              width: 100px;
+              height: 36px !important;
+              border-radius: 100px;
+              background: $main;
+              color: $white;
+              height: 48px;
+            }
+          }
+        }
+      }
     }
+  }
+  .explore {
+    padding: 60px 0;
+    .asideFilter {
+      width: 100%;
+      border-radius: 12px;
+      padding: 24px;
+      background: $inputBg;
+      .accordion-item {
+        margin-bottom: 12px;
+        border-radius: 8px;
+        &:last-child {
+          margin: 0;
+        }
+        .categories {
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+        }
+        .checkBoxField {
+          @include space-between();
+          label {
+            color: $dark;
+            font-size: 14px;
+            font-weight: 500;
+            img {
+              margin-right: 4px;
+              height: 20px;
+              width: 30px;
+              border-radius: 2px;
+            }
+          }
+        }
+      }
+    }
+    .profile_card {
+      border: 1px solid $inputStroke;
+      padding: 4px;
+      gap: 8px;
+      border-radius: 100px 0 0 100px;
+      display: flex;
+      align-items: center;
+      .img {
+        width: 90px;
+        height: 90px;
+        overflow: hidden;
+        border-radius: 50%;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .owner {
+        h6 {
+          color: $dark;
+          font-size: 16px;
+          font-weight: 500;
+          margin-bottom: 0;
+        }
+        .title_age {
+          display: flex;
+          gap: 12px;
+          align-items: center;
+          color: $text;
+          font-size: 12px;
+          font-weight: 400;
+        }
+        .label {
+          height: 32px;
+          background: $main5;
+          padding: 4px 8px;
+          gap: 4px;
+          border-radius: 8px;
+          display: flex;
+          align-items: center;
+          img {
+            height: 26px;
+          }
+          h6 {
+            color: $main;
+            margin: 0;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    .sortBy {
+      cursor: pointer;
+      color: $text;
+      font-size: 14px;
+      font-weight: 600;
+      display: none;
+      @media screen and (max-width: 768px) {
+        display: block;
+      }
+    }
+    .closeFilter {
+      display: none;
+      @include clearInput();
+      align-self: flex-end;
+      color: $dark;
+      font-size: 18px;
+      padding: 0 8px;
+      @media screen and (max-width: 768px) {
+        display: block;
+      }
+    }
+    .filter {
+      @media screen and (max-width: 768px) {
+        position: fixed;
+        bottom: -100%;
+        z-index: 9999;
+        background: $inputBg;
+        @include space-between();
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+        left: 0;
+        transition: $transition;
+      }
+      &.active {
+        bottom: 0;
+      }
+    }
+  }
+  .profile_section {
+    padding: 60px 0;
+    .profile_card {
+      box-shadow: 0px 4px 16px 0px #0000001A;
+      border-radius: 200px;
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      .img {
+        height: 120px;
+        width: 120px;
+        overflow: hidden;
+        border-radius: 50%;
+        @media screen and (max-width: 576px) {
+          width: 100px;
+          height: 100px;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .owner {
+        h5 {
+          color: $dark;
+          font-size: 24px;
+          font-weight: 500;
+          margin-bottom: 0;
+          @media screen and (max-width: 576px) {
+            font-size: 20px;
+          }
+        }
+        .title_age {
+          display: flex;
+          gap: 16px;
+          align-items: center;
+          color: $text;
+          font-size: 14px;
+          font-weight: 400;
+        }
+        .social {
+          margin-top: 4px;
+          display: flex;
+          gap: 8px;
+          align-items: center;
+          color: $text;
+          font-size: 14px;
+          font-weight: 400;
+          a {
+            @include centerFlex();
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: $dark;
+            color: $white;
+            font-size: 12px;
+            font-weight: 400;
+            transition: $transition;
+            @media screen and (max-width: 576px) {
+              width: 26px;
+              height: 26px;
+            }
+            &:hover {
+              background: $main;
+            }
+          }
+        }
+      }
+    }
+    .bio {
+      margin-top: 12px;
+      background: $inputBg;
+      padding: 16px 12px;
+      border-radius: 12px;
+      h6 {
+        color: $text;
+        font-size: 16px;
+        font-weight: 700;
+      }
+      p {
+        color: $dark;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+      }
+      .info {
+        gap: 24px;
+        margin-top: 16px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        .info_place {
+          h6 {
+            margin-bottom: 4px;
+          }
+          .titles {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            .title {
+              background: $white;
+              color: $dark;
+              padding: 4px 12px;
+              gap: 8px;
+              border-radius: 8px;
+            }
+          }
+        }
+      }
+      &.career {
+        .info {
+          grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        }
+      }
+      &.education {
+        h6 {
+          margin-bottom: 8px;
+        }
+        .edu_card {
+          width: 100%;
+          background: $white;
+          border: 1px solid $inputStroke;
+          padding: 12px;
+          border-radius: 8px;
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          h5 {
+            font-size: 14px;
+            color: $dark;
+            font-weight: 600;
+            margin-bottom: 4px;
+          }
+          p {
+            color: $text;
+          }
+          .image {
+            img {
+              height: 64px;
+            }
+          }
+        }
+      }
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 12px;
+        @media screen and (max-width: 576px) {
+          grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          aspect-ratio: 3 / 2;
+          object-fit: cover;
+          border-radius: 8px;
+        }
+      }
+    }
+    .float_call {
+      width: 400px;
+      position: fixed;
+      bottom: 16px;
+      left: 50%;
+      backdrop-filter: blur(10px);
+      background: #ffffff60;
+      padding: 12px;
+      border-radius: 8px;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+      @media screen and (max-width: 576px) {
+        width: 100%;
+        bottom: 0;
+      }
+      a {
+        flex: 1;
+        gap: 6px;
+        background: #bde0fc;
+        border-radius: 100px;
+        padding: 8px;
+        color: $dark;
+        font-weight: 500;
+        @include centerFlex();
+        &:last-child {
+          background: #c4e7c0;
+        }
+        &:hover {
+          color: $dark;
+        }
+      }
+    }
+  }
+  .sec_title {
+    @include space-between();
+    h3 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 700;
+    }
+    a {
+      font-size: 14px;
+      font-weight: 400;
+      color: $main;
+    }
+  }
+  .companies {
+    padding: 40px 0;
+    .companies_grid {
+      gap: 12px;
+      display: flex;
+      overflow-x: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      .company_card {
+        background: $inputBg;
+        padding: 16px 24px;
+        @include centerFlex();
+        min-width: 206px;
+        max-width: 206px;
+        gap: 12px;
+        border-radius: 12px;
+        flex-direction: column;
+        .img {
+          img {
+            height: 70px;
+          }
+        }
+        h6{
+          color: $dark;
+          font-weight: 600;
+          margin: 0;
+        }
+      }
+    }
+  }
+  .categories_section {
+    .categories_grid {
+      gap: 16px;
+      display: flex;
+      overflow-x: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      .category_card {
+        min-width: 250px;
+        overflow: hidden;
+        border-radius: 12px;
+        position: relative;
+        .img {
+          width: 100%;
+          height: 100%;
+          aspect-ratio: 1 / 1;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: 50% 20%;
+        }
+        .overlay {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.2) 61.5%,
+            #000000 100%
+          );
+          display: flex;
+          align-items: flex-end;
+          padding: 14px;
+          h6 {
+            color: $white;
+            margin: 0;
+            font-size: 16px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+  .latest_cvs {
+    padding: 40px 0;
+    .profile_card {
+      border: 1px solid $inputStroke;
+      padding: 4px;
+      gap: 8px;
+      border-radius: 100px 0 0 100px;
+      display: flex;
+      align-items: center;
+      .img {
+        width: 90px;
+        height: 90px;
+        overflow: hidden;
+        border-radius: 50%;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .owner {
+        h6 {
+          color: $dark;
+          font-size: 16px;
+          font-weight: 500;
+          margin-bottom: 0;
+        }
+        .title_age {
+          display: flex;
+          gap: 12px;
+          align-items: center;
+          color: $text;
+          font-size: 12px;
+          font-weight: 400;
+        }
+        .label {
+          height: 32px;
+          background: $main5;
+          padding: 4px 8px;
+          gap: 4px;
+          border-radius: 8px;
+          display: flex;
+          align-items: center;
+          img {
+            height: 26px;
+          }
+          h6 {
+            color: $main;
+            margin: 0;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+.modal {
+  .modal-content {
+    .modal-body {
+      input {
+        @include clearInput();
+        width: 100%;
+        height: 48px;
+        border: 1px solid $inputStroke;
+        background: $inputBg;
+        border-radius: 8px;
+        padding: 0 12px;
+        margin-bottom: 12px;
+      }
+      padding: 8px;
+    }
+    .modal-footer {
+      padding: 0 8px 8px;
+      button {
+        width: 100%;
+        background: $main;
+        color: $white;
+        height: 48px;
+      }
+    }
+  }
+}
+input[type="checkbox"] {
+  width: 16px;
+  appearance: none;
+  position: relative;
+  cursor: pointer;
+  &::after {
+    position: absolute;
+    right: 50%;
+    transform: translate(50%, -50%);
+    top: 50%;
+    content: "";
+    font-family: "FontAwesome";
+    width: 16px;
+    height: 16px;
+    border: 1px solid $inputStroke;
+    border-radius: 2px;
+    font-size: 10px;
+    @include centerFlex();
+    color: $main;
+  }
+  &:checked::after {
+    content: "\f00c";
+    background: $main;
+    color: #fff;
+    border-color: $main;
+  }
+}
+input[type="radio"] {
+  width: 16px;
+  appearance: none;
+  position: relative;
+  cursor: pointer;
+  &::after {
+    position: absolute;
+    right: 50%;
+    transform: translate(50%, -50%);
+    top: 50%;
+    content: "";
+    width: 16px;
+    height: 16px;
+    border: 1px solid $inputStroke;
+    border-radius: 50%;
+  }
+  &:checked::after {
+    background: $main;
+    border-color: $main;
+  }
+}
+.stars {
+  ul {
+    display: flex;
+    line-height: 16px;
+    gap: 4px;
+    li {
+      line-height: 16px;
+    }
+  }
+  i {
+    color: #ffd500;
+    font-size: 12px;
   }
 }
