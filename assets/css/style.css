@@ -1132,7 +1132,7 @@ main .sec_title a {
   color: #009640;
 }
 main .companies {
-  padding: 40px 0;
+  padding: 60px 0;
 }
 main .companies .companies_grid {
   gap: 12px;
@@ -1142,7 +1142,7 @@ main .companies .companies_grid {
 main .companies .companies_grid::-webkit-scrollbar {
   display: none;
 }
-main .companies .companies_grid .company_card {
+main .companies .company_card {
   background: #f8f8f8;
   padding: 16px 24px;
   display: flex;
@@ -1154,13 +1154,21 @@ main .companies .companies_grid .company_card {
   border-radius: 12px;
   flex-direction: column;
 }
-main .companies .companies_grid .company_card .img img {
+main .companies .company_card .img img {
   height: 70px;
 }
-main .companies .companies_grid .company_card h6 {
+main .companies .company_card h6 {
   color: #1d1d1b;
   font-weight: 600;
   margin: 0;
+}
+main .companies .company_card.company {
+  width: 100%;
+  min-width: auto !important;
+  max-width: auto !important;
+}
+main .companies .company_card.company img {
+  height: 54px !important;
 }
 main .categories_section .categories_grid {
   gap: 16px;
@@ -1353,4 +1361,122 @@ input[type=radio]:checked::after {
 .stars i {
   color: #ffd500;
   font-size: 12px;
+}
+
+.explore_inCompany {
+  padding-top: 20px !important;
+}
+
+.company_profile {
+  padding-top: 60px;
+}
+.company_profile .profile_card {
+  padding: 8px;
+  border-radius: 8px;
+  background: #f8f8f8;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.company_profile .profile_card .img {
+  height: 104px;
+  width: 104px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #ffffff;
+}
+.company_profile .profile_card .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.company_profile .profile_card .content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 104px;
+}
+.company_profile .profile_card .content h6 {
+  margin: 0;
+}
+.company_profile .profile_card .content p {
+  margin: 0;
+}
+.company_profile .profile_card .content p img {
+  height: 16px;
+}
+.company_profile .profile_card .content .call {
+  display: flex;
+  gap: 12px;
+}
+.company_profile .profile_card .content .call a {
+  gap: 6px;
+  background: #bde0fc;
+  border-radius: 8px;
+  padding: 4px 16px;
+  color: #1d1d1b;
+  font-weight: 500;
+}
+.company_profile .profile_card .content .call a:last-child {
+  background: #c4e7c0;
+}
+.company_profile .profile_card .content .call a:hover {
+  color: #1d1d1b;
+}
+.company_profile .bio_card {
+  padding: 16px;
+  border-radius: 8px;
+  background: #f8f8f8;
+}
+.company_profile .bio_card p {
+  line-height: 24px;
+  margin: 0;
+}
+
+.create_resume {
+  padding-top: 60px;
+}
+.create_resume .wrapper {
+  position: relative;
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+  padding: 10px 20px;
+  border-radius: 12px;
+  display: flex;
+  background: radial-gradient(60.11% 241.83% at 90.6% 28.57%, rgba(0, 150, 64, 0.35) 0%, #009640 100%);
+}
+.create_resume .wrapper .content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.create_resume .wrapper .content h1 {
+  margin: 0;
+  font-size: 32px;
+  color: #ffffff;
+}
+.create_resume .wrapper .content p {
+  margin: 0;
+  font-size: 16px;
+  color: #ffffff;
+}
+.create_resume .wrapper .content .avatar {
+  height: 100%;
+  width: 140px;
+}
+.create_resume .wrapper .content .avatar img {
+  height: 100%;
+}
+.create_resume .wrapper .thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 140px;
+  height: 100px;
+  background-size: cover;
+  background-image: url(../images/thumb.png);
 }/*# sourceMappingURL=style.css.map */
