@@ -324,6 +324,7 @@ header nav .util li.toggler.hihglight span small {
   background: #009640 !important;
 }
 header .search_wrapper {
+  transition: all 0.4s ease-in-out;
   height: 80px;
   background-image: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.8)), url("../images/search.jpg");
   background-size: cover;
@@ -365,14 +366,25 @@ header .search_wrapper form .search_field button {
   background: #009640;
 }
 header.sticky {
-  position: sticky;
+  position: fixed;
+  width: 100%;
+  left: 0;
   top: 0;
   z-index: 9;
   background: #ffffff;
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+  animation: 0.4s sticky ease-in-out;
 }
 header.sticky .search_wrapper {
   display: none;
+}
+@keyframes sticky {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 main .auth_section {
@@ -431,118 +443,6 @@ main .auth_section .auth_form .nav .nav-link.active::after {
 }
 main .auth_section .auth_form .tab-content {
   padding: 16px 0 0;
-}
-main .auth_section .auth_form .input_field {
-  display: flex;
-  gap: 8px;
-  position: relative;
-}
-main .auth_section .auth_form .input_field label {
-  font-size: 14px;
-  color: #1d1d1b;
-  font-weight: 500;
-  position: absolute;
-  transition: 0.2s ease-in-out;
-  top: 12px;
-  left: 12px;
-  padding: 0 32px 0 4px;
-  background: #ffffff;
-}
-main .auth_section .auth_form .input_field label.h {
-  padding: 0 4px;
-  top: -14px;
-}
-main .auth_section .auth_form .input_field input,
-main .auth_section .auth_form .input_field select,
-main .auth_section .auth_form .input_field textarea {
-  border: none;
-  background: none;
-  outline: none;
-  width: 100%;
-  height: 54px;
-  border-radius: 12px;
-  border: 1px solid #e9e9e9;
-  padding: 0 16px;
-  font-size: 14px;
-}
-main .auth_section .auth_form .input_field textarea {
-  padding-top: 16px;
-  height: 132px;
-}
-main .auth_section .auth_form .input_field .location {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-main .auth_section .auth_form .input_field .country_code_select {
-  width: 160px;
-  height: 54px;
-  border-radius: 12px;
-  border: 1px solid #e9e9e9;
-  padding: 0 16px;
-  font-size: 14px;
-  position: relative;
-}
-main .auth_section .auth_form .input_field .country_code_select label {
-  position: absolute;
-  top: -15px;
-  left: 12px;
-  background: #ffffff;
-}
-main .auth_section .auth_form .input_field .country_code_select .country-picker {
-  pointer-events: none;
-  border: none;
-}
-main .auth_section .auth_form .image_change {
-  padding: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-main .auth_section .auth_form .image_change .image_upload {
-  width: 148px;
-  height: 148px;
-  padding: 12px;
-  position: relative;
-  border-radius: 50%;
-  border: 1.5px solid #e9e9e9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-main .auth_section .auth_form .image_change .image_upload img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-main .auth_section .auth_form .image_change .image_upload h4 {
-  font-size: 28px;
-  margin: 0;
-  font-weight: 900;
-  color: #aaaaaa;
-}
-main .auth_section .auth_form .image_change .image_upload input {
-  display: none;
-}
-main .auth_section .auth_form .image_change .image_upload label {
-  position: absolute;
-  background: #009640;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  right: 6px;
-  bottom: 12px;
-}
-main .auth_section .auth_form .image_change .image_upload label i {
-  font-size: 16px;
-  color: #ffffff;
 }
 main .auth_section .auth_form .save_btn {
   border: none;
@@ -1479,4 +1379,330 @@ input[type=radio]:checked::after {
   height: 100px;
   background-size: cover;
   background-image: url(../images/thumb.png);
+}
+
+.create_resume_form {
+  padding: 60px 0;
+}
+.create_resume_form .nav_wrapper {
+  position: relative;
+}
+.create_resume_form .nav_wrapper::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  z-index: -1;
+  transform: translateY(-50%);
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #e9e9e9;
+}
+.create_resume_form .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow-x: scroll;
+  flex-wrap: nowrap;
+  gap: 60px;
+}
+.create_resume_form .nav::-webkit-scrollbar {
+  display: none;
+}
+.create_resume_form .nav-link {
+  white-space: nowrap;
+  display: flex;
+  padding: 8px 4px;
+  gap: 8px;
+  background: #ffffff;
+  transition: all 0.4s ease-in-out;
+}
+.create_resume_form .nav-link .step {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  transition: all 0.4s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #1d1d1b;
+  color: #1d1d1b;
+}
+.create_resume_form .nav-link.active, .create_resume_form .nav-link:hover {
+  background: #ffffff;
+  box-shadow: none;
+  color: #009640 !important;
+}
+.create_resume_form .nav-link.active .step, .create_resume_form .nav-link:hover .step {
+  border: 1px solid #009640;
+  color: #ffffff;
+  background: #009640;
+}
+
+.card_form {
+  border: 1px dashed #e9e9e9;
+  border-radius: 8px;
+  padding: 8px;
+  background: #ffffff;
+}
+.card_form h5 {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 700;
+  color: #666b88;
+}
+
+.save_changes {
+  border: 1px solid #1d1d1b !important;
+  color: #1d1d1b !important;
+  height: 44px;
+  transition: all 0.4s ease-in-out;
+  white-space: nowrap;
+  border-radius: 8px;
+}
+.save_changes:hover {
+  background: #1d1d1b !important;
+  color: #ffffff !important;
+}
+
+.save_changes_publish {
+  background: #009640;
+  color: #ffffff;
+  white-space: nowrap;
+  height: 44px;
+  border-radius: 8px;
+  min-width: 216px;
+}
+.save_changes_publish:hover {
+  background: #009640 !important;
+  color: #ffffff !important;
+}
+@media screen and (max-width: 576px) {
+  .save_changes_publish {
+    min-width: 0;
+  }
+}
+
+.levels_grid {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.levels_grid .level_label {
+  cursor: pointer;
+}
+.levels_grid .level_label input {
+  display: none;
+}
+.levels_grid .level_label input:checked + .content {
+  border: 1px solid #009640;
+  color: #009640;
+  background: rgba(0, 150, 64, 0.0509803922);
+}
+.levels_grid .level_label .content {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #e9e9e9;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  display: none;
+}
+
+.add_btn {
+  height: 36px;
+  padding: 0 16px;
+  border-radius: 8px;
+  color: #ffffff !important;
+  cursor: pointer;
+  background: #009640;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.actitvity_card {
+  border-radius: 8px;
+  border: 1px solid #e9e9e9;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.actitvity_card .content {
+  gap: 16px;
+  display: flex;
+}
+@media screen and (max-width: 576px) {
+  .actitvity_card .content {
+    gap: 12px;
+  }
+}
+.actitvity_card .content .img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.actitvity_card .content .img img {
+  height: 64px;
+}
+@media screen and (max-width: 576px) {
+  .actitvity_card .content .img img {
+    height: 48px;
+  }
+}
+.actitvity_card .content .name_time {
+  display: flex;
+  flex-direction: column;
+}
+.actitvity_card .content .name_time h6 {
+  margin: 0;
+  font-size: 18px !important;
+  color: #1d1d1b;
+  font-size: 14px;
+  font-weight: 700;
+}
+.actitvity_card .content .name_time p {
+  line-height: 24px;
+  margin: 0;
+  color: #666b88;
+  font-size: 14px;
+  font-weight: 400;
+}
+.actitvity_card .content .name_time p span {
+  line-height: inherit;
+}
+.actitvity_card .actions {
+  gap: 12px;
+  display: flex;
+}
+.actitvity_card .actions button {
+  border: none;
+  background: none;
+  outline: none;
+}
+.actitvity_card .actions button i {
+  font-size: 18px;
+}
+.actitvity_card .actions button.edit {
+  color: #6c757d;
+}
+.actitvity_card .actions button.delete {
+  color: red;
+}
+
+.image_change {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image_change .image_upload {
+  width: 148px;
+  height: 148px;
+  position: relative;
+  border-radius: 50%;
+  border: 1.5px solid #e9e9e9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.image_change .image_upload img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.image_change .image_upload h4 {
+  font-size: 28px;
+  margin: 0;
+  font-weight: 900;
+  color: #aaaaaa;
+}
+.image_change .image_upload input {
+  display: none;
+}
+.image_change .image_upload label {
+  position: absolute;
+  background: #009640;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 6px;
+  bottom: 12px;
+}
+.image_change .image_upload label i {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.input_field {
+  display: flex;
+  gap: 8px;
+  position: relative;
+}
+.input_field label {
+  font-size: 14px;
+  color: #1d1d1b;
+  font-weight: 500;
+  position: absolute;
+  transition: 0.2s ease-in-out;
+  top: 12px;
+  left: 12px;
+  padding: 0 32px 0 4px;
+  background: #ffffff;
+}
+.input_field label.h {
+  padding: 0 4px;
+  top: -14px;
+}
+.input_field input,
+.input_field select,
+.input_field textarea {
+  outline: none !important;
+  border: none !important;
+  background: #ffffff !important;
+  width: 100% !important;
+  height: 54px !important;
+  border-radius: 12px !important;
+  border: 1px solid #e9e9e9 !important;
+  padding: 0 16px !important;
+  font-size: 14px !important;
+  margin: 0 !important;
+}
+.input_field textarea {
+  padding-top: 16px;
+  height: 132px;
+}
+.input_field .location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.input_field .country_code_select {
+  width: 160px;
+  height: 54px;
+  border-radius: 12px;
+  border: 1px solid #e9e9e9;
+  padding: 0 16px;
+  font-size: 14px;
+  position: relative;
+}
+.input_field .country_code_select label {
+  position: absolute;
+  top: -15px;
+  left: 12px;
+  background: #ffffff;
+}
+.input_field .country_code_select .country-picker {
+  pointer-events: none;
+  border: none;
 }/*# sourceMappingURL=style.css.map */

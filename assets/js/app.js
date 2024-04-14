@@ -32,14 +32,14 @@ document.querySelectorAll(".nav-link").forEach((el) => {
 });
 // nav bar fixed up
 let header = document.querySelector("header");
-let heroSection = document.querySelector("main");
+let body = document.querySelector("body");
 window.addEventListener("scroll", () => {
   if (this.scrollY > 160) {
     header.classList.add("sticky");
-    heroSection.style.margin = "160px 0 0";
+    body.style.padding = "160px 0 0";
   } else {
     header.classList.remove("sticky");
-    heroSection.style.margin = "0";
+    body.style.padding = "0";
   }
 });
 

@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobsin Saudai</title>
+    <link rel="shortcut icon" href="assets/images/fav.svg" type="image/x-icon">
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/jquery.ccpicker.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- loader -->
+    <div class="preloader">
+        <div class="preloaderImg"></div>
+    </div>
+    <!-- header -->
+    <header>
+        <!-- nav bar menu -->
+        <nav class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.svg" alt="logo">
+            </a>
+            <ul class="nav-links">
+                <li>
+                    <a href="index.html" class="active">Home</a>
+                </li>
+                <li>
+                    <a href="explore.html">Explore</a>
+                </li>
+                <li>
+                    <a href="index.html">About Us</a>
+                </li>
+                <li>
+                    <a href="index.html">Contact Us</a>
+                </li>
+            </ul>
+            <ul class="util">
+                <li>
+                    <div id="showNotification">
+                        <small class="count">2</small>
+                        <span>
+                            <i class="fa-duotone fa-bell"></i>
+                        </span>
+                    </div>
+                    <div class="notification_dropDown">
+                        <div class="inner">
+                            <h6><i class="fa-duotone fa-bell"></i> Notifications</h6>
+                            <ul>
+                                <li>
+                                    <div class="img">
+                                        <img src="assets/images/no1.png" alt="">
+                                    </div>
+                                    <div class="content">
+                                        <h6>System</h6>
+                                        <p>Welcome to Jobsin Saudai</p>
+                                        <small>1 hour ago</small>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="img">
+                                        <img src="assets/images/no1.png" alt="">
+                                    </div>
+                                    <div class="content">
+                                        <h6>System</h6>
+                                        <p>Welcome to Jobsin Saudai</p>
+                                        <small>1 hour ago</small>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="img">
+                                        <img src="assets/images/no1.png" alt="">
+                                    </div>
+                                    <div class="content">
+                                        <h6>System</h6>
+                                        <p>Welcome to Jobsin Saudai</p>
+                                        <small>1 hour ago</small>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="img">
+                                        <img src="assets/images/no1.png" alt="">
+                                    </div>
+                                    <div class="content">
+                                        <h6>System</h6>
+                                        <p>Welcome to Jobsin Saudai</p>
+                                        <small>1 hour ago</small>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="img">
+                                        <img src="assets/images/no1.png" alt="">
+                                    </div>
+                                    <div class="content">
+                                        <h6>System</h6>
+                                        <p>Welcome to Jobsin Saudai</p>
+                                        <small>1 hour ago</small>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="login.html" class="login">
+                        <i class="fa-duotone fa-user"></i>
+                    </a>
+                </li>
+                <li class="toggler">
+                    <span>
+                        <small></small>
+                        <small></small>
+                    </span>
+                </li>
+            </ul>
+        </nav>
+        <!-- search wrapper -->
+        <div class="search_wrapper">
+            <div class="container">
+                <form action="">
+                    <div class="search_field">
+                        <button>
+                            <img src="assets/images/searchIcon.svg" alt="">
+                        </button>
+                        <input type="text" placeholder="Search for employees...">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+    <!-- main wrapper -->
+    <main>
+        <section class="create_resume_form auth_section">
+            <div class="container p-0">
+                <div class="row m-0">
+                    <div class="col-12 p-2">
+                        <div class="nav_wrapper">
+                            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="pills-generalInfo-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-generalInfo" type="button" role="tab"
+                                        aria-controls="pills-generalInfo" aria-selected="true">
+                                        <span class="step">1</span>
+                                        General Info
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-careerInterests-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-careerInterests" type="button" role="tab"
+                                        aria-controls="pills-careerInterests" aria-selected="false">
+                                        <span class="step">2</span>
+                                        Career Interests
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-experience-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-experience" type="button" role="tab"
+                                        aria-controls="pills-experience" aria-selected="false">
+                                        <span class="step">3</span>
+                                        Experience
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-skills-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-skills" type="button" role="tab"
+                                        aria-controls="pills-skills" aria-selected="false">
+                                        <span class="step">4</span>
+                                        Skills
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-education-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-education" type="button" role="tab"
+                                        aria-controls="pills-education" aria-selected="false">
+                                        <span class="step">5</span>
+                                        Education
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-onlinePresence-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-onlinePresence" type="button" role="tab"
+                                        aria-controls="pills-onlinePresence" aria-selected="false">
+                                        <span class="step">6</span>
+                                        Online Presence
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-workSamples-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-workSamples" type="button" role="tab"
+                                        aria-controls="pills-workSamples" aria-selected="false">
+                                        <span class="step">7</span>
+                                        Work Samples
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 p-2">
+                        <form action="" class="auth_form">
+                            <div class="tab-content" id="pills-tabContent">
+                                <!-- general info tab -->
+                                <div class="tab-pane fade show active" id="pills-generalInfo" role="tabpanel"
+                                    aria-labelledby="pills-generalInfo-tab">
+                                    <!-- Your Personal Info -->
+                                    <div class="card_form mb-3">
+                                        <div class="row m-0">
+                                            <div class="col-12 p-2">
+                                                <h5>Your Personal Info</h5>
+                                            </div>
+                                            <div class="col-12 p-2 mb-1">
+                                                <div class="image_change">
+                                                    <div class="image_upload">
+                                                        <img src="assets/images/avatar.svg" alt="" id="uploadedImagev2">
+                                                        <input type="file" name="file" id="img-uploadv2">
+                                                        <label for="img-uploadv2">
+                                                            <i class="fa-light fa-plus"></i>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 p-2 mb-1">
+                                                <div class="input_field">
+                                                    <label for="name" class="label">Name</label>
+                                                    <input type="text" name="name" id="name" onfocus="highlight(this)"
+                                                        onblur="unhighlight(this)">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 p-2 mb-1">
+                                                <div class="input_field">
+                                                    <label for="bio">Bio</label>
+                                                    <textarea name="bio" id="bio" onfocus="highlight(this)"
+                                                        onblur="unhighlight(this)">
+                                                    </textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-12 p-2 mb-1">
+                                                <div class="input_field">
+                                                    <label for="birthdate">Birthdate</label>
+                                                    <input type="date" name="birthdate" id="birthdate"
+                                                        onfocus="highlight(this)" onblur="unhighlight(this)">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-12 p-2 mb-1">
+                                                <div class="input_field">
+                                                    <label for="gender" class="label">Gender</label>
+                                                    <select name="gender" id="gender" onfocus="highlight(this)"
+                                                        onblur="unhighlight(this)">
+                                                        <option value="">select</option>
+                                                        <option value="male">Male</option>
+                                                        <option value="female">Female</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-12 p-2 mb-1">
+                                                <div class="input_field">
+                                                    <label for="nationality" class="label">Nationality</label>
+                                                    <select name="nationality" id="nationality"
+                                                        onfocus="highlight(this)" onblur="unhighlight(this)">
+                                                        <option value="">select</option>
+                                                        <option value="malaysian">Malaysian</option>
+                                                        <option value="foreigner">Foreigner</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-12 p-2 mb-1">
+                                                <div class="input_field">
+                                                    <label for="maritalStatus" class="label">Marital Status</label>
+                                                    <select name="maritalStatus" id="maritalStatus"
+                                                        onfocus="highlight(this)" onblur="unhighlight(this)">
+                                                        <option value="">select</option>
+                                                        <option value="single">Single</option>
+                                                        <option value="married">Married</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Your Location -->
+                                    <div class="card_form mb-3">
+                                        <div class="row m-0">
+                                            <div class="col-12 p-2">
+                                                <h5>Your Location</h5>
+                                            </div>
+                                            <div class="col-lg-6 col-12 p-2 mb-1">
+                                                <div class="input_field">
+                                                    <label for="country" class="label">Country </label>
+                                                    <select name="country" id="country" onfocus="highlight(this)"
+                                                        onblur="unhighlight(this)">
+                                                        <option value="">select</option>
+                                                        <option value="malaysia">Malaysia</option>
+                                                        <option value="singapore">Singapore</option>
+                                                        <option value="australia">Australia</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-12 p-2 mb-1">
+                                                <div class="input_field">
+                                                    <label for="city" class="label">City</label>
+                                                    <select name="city" id="city" onfocus="highlight(this)"
+                                                        onblur="unhighlight(this)">
+                                                        <option value="">select</option>
+                                                        <option value="kuala-lumpur">Kuala Lumpur</option>
+                                                        <option value="singapore">Singapore</option>
+                                                        <option value="australia">Australia</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 p-2 mb-1">
+                                                <div class="input_field">
+                                                    <label for="area" class="label">Area</label>
+                                                    <select name="area" id="area" onfocus="highlight(this)"
+                                                        onblur="unhighlight(this)">
+                                                        <option value="">select</option>
+                                                        <option value="kuala-lumpur">Kuala Lumpur</option>
+                                                        <option value="singapore">Singapore</option>
+                                                        <option value="australia">Australia</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Your Contact Info -->
+                                    <div class="card_form mb-3">
+                                        <div class="row m-0">
+                                            <div class="col-12 p-2">
+                                                <h5>Your Contact Info</h5>
+                                            </div>
+                                            <div class="col-12 p-2">
+                                                <div class="d-flex gap-2">
+                                                    <div class="input_field">
+                                                        <div class="country_code_select">
+                                                            <label for="country" class="h">Country</label>
+                                                            <input type="text" id="phoneField1" name="countryPicker"
+                                                                class="country-picker">
+                                                        </div>
+                                                    </div>
+                                                    <div class="input_field w-100">
+                                                        <label for="phone"> Phone Number</label>
+                                                        <input type="tel" id="phone" name="phone"
+                                                            onfocus="highlight(this)" onblur="unhighlight(this)">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 p-2 mb-1">
+                                                <div class="input_field">
+                                                    <label for="email" class="label">Email</label>
+                                                    <input type="email" name="email" id="email"
+                                                        onfocus="highlight(this)" onblur="unhighlight(this)">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- career interests -->
+                                <div class="tab-pane fade" id="pills-careerInterests" role="tabpanel"
+                                    aria-labelledby="pills-careerInterests-tab">
+                                    <!-- career level -->
+                                    <div class="card_form mb-3">
+                                        <div class="row m-0">
+                                            <div class="col-12 p-2">
+                                                <h5>What is your current career level?</h5>
+                                            </div>
+                                            <div class="col-12 p-2">
+                                                <div class="levels_grid">
+                                                    <label for="Student" class="level_label">
+                                                        <input type="radio" name="careerLevel" id="Student">
+                                                        <div class="content">
+                                                            <span>Student</span>
+                                                        </div>
+                                                    </label>
+                                                    <label for="entryLevel" class="level_label">
+                                                        <input type="radio" name="careerLevel" id="entryLevel">
+                                                        <div class="content">
+                                                            <span>Entry Level</span>
+                                                        </div>
+                                                    </label>
+                                                    <label for="experienced" class="level_label">
+                                                        <input type="radio" name="careerLevel" id="experienced">
+                                                        <div class="content">
+                                                            <span>Experienced</span>
+                                                        </div>
+                                                    </label>
+                                                    <label for="manager" class="level_label">
+                                                        <input type="radio" name="careerLevel" id="manager">
+                                                        <div class="content">
+                                                            <span>Manager</span>
+                                                        </div>
+                                                    </label>
+                                                    <label for="seniorManagement" class="level_label">
+                                                        <input type="radio" name="careerLevel" id="seniorManagement">
+                                                        <div class="content">
+                                                            <span>Senior Management</span>
+                                                        </div>
+                                                    </label>
+                                                    <label for="notSpecified" class="level_label">
+                                                        <input type="radio" name="careerLevel" id="notSpecified">
+                                                        <div class="content">
+                                                            <span>Not Specified</span>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- main and sub category -->
+                                    <div class="card_form mb-3">
+                                        <div class="row m-0">
+                                            <div class="col-12 p-2">
+                                                <h5>What are the job titles that describe what you are looking for?</h5>
+                                            </div>
+                                            <div class="col-lg-6 col-12 p-2">
+                                                <div class="input_field">
+                                                    <label for="mainCategory">Main Category</label>
+                                                    <select name="mainCategory" id="mainCategory"
+                                                        onfocus="highlight(this)" onblur="unhighlight(this)">
+                                                        <option value="">select</option>
+                                                        <option value="1">Option 1</option>
+                                                        <option value="2">Option 2</option>
+                                                        <option value="3">Option 3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-12 p-2">
+                                                <div class="input_field">
+                                                    <label for="subCategory">sub Category ( Job )</label>
+                                                    <select name="subCategory" id="subCategory"
+                                                        onfocus="highlight(this)" onblur="unhighlight(this)">
+                                                        <option value="">select</option>
+                                                        <option value="1">Option 1</option>
+                                                        <option value="2">Option 2</option>
+                                                        <option value="3">Option 3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card_form mb-3">
+                                        <div class="row m-0">
+                                            <div class="col-12 p-2">
+                                                <h5>What is the minimum salary you would accept?</h5>
+                                            </div>
+                                            <div class="col-lg-6 col-12 p-2">
+                                                <div class="input_field">
+                                                    <label for="salary">Salary</label>
+                                                    <input type="number" name="salary" id="salary"
+                                                        onfocus="highlight(this)" onblur="unhighlight(this)">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-12 p-2">
+                                                <div class="input_field">
+                                                    <label for="currency">Currency</label>
+                                                    <select name="currency" id="currency" onfocus="highlight(this)"
+                                                        onblur="unhighlight(this)">
+                                                        <option value="">select</option>
+                                                        <option value="1">Option 1</option>
+                                                        <option value="2">Option 2</option>
+                                                        <option value="3">Option 3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- experience -->
+                                <div class="tab-pane fade" id="pills-experience" role="tabpanel"
+                                    aria-labelledby="pills-experience-tab">
+                                    <!-- years of experience -->
+                                    <div class="card_form mb-3">
+                                        <div class="row m-0">
+                                            <div class="col-12 p-2">
+                                                <h5>How many years of experience do you have?</h5>
+                                            </div>
+                                            <div class="col-12 p-2">
+                                                <div class="input_field">
+                                                    <label for="experience">Experience</label>
+                                                    <select name="experience" id="experience" onfocus="highlight(this)"
+                                                        onblur="unhighlight(this)">
+                                                        <option value="">select</option>
+                                                        <option value="1">Option 1</option>
+                                                        <option value="2">Option 2</option>
+                                                        <option value="3">Option 3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card_form mb-3">
+                                        <div class="row m-0">
+                                            <div class="col-12 p-2 d-flex justify-content-between align-items-center">
+                                                <h5 class="m-0">Work experiences/Activities?</h5>
+                                                <a class="add_btn" data-bs-toggle="modal" data-bs-target="#addActivity">
+                                                    Add
+                                                </a>
+                                            </div>
+                                            <div class="col-12 p-2">
+                                                <div class="actitvity_card">
+                                                    <div class="content">
+                                                        <div class="img">
+                                                            <img src="assets/images/no4.png" alt="">
+                                                        </div>
+                                                        <div class="name_time">
+                                                            <h6>ATE</h6>
+                                                            <p>Marketing Manager</p>
+                                                            <p>
+                                                                <span>May 4, 2023</span> TO <span>Oct 22, 2023</span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="actions">
+                                                        <button class="edit" data-bs-toggle="modal" data-bs-target="#addActivity>
+                                                            <i class="fa-sharp fa-light fa-pen-to-square"></i>
+                                                        </button>
+                                                        <button class="delete">
+                                                            <i class="fa-regular fa-trash-can"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 p-2">
+                                                <div class="actitvity_card">
+                                                    <div class="content">
+                                                        <div class="img">
+                                                            <img src="assets/images/no4.png" alt="">
+                                                        </div>
+                                                        <div class="name_time">
+                                                            <h6>ATE</h6>
+                                                            <p>Marketing Manager</p>
+                                                            <p>
+                                                                <span>May 4, 2023</span> TO <span>Oct 22, 2023</span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="actions">
+                                                        <button class="edit" data-bs-toggle="modal" data-bs-target="#addActivity>
+                                                            <i class="fa-sharp fa-light fa-pen-to-square"></i>
+                                                        </button>
+                                                        <button class="delete">
+                                                            <i class="fa-regular fa-trash-can"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="pills-skills" role="tabpanel"
+                                    aria-labelledby="pills-skills-tab">
+
+                                </div>
+                                <div class="tab-pane fade" id="pills-education" role="tabpanel"
+                                    aria-labelledby="pills-education-tab">
+
+                                </div>
+                                <div class="tab-pane fade" id="pills-onlinePresence" role="tabpanel"
+                                    aria-labelledby="pills-onlinePresence-tab">
+
+                                </div>
+                                <div class="tab-pane fade" id="pills-workSamples" role="tabpanel"
+                                    aria-labelledby="pills-workSamples-tab">
+
+                                </div>
+                                <!-- save and next -->
+                                <div class="d-flex gap-2 justify-content-end">
+                                    <button class="btn save_changes" type="submit">Save changes</button>
+                                    <button class="btn save_changes_publish" type="submit">Save and Publish</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- footer -->
+    <footer>
+
+    </footer>
+    <div class="modal fade" id="addActivity" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add Work Experiences</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="auth_section">
+                        <form action="" class="auth_form">
+                            <div class="row m-0">
+                                <div class="col-12 p-2 mb-1">
+                                    <div class="image_change">
+                                        <div class="image_upload">
+                                            <h4 id="uploadLabel">LOGO</h4>
+                                            <img src="" alt="" id="uploadedImage">
+                                            <input type="file" name="file" id="img-upload">
+                                            <label for="img-upload">
+                                                <i class="fa-light fa-plus"></i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 p-2 mb-1">
+                                    <div class="input_field">
+                                        <label for="name" class="label">Name</label>
+                                        <input type="text" name="name" id="name" onfocus="highlight(this)"
+                                            onblur="unhighlight(this)">
+                                    </div>
+                                </div>
+                                <div class="col-12 p-2">
+                                    <div class="input_field">
+                                        <label for="mainCategory">Main Category</label>
+                                        <select name="mainCategory" id="mainCategory" onfocus="highlight(this)"
+                                            onblur="unhighlight(this)">
+                                            <option value="">select</option>
+                                            <option value="1">Option 1</option>
+                                            <option value="2">Option 2</option>
+                                            <option value="3">Option 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-12 p-2">
+                                    <div class="input_field">
+                                        <label for="startDate">Start Date</label>
+                                        <input type="date" name="startDate" id="startDate" onfocus="highlight(this)"
+                                            onblur="unhighlight(this)">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-12 p-2">
+                                    <div class="input_field">
+                                        <label for="endDate">End Date</label>
+                                        <input type="date" name="endDate" id="endDate" onfocus="highlight(this)"
+                                            onblur="unhighlight(this)">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- js -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/jquery.ccpicker.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script>
+        // country code picker
+        $(document).ready(function () {
+            $("#phoneField1").CcPicker();
+            $("#phoneField1").CcPicker("setCountryByCode", "sa");
+        });
+    </script>
+    <script>
+        let inputImg = document.getElementById("img-upload");
+        let uploadedImage = document.getElementById("uploadedImage");
+        uploadedImage.style.display = "none";
+        inputImg.addEventListener("change", () => {
+            if (inputImg.files && inputImg.files[0]) {
+                uploadedImage.style.display = "block";
+                const reader = new FileReader();
+                reader.onload = e => {
+                    uploadedImage.src = e.target.result;
+                };
+                document.getElementById("uploadLabel").style.display = "none";
+                reader.readAsDataURL(inputImg.files[0]);
+            }
+        });
+    </script>
+    <script>
+        let inputImage = document.getElementById("img-uploadv2");
+        let uploadedImagev2 = document.getElementById("uploadedImagev2");
+        inputImg.addEventListener("change", () => {
+            if (inputImg.files && inputImg.files[0]) {
+                const reader = new FileReader();
+                reader.onload = e => {
+                    uploadedImage.src = e.target.result;
+                };
+                reader.readAsDataURL(inputImg.files[0]);
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -152,6 +152,7 @@ header {
   background: $white;
   display: flex;
   flex-direction: column;
+
   nav {
     height: 80px;
     @include space-between();
@@ -331,6 +332,7 @@ header {
     }
   }
   .search_wrapper {
+    transition: $transition;
     height: 80px;
     background-image: linear-gradient(
         rgba(255, 255, 255, 1),
@@ -372,13 +374,24 @@ header {
     }
   }
   &.sticky {
-    position: sticky;
+    position: fixed;
+    width: 100%;
+    left: 0;
     top: 0;
     z-index: 9;
     background: $white;
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+    animation: .4s sticky ease-in-out;
     .search_wrapper {
       display: none;
+    }
+  }
+  @keyframes sticky {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
     }
   }
 }
@@ -440,107 +453,7 @@ main {
       .tab-content {
         padding: 16px 0 0;
       }
-      .input_field {
-        display: flex;
-        gap: 8px;
-        position: relative;
-        label {
-          font-size: 14px;
-          color: $dark;
-          font-weight: 500;
-          position: absolute;
-          transition: .2s ease-in-out;
-          top: 12px;
-          left: 12px;
-          padding: 0 32px 0 4px;
-          background: $white;
-          &.h {
-            padding: 0 4px;
-            top: -14px;
-          }
-        }
-        input,
-        select,
-        textarea {
-          @include clearInput();
-          width: 100%;
-          height: 54px;
-          border-radius: 12px;
-          border: 1px solid $inputStroke;
-          padding: 0 16px;
-          font-size: 14px;
-        }
-        textarea {
-          padding-top: 16px;
-          height: 132px;
-        }
-        .location {
-          @include centerFlex();
-          cursor: pointer;
-        }
-        .country_code_select {
-          width: 160px;
-          height: 54px;
-          border-radius: 12px;
-          border: 1px solid $inputStroke;
-          padding: 0 16px;
-          font-size: 14px;
-          position: relative;
-          label {
-            position: absolute;
-            top: -15px;
-            left: 12px;
-            background: $white;
-          }
-          .country-picker {
-            pointer-events: none;
-            border: none;
-          }
-        }
-      }
-      .image_change {
-        padding: 12px;
-        @include centerFlex();
-        .image_upload {
-          width: 148px;
-          height: 148px;
-          padding: 12px;
-          position: relative;
-          border-radius: 50%;
-          border: 1.5px solid $inputStroke;
-          @include centerFlex();
-          cursor: pointer;
-          img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-          }
-          h4 {
-            font-size: 28px;
-            margin: 0;
-            font-weight: 900;
-            color: $inputHint;
-          }
-          input {
-            display: none;
-          }
-          label {
-            position: absolute;
-            background: $main;
-            border-radius: 50%;
-            width: 24px;
-            height: 24px;
-            cursor: pointer;
-            @include centerFlex();
-            i {
-              font-size: 16px;
-              color: $white;
-            }
-            right: 6px;
-            bottom: 12px;
-          }
-        }
-      }
+
       .save_btn {
         @include clearInput();
         width: 100%;
@@ -1439,6 +1352,296 @@ input[type="radio"] {
       height: 100px;
       background-size: cover;
       background-image: url(../images/thumb.png);
+    }
+  }
+}
+.create_resume_form {
+  padding: 60px 0;
+  .nav_wrapper {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      z-index: -1;
+      transform: translateY(-50%);
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: $inputStroke;
+    }
+  }
+  .nav {
+    @include space-between();
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+    gap: 60px;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .nav-link {
+    white-space: nowrap;
+    display: flex;
+    padding: 8px 4px;
+    gap: 8px;
+    background: $white;
+    transition: $transition;
+    .step {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      transition: $transition;
+      @include centerFlex();
+      border: 1px solid $dark;
+      color: $dark;
+    }
+    &.active,
+    &:hover {
+      background: $white;
+      box-shadow: none;
+      color: $main !important;
+      .step {
+        border: 1px solid $main;
+        color: $white;
+        background: $main;
+      }
+    }
+  }
+}
+.card_form {
+  border: 1px dashed $inputStroke;
+  border-radius: 8px;
+  padding: 8px;
+  background: $white;
+  h5 {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 700;
+    color: $text;
+  }
+}
+.save_changes {
+  border: 1px solid $dark !important;
+  color: $dark !important;
+  height: 44px;
+  transition: $transition;
+  white-space: nowrap;
+  border-radius: 8px;
+  &:hover {
+    background: $dark !important;
+    color: $white !important;
+  }
+}
+.save_changes_publish {
+  background: $main;
+  color: $white;
+  white-space: nowrap;
+  height: 44px;
+  border-radius: 8px;
+  min-width: 216px;
+  &:hover {
+    background: $main !important;
+    color: $white !important;
+  }
+  @media screen and (max-width: 576px) {
+    min-width: 0;
+  }
+}
+.levels_grid {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  .level_label {
+    cursor: pointer;
+    input {
+      display: none;
+      &:checked + .content {
+        border: 1px solid $main;
+        color: $main;
+        background: $main5;
+      }
+    }
+    .content {
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: 1px solid $inputStroke;
+    }
+  }
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  display: none;
+}
+.add_btn {
+  height: 36px;
+  padding: 0 16px;
+  border-radius: 8px;
+  color: $white !important;
+  cursor: pointer;
+  background: $main;
+  @include centerFlex();
+}
+.actitvity_card {
+  border-radius: 8px;
+  border: 1px solid $inputStroke;
+  padding: 12px;
+  @include space-between();
+  .content {
+    gap: 16px;
+    display: flex;
+    @media screen and (max-width: 576px) {
+      gap: 12px;
+    }
+    .img {
+      @include centerFlex();
+      img {
+        height: 64px;
+        @media screen and (max-width: 576px) {
+          height: 48px;
+        }
+      }
+    }
+    .name_time {
+      display: flex;
+      flex-direction: column;
+      h6 {
+        margin: 0;
+        font-size: 18px !important;
+        color: $dark;
+        font-size: 14px;
+        font-weight: 700;
+      }
+      p {
+        line-height: 24px;
+        margin: 0;
+        color: $text;
+        font-size: 14px;
+        font-weight: 400;
+        span {
+          line-height: inherit;
+        }
+      }
+    }
+  }
+  .actions {
+    gap: 12px;
+    display: flex;
+    button {
+      @include clearInput();
+      i {
+        font-size: 18px;
+      }
+      &.edit {
+        color: #6c757d;
+      }
+      &.delete {
+        color: red;
+      }
+    }
+  }
+}
+.image_change {
+  padding: 12px;
+  @include centerFlex();
+  .image_upload {
+    width: 148px;
+    height: 148px;
+    position: relative;
+    border-radius: 50%;
+    border: 1.5px solid $inputStroke;
+    @include centerFlex();
+    cursor: pointer;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    h4 {
+      font-size: 28px;
+      margin: 0;
+      font-weight: 900;
+      color: $inputHint;
+    }
+    input {
+      display: none;
+    }
+    label {
+      position: absolute;
+      background: $main;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+      @include centerFlex();
+      i {
+        font-size: 16px;
+        color: $white;
+      }
+      right: 6px;
+      bottom: 12px;
+    }
+  }
+}
+.input_field {
+  display: flex;
+  gap: 8px;
+  position: relative;
+  label {
+    font-size: 14px;
+    color: $dark;
+    font-weight: 500;
+    position: absolute;
+    transition: .2s ease-in-out;
+    top: 12px;
+    left: 12px;
+    padding: 0 32px 0 4px;
+    background: $white;
+    &.h {
+      padding: 0 4px;
+      top: -14px;
+    }
+  }
+  input,
+  select,
+  textarea {
+    outline: none !important;
+    border: none !important;
+    background: $white !important;
+    width: 100% !important;
+    height: 54px !important;
+    border-radius: 12px !important;
+    border: 1px solid $inputStroke !important;
+    padding: 0 16px !important;
+    font-size: 14px !important;
+    margin: 0 !important;
+  }
+  textarea {
+    padding-top: 16px;
+    height: 132px;
+  }
+  .location {
+    @include centerFlex();
+    cursor: pointer;
+  }
+  .country_code_select {
+    width: 160px;
+    height: 54px;
+    border-radius: 12px;
+    border: 1px solid $inputStroke;
+    padding: 0 16px;
+    font-size: 14px;
+    position: relative;
+    label {
+      position: absolute;
+      top: -15px;
+      left: 12px;
+      background: $white;
+    }
+    .country-picker {
+      pointer-events: none;
+      border: none;
     }
   }
 }
