@@ -1524,20 +1524,20 @@ input[type="number"]::-webkit-inner-spin-button {
       }
     }
   }
-  .actions {
-    gap: 12px;
-    display: flex;
-    button {
-      @include clearInput();
-      i {
-        font-size: 18px;
-      }
-      &.edit {
-        color: #6c757d;
-      }
-      &.delete {
-        color: red;
-      }
+}
+.actions {
+  gap: 12px;
+  display: flex;
+  button {
+    @include clearInput();
+    i {
+      font-size: 18px;
+    }
+    &.edit {
+      color: #6c757d;
+    }
+    &.delete {
+      color: red;
     }
   }
 }
@@ -1642,6 +1642,20 @@ input[type="number"]::-webkit-inner-spin-button {
     .country-picker {
       pointer-events: none;
       border: none;
+    }
+  }
+}
+.skills_card {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid $inputStroke;
+  .name_actions {
+    @include space-between();
+    h6 {
+      color: $dark;
+      font-weight: 600;
+      margin: 0;
+      font-size: 18px !important;
     }
   }
 }

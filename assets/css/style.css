@@ -1573,22 +1573,23 @@ input[type=number]::-webkit-inner-spin-button {
 .actitvity_card .content .name_time p span {
   line-height: inherit;
 }
-.actitvity_card .actions {
+
+.actions {
   gap: 12px;
   display: flex;
 }
-.actitvity_card .actions button {
+.actions button {
   border: none;
   background: none;
   outline: none;
 }
-.actitvity_card .actions button i {
+.actions button i {
   font-size: 18px;
 }
-.actitvity_card .actions button.edit {
+.actions button.edit {
   color: #6c757d;
 }
-.actitvity_card .actions button.delete {
+.actions button.delete {
   color: red;
 }
 
@@ -1705,4 +1706,21 @@ input[type=number]::-webkit-inner-spin-button {
 .input_field .country_code_select .country-picker {
   pointer-events: none;
   border: none;
+}
+
+.skills_card {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #e9e9e9;
+}
+.skills_card .name_actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.skills_card .name_actions h6 {
+  color: #1d1d1b;
+  font-weight: 600;
+  margin: 0;
+  font-size: 18px !important;
 }/*# sourceMappingURL=style.css.map */
