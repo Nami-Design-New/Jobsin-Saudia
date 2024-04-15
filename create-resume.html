@@ -367,7 +367,7 @@
                                             <div class="col-12 p-2">
                                                 <div class="levels_grid">
                                                     <label for="Student" class="level_label">
-                                                        <input type="radio" name="careerLevel" id="Student">
+                                                        <input type="radio" name="careerLevel" id="Student" checked>
                                                         <div class="content">
                                                             <span>Student</span>
                                                         </div>
@@ -511,13 +511,13 @@
                                                         </div>
                                                     </div>
                                                     <div class="actions">
-                                                        <button class="edit" data-bs-toggle="modal"
+                                                        <span role="button" class="edit" data-bs-toggle="modal"
                                                             data-bs-target="#addActivity">
                                                             <i class="fa-sharp fa-light fa-pen-to-square"></i>
-                                                        </button>
-                                                        <button class="delete">
+                                                        </span>
+                                                        <span role="button" class="delete">
                                                             <i class="fa-regular fa-trash-can"></i>
-                                                        </button>
+                                                            </>
                                                     </div>
                                                 </div>
                                             </div>
@@ -536,13 +536,13 @@
                                                         </div>
                                                     </div>
                                                     <div class="actions">
-                                                        <button class="edit" data-bs-toggle="modal"
+                                                        <span role="button" class="edit" data-bs-toggle="modal"
                                                             data-bs-target="#addActivity">
                                                             <i class="fa-sharp fa-light fa-pen-to-square"></i>
-                                                        </button>
-                                                        <button class="delete">
+                                                        </span>
+                                                        <span role="button" class="delete">
                                                             <i class="fa-regular fa-trash-can"></i>
-                                                        </button>
+                                                            </>
                                                     </div>
                                                 </div>
                                             </div>
@@ -557,7 +557,7 @@
                                             <div class="col-12 p-2 d-flex justify-content-between align-items-center">
                                                 <h5 class="m-0">What skills, tools, technologies and fields of expertise
                                                     do you have?</h5>
-                                                <a class="add_btn" data-bs-toggle="modal" data-bs-target="#addActivity">
+                                                <a class="add_btn" data-bs-toggle="modal" data-bs-target="#addSkill">
                                                     Add
                                                 </a>
                                             </div>
@@ -566,13 +566,13 @@
                                                     <div class="name_actions">
                                                         <h6>UI/UX</h6>
                                                         <div class="actions">
-                                                            <button class="edit" data-bs-toggle="modal"
-                                                                data-bs-target="#addActivity">
+                                                            <span role="button" class="edit" data-bs-toggle="modal"
+                                                                data-bs-target="#addSkill">
                                                                 <i class="fa-sharp fa-light fa-pen-to-square"></i>
-                                                            </button>
-                                                            <button class="delete">
+                                                            </span>
+                                                            <span role="button" class="delete">
                                                                 <i class="fa-regular fa-trash-can"></i>
-                                                            </button>
+                                                            </span>
                                                         </div>
                                                     </div>
                                                     <div class="d-flex gap-5">
@@ -627,17 +627,194 @@
                                         </div>
                                     </div>
                                 </div>
+                                <!-- education -->
                                 <div class="tab-pane fade" id="pills-education" role="tabpanel"
                                     aria-labelledby="pills-education-tab">
-
+                                    <div class="card_form mb-3">
+                                        <div class="row m-0">
+                                            <div class="col-12 p-2">
+                                                <h5>What's your current educational level?</h5>
+                                            </div>
+                                            <div class="col-12 p-2">
+                                                <div class="levels_grid">
+                                                    <label for="bachelor" class="level_label">
+                                                        <input type="radio" name="degree" id="bachelor" checked>
+                                                        <div class="content">
+                                                            <span>Bachelor's Degree</span>
+                                                        </div>
+                                                    </label>
+                                                    <label for="master" class="level_label">
+                                                        <input type="radio" name="degree" id="master">
+                                                        <div class="content">
+                                                            <span>Master's Degree</span>
+                                                        </div>
+                                                    </label>
+                                                    <label for="phd" class="level_label">
+                                                        <input type="radio" name="degree" id="phd">
+                                                        <div class="content">
+                                                            <span>PHD Degree</span>
+                                                        </div>
+                                                    </label>
+                                                    <label for="highSchool" class="level_label">
+                                                        <input type="radio" name="degree" id="highSchool">
+                                                        <div class="content">
+                                                            <span>High School</span>
+                                                        </div>
+                                                    </label>
+                                                    <label for="vocational" class="level_label">
+                                                        <input type="radio" name="degree" id="vocational">
+                                                        <div class="content">
+                                                            <span>Vocational</span>
+                                                        </div>
+                                                    </label>
+                                                    <label for="diploama" class="level_label">
+                                                        <input type="radio" name="degree" id="diploama">
+                                                        <div class="content">
+                                                            <span>Diploma</span>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card_form mb-3">
+                                        <div class="row m-0">
+                                            <div class="col-12 p-2 d-flex justify-content-between align-items-center">
+                                                <h5 class="m-0">University Degrees</h5>
+                                                <a class="add_btn" data-bs-toggle="modal"
+                                                    data-bs-target="#addEducation">
+                                                    Add
+                                                </a>
+                                            </div>
+                                            <div class="col-12 p-2">
+                                                <div class="skills_card">
+                                                    <div class="name_actions">
+                                                        <h6>Bachelor's Degree in information technology</h6>
+                                                        <div class="actions">
+                                                            <span role="button" class="edit" data-bs-toggle="modal"
+                                                                data-bs-target="#addEducation">
+                                                                <i class="fa-sharp fa-light fa-pen-to-square"></i>
+                                                            </span>
+                                                            <span role="button" class="delete">
+                                                                <i class="fa-regular fa-trash-can"></i>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <p>Tanta University, Ecuador</p>
+                                                    <p>2015 - 2020</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card_form mb-3">
+                                        <div class="row m-0">
+                                            <div class="col-12 p-2 d-flex justify-content-between align-items-center">
+                                                <h5 class="m-0">High School</h5>
+                                                <a class="add_btn" data-bs-toggle="modal"
+                                                    data-bs-target="#addEducation">
+                                                    Add
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card_form mb-3">
+                                        <div class="row m-0">
+                                            <div class="col-12 p-2 d-flex justify-content-between align-items-center">
+                                                <h5 class="m-0">Certifications</h5>
+                                                <a class="add_btn" data-bs-toggle="modal"
+                                                    data-bs-target="#addEducation">
+                                                    Add
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card_form mb-3">
+                                        <div class="row m-0">
+                                            <div class="col-12 p-2 d-flex justify-content-between align-items-center">
+                                                <h5 class="m-0">Training and Courses</h5>
+                                                <a class="add_btn" data-bs-toggle="modal"
+                                                    data-bs-target="#addEducation">
+                                                    Add
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+                                <!-- online presence -->
                                 <div class="tab-pane fade" id="pills-onlinePresence" role="tabpanel"
                                     aria-labelledby="pills-onlinePresence-tab">
-
+                                    <div class="card_form mb-3">
+                                        <div class="row m-0">
+                                            <div class="col-12 p-2 d-flex justify-content-between align-items-center">
+                                                <h5>Your Online Presence</h5>
+                                            </div>
+                                            <div class="col-12 p-2">
+                                                <div class="input_field">
+                                                    <label for="linkedin" class="label">LinkedIn</label>
+                                                    <input type="url" name="linkedin" id="linkedin"
+                                                        onfocus="highlight(this)" onblur="unhighlight(this)"
+                                                        onchange="validateLinkedInUrl(this)">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 p-2">
+                                                <div class="input_field">
+                                                    <label for="facebook" class="label">Facebook</label>
+                                                    <input type="url" name="facebook" id="facebook"
+                                                        onfocus="highlight(this)" onblur="unhighlight(this)">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 p-2">
+                                                <div class="input_field">
+                                                    <label for="twitter" class="label">Twitter</label>
+                                                    <input type="url" name="twitter" id="twitter"
+                                                        onfocus="highlight(this)" onblur="unhighlight(this)">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 p-2">
+                                                <div class="input_field">
+                                                    <label for="instagram" class="label">Instagram</label>
+                                                    <input type="url" name="instagram" id="instagram"
+                                                        onfocus="highlight(this)" onblur="unhighlight(this)">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 p-2">
+                                                <div class="input_field">
+                                                    <label for="youtube" class="label">YouTube</label>
+                                                    <input type="url" name="youtube" id="youtube"
+                                                        onfocus="highlight(this)" onblur="unhighlight(this)">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 p-2">
+                                                <div class="input_field">
+                                                    <label for="website" class="label">Website</label>
+                                                    <input type="url" name="website" id="website"
+                                                        onfocus="highlight(this)" onblur="unhighlight(this)">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+                                <!-- work samples -->
                                 <div class="tab-pane fade" id="pills-workSamples" role="tabpanel"
                                     aria-labelledby="pills-workSamples-tab">
-
+                                    <div class="card_form mb-3">
+                                        <div class="row m-0">
+                                            <div class="col-12 p-2">
+                                                <h5>Samples of Your Creative and Design Work</h5>
+                                            </div>
+                                            <div class="col-12 p-2">
+                                                <div class="work_samples_grid">
+                                                    <label class="img_upload">
+                                                        <input type="file" accept="image/*" multiple name="file"
+                                                            id="img-upload" onchange="handleFileSelect(event)">
+                                                        <div class="img">
+                                                            <img src="assets/images/plus.svg" alt="plus">
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <!-- save and next -->
                                 <div class="d-flex gap-2 justify-content-end">
@@ -645,6 +822,8 @@
                                     <button class="btn save_changes_publish" type="submit">Save and Publish</button>
                                 </div>
                             </div>
+                            <!-- work samples -->
+
                         </form>
                     </div>
 
@@ -656,6 +835,7 @@
     <footer>
 
     </footer>
+    <!-- add activity modal -->
     <div class="modal fade" id="addActivity" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -722,10 +902,138 @@
             </div>
         </div>
     </div>
+    <!-- add skill modal -->
+    <div class="modal fade" id="addSkill" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add Skill</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="auth_section">
+                        <form action="" class="auth_form">
+                            <div class="row m-0">
+                                <div class="col-12 p-2 mb-1">
+                                    <div class="input_field">
+                                        <label for="skill" class="label">Skill</label>
+                                        <input type="text" name="skill" id="skill" onfocus="highlight(this)"
+                                            onblur="unhighlight(this)">
+                                    </div>
+                                </div>
+                                <div class="col-12 p-2">
+                                    <div class="input_field">
+                                        <label for="years">Years of Experience</label>
+                                        <select name="years" id="years" onfocus="highlight(this)"
+                                            onblur="unhighlight(this)">
+                                            <option value="">select</option>
+                                            <option value="1">Option 1</option>
+                                            <option value="2">Option 2</option>
+                                            <option value="3">Option 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 p-2">
+                                    <div class="rating_field">
+                                        <h6>Proficiency</h6>
+                                        <div class="stars_rate">
+                                            <div class="star-rating-proficiency">
+                                                <input type="radio" id="star5" name="rating" value="5" />
+                                                <label for="star5"><i class="fa-sharp fa-solid fa-star"></i></label>
+                                                <input type="radio" id="star4" name="rating" value="4" />
+                                                <label for="star4"><i class="fa-sharp fa-solid fa-star"></i></label>
+                                                <input type="radio" id="star3" name="rating" value="3" />
+                                                <label for="star3"><i class="fa-sharp fa-solid fa-star"></i></label>
+                                                <input type="radio" id="star2" name="rating" value="2" />
+                                                <label for="star2"><i class="fa-sharp fa-solid fa-star"></i></label>
+                                                <input type="radio" id="star1" name="rating" value="1" />
+                                                <label for="star1"><i class="fa-sharp fa-solid fa-star"></i></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rating_field">
+                                        <h6>Interest</h6>
+                                        <div class="stars_rate">
+                                            <div class="star-rating-interest">
+                                                <input type="radio" id="Rstar5" name="Rrating" value="5" />
+                                                <label for="Rstar5"><i class="fa-sharp fa-solid fa-star"></i></label>
+                                                <input type="radio" id="Rstar4" name="Rrating" value="4" />
+                                                <label for="Rstar4"><i class="fa-sharp fa-solid fa-star"></i></label>
+                                                <input type="radio" id="Rstar3" name="Rrating" value="3" />
+                                                <label for="Rstar3"><i class="fa-sharp fa-solid fa-star"></i></label>
+                                                <input type="radio" id="Rstar2" name="Rrating" value="2" />
+                                                <label for="Rstar2"><i class="fa-sharp fa-solid fa-star"></i></label>
+                                                <input type="radio" id="Rstar1" name="Rrating" value="1" />
+                                                <label for="Rstar1"><i class="fa-sharp fa-solid fa-star"></i></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- add education modal -->
+    <div class="modal fade" id="addEducation" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add University Degree </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="auth_section">
+                        <form action="" class="auth_form">
+                            <div class="row m-0">
+                                <div class="col-12 p-2">
+                                    <div class="input_field">
+                                        <label for="degree" class="label">Degree</label>
+                                        <input type="text" name="degree" id="degree" onfocus="highlight(this)"
+                                            onblur="unhighlight(this)">
+                                    </div>
+                                </div>
+                                <div class="col-12 p-2">
+                                    <div class="input_field">
+                                        <label for="university" class="label">University</label>
+                                        <input type="text" name="university" id="university" onfocus="highlight(this)"
+                                            onblur="unhighlight(this)">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-12 p-2">
+                                    <div class="input_field">
+                                        <label for="graduation" class="label">Start date</label>
+                                        <input type="date" name="graduation" id="graduation" onfocus="highlight(this)"
+                                            onblur="unhighlight(this)">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-12 p-2">
+                                    <div class="input_field">
+                                        <label for="graduation" class="label">End date</label>
+                                        <input type="date" name="graduation" id="graduation" onfocus="highlight(this)"
+                                            onblur="unhighlight(this)">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- js -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/jquery.ccpicker.min.js"></script>
     <script src="assets/js/app.js"></script>
+    <!-- countrey code script -->
     <script>
         // country code picker
         $(document).ready(function () {
@@ -733,6 +1041,7 @@
             $("#phoneField1").CcPicker("setCountryByCode", "sa");
         });
     </script>
+    <!-- image upload type companyt -->
     <script>
         let inputImg = document.getElementById("img-upload");
         let uploadedImage = document.getElementById("uploadedImage");
@@ -749,6 +1058,7 @@
             }
         });
     </script>
+    <!-- image upload type personal -->
     <script>
         let inputImage = document.getElementById("img-uploadv2");
         let uploadedImagev2 = document.getElementById("uploadedImagev2");
@@ -761,6 +1071,68 @@
                 reader.readAsDataURL(inputImg.files[0]);
             }
         });
+    </script>
+    <!-- rating -->
+    <script>
+        const radioInputsProficiency = document.querySelectorAll('.star-rating-proficiency input');
+        const labelsProficiency = document.querySelectorAll('.star-rating-proficiency label');
+        radioInputsProficiency.forEach((input, index) => {
+            input.addEventListener('click', () => {
+                labelsProficiency.forEach((label) => {
+                    label.classList.remove('active');
+                });
+                for (let i = 0; i <= index; i++) {
+                    labelsProficiency[i].classList.add('active');
+                }
+            });
+        });
+        const radioInputsInterest = document.querySelectorAll('.star-rating-interest input');
+        const labelsInterest = document.querySelectorAll('.star-rating-interest label');
+        radioInputsInterest.forEach((input, index) => {
+            input.addEventListener('click', () => {
+                labelsInterest.forEach((label) => {
+                    label.classList.remove('active');
+                });
+                for (let i = 0; i <= index; i++) {
+                    labelsInterest[i].classList.add('active');
+                }
+            });
+        });
+    </script>
+    <!-- images upload -->
+    <script>
+        function handleFileSelect(event) {
+            const files = event.target.files;
+
+            for (let i = 0; i < files.length; i++) {
+                const file = files[i];
+                const reader = new FileReader();
+
+                reader.onload = function (event) {
+                    const uploadedImageDiv = document.createElement("div");
+                    uploadedImageDiv.classList.add("uploadedImage");
+
+                    const img = document.createElement("img");
+                    img.src = event.target.result;
+                    img.alt = file.name;
+
+                    const deleteIcon = document.createElement("div");
+                    deleteIcon.classList.add("delete");
+                    deleteIcon.innerHTML = '<img src="assets/images/trash.svg" alt="trash">';
+
+                    deleteIcon.addEventListener("click", function () {
+                        uploadedImageDiv.remove();
+                    });
+
+                    uploadedImageDiv.appendChild(img);
+                    uploadedImageDiv.appendChild(deleteIcon);
+
+                    document.querySelector(".work_samples_grid").appendChild(uploadedImageDiv);
+                };
+
+                reader.readAsDataURL(file);
+            }
+        }
     </script>
 </body>
 
