@@ -1330,17 +1330,25 @@ input[type="radio"] {
         margin: 0;
         font-size: 32px;
         color: $white;
+        @media screen and (max-width: 576px) {
+          font-size: 24px;
+        }
       }
       p {
         margin: 0;
         font-size: 16px;
         color: $white;
+        @media screen and (max-width: 576px) {
+          font-size: 12px;
+          line-height: 22px;
+        }
       }
       .avatar {
         height: 100%;
         width: 140px;
         img {
           height: 100%;
+          object-fit: contain;
         }
       }
     }
@@ -1350,7 +1358,8 @@ input[type="radio"] {
       right: 0;
       width: 140px;
       height: 100px;
-      background-size: cover;
+      background-position: top right;
+      background-repeat: no-repeat;
       background-image: url(../images/thumb.png);
     }
   }
@@ -1621,7 +1630,7 @@ input[type="number"]::-webkit-inner-spin-button {
   }
   textarea {
     padding-top: 16px;
-    height: 132px;
+    height: 148px !important;
   }
   .location {
     @include centerFlex();
@@ -1735,4 +1744,377 @@ input[type="number"]::-webkit-inner-spin-button {
       }
     }
   }
+}
+
+footer {
+  border-top: 1px solid $inputStroke;
+  padding: 40px 0 0;
+  .about_company {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    .logo {
+      height: 40px;
+      img {
+        height: 40px;
+      }
+    }
+    .text {
+      p {
+        color: $text;
+        line-height: 26px;
+      }
+    }
+  }
+  .col {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-left: 30px;
+    @media screen and (max-width: 576px) {
+      padding: 0;
+    }
+    &:last-child {
+      padding-left: 0;
+    }
+    h3 {
+      color: $dark;
+      font-weight: 600;
+      margin: 0;
+      font-size: 18px !important;
+    }
+    ul {
+      li {
+        line-height: 24px;
+        a {
+          display: flex;
+          gap: 4px;
+          color: $text;
+          transition: 0.2s ease-in-out;
+          &:hover {
+            color: $main;
+            span {
+              width: 16px;
+            }
+          }
+          span {
+            transition: $transition;
+            width: 0;
+            overflow: hidden;
+          }
+        }
+      }
+    }
+  }
+  .copy_rights {
+    border-top: 1px solid $inputStroke;
+    padding: 20px 0 40px;
+    @include space-between();
+    @media screen and (max-width: 576px) {
+      flex-direction: column-reverse;
+      gap: 12px;
+    }
+    p a {
+      color: $main;
+    }
+    .social_media {
+      ul {
+        display: flex;
+        gap: 8px;
+        a {
+          border: 1px solid $inputStroke;
+          border-radius: 50%;
+          width: 32px;
+          height: 32px;
+          transition: 0.2s ease-in-out;
+          color: $inputHint;
+          @include centerFlex();
+          i {
+            font-size: 14px;
+          }
+          &:hover {
+            background: $main;
+            border-color: $main;
+            transform: translateY(-2px);
+            i {
+              color: $white;
+            }
+            svg {
+              path {
+                fill: $white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.download-app {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 20px !important;
+  @media (max-width: 576px) {
+    flex-direction: row !important;
+  }
+  li {
+    width: 150px !important;
+    padding: 10px !important;
+    background: $inputBg !important ;
+    border-radius: 50px !important;
+    transition: all 0.3s ease-in-out !important;
+    &:hover {
+      background: $main !important;
+      a {
+        .icon i,
+        p {
+          color: #fff;
+        }
+      }
+    }
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      .icon {
+        width: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        i {
+          font-size: 18px;
+          color: $dark;
+        }
+      }
+      p {
+        font-size: 12px;
+        text-align: end;
+        line-height: 18px;
+        color: $dark;
+      }
+    }
+  }
+}
+.contact {
+  padding: 60px 0;
+  .send_btn {
+    padding: 8px 32px;
+    @include clearInput();
+    background: $main;
+    color: $white;
+    border-radius: 8px;
+  }
+  form {
+    height: 100%;
+    @include centerFlex();
+    .form {
+      width: 100%;
+    }
+  }
+  h4 {
+    font-size: 40px;
+    color: $main;
+    font-weight: 600;
+  }
+}
+
+.animatedMap {
+  width: 100%;
+  @include centerFlex();
+}
+.worldMap {
+  width: 500px;
+  height: 500px;
+  order: 2;
+  position: relative;
+
+  .earth {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    margin: -40%;
+    background: #fff url(../images/map.png) 0 50% repeat-x;
+    background-size: auto 90%;
+    box-shadow: rgba(0, 0, 0, 0.05) 0 1em 2em;
+    border-radius: 100%;
+    overflow: hidden;
+    animation: map linear 90s infinite;
+  }
+
+  .orbic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .orbic svg {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+  }
+
+  #orbic_path {
+    fill: none;
+    stroke: rgba(0, 0, 0, 0.1);
+    stroke-linecap: round;
+    stroke-width: 4px;
+    stroke-dasharray: 1 9;
+    -webkit-animation: orbic linear 2s infinite;
+    -moz-animation: orbic linear 2s infinite;
+    animation: orbic linear 2s infinite;
+  }
+
+  #orbic_dots use {
+    fill: #fff;
+    stroke: rgba(30, 144, 255, 0.25);
+    stroke-width: 4;
+    -webkit-animation: dots ease 1s infinite alternate;
+    -moz-animation: dots ease 1s infinite alternate;
+    animation: dots ease 1s infinite alternate;
+  }
+
+  #orbic_dot1 {
+    transform: translate(50.4%, 29.6%);
+  }
+
+  #orbic_dot2 {
+    transform: translate(5%, 62.8%);
+    animation-delay: 0.2s !important;
+  }
+
+  #orbic_dot3 {
+    transform: translate(97%, 41%);
+    animation-delay: 0.3s !important;
+  }
+
+  #orbic_dot4 {
+    transform: translate(50%, 70.2%);
+    animation-delay: 0.5s !important;
+  }
+
+  #orbic_dot5 {
+    transform: translate(31.5%, 51.5%);
+    animation-delay: 0.7s !important;
+  }
+
+  #orbic_user1 {
+    transform: translate(1%, 40%) scale(0.666667);
+  }
+
+  #orbic_user2 {
+    transform: translate(18%, 64%) scale(0.666667);
+  }
+
+  #orbic_user3 {
+    transform: translate(39.5%, 31%) scale(0.666667);
+  }
+
+  #orbic_user4 {
+    transform: translate(69%, 22%) scale(0.666667);
+  }
+
+  #orbic_user5 {
+    transform: translate(75%, 53%) scale(0.666667);
+  }
+
+  @-webkit-keyframes map {
+    100% {
+      background-position: 220% 50%;
+    }
+  }
+
+  @-moz-keyframes map {
+    100% {
+      background-position: 220% 50%;
+    }
+  }
+
+  @keyframes map {
+    100% {
+      background-position: 220% 50%;
+    }
+  }
+
+  @-webkit-keyframes orbic {
+    100% {
+      stroke-dashoffset: 10;
+    }
+  }
+
+  @-moz-keyframes orbic {
+    100% {
+      stroke-dashoffset: 10;
+    }
+  }
+
+  @keyframes orbic {
+    100% {
+      stroke-dashoffset: 10;
+    }
+  }
+
+  @-webkit-keyframes dots {
+    100%,
+    80% {
+      stroke: #1e90ff;
+    }
+  }
+
+  @-moz-keyframes dots {
+    100%,
+    80% {
+      stroke: #1e90ff;
+    }
+  }
+
+  @keyframes dots {
+    100%,
+    80% {
+      stroke: #1e90ff;
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .worldMap {
+    width: 100%;
+    order: 2;
+    position: relative;
+
+    .earth {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      background-color: transparent;
+      background-size: 100% auto;
+      box-shadow: none;
+      border-radius: 0;
+      -webkit-animation: none;
+      -moz-animation: none;
+      animation: none;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .worldMap {
+    height: 300px;
+  }
+}
+.profile_menu {
+  width: 300px;
+  height: 100%;
+  position: fixed;
+  top: 80px;
+  right: 0;
+  background-color: $white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 4px;
+  z-index: 1000;
 }
