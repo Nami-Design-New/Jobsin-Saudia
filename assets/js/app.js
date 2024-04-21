@@ -51,3 +51,100 @@ function unhighlight(el) {
     el.previousElementSibling.classList.remove("h");
   }
 }
+
+// profile menu
+let showBtn = document.getElementById("showProfile");
+let profileMenu = document.querySelector(".profile_menu");
+
+showBtn.addEventListener("click", () => {
+  profileMenu.classList.toggle("show");
+  if (profileMenu.classList.contains("show")) {
+    document.querySelector("body").style.overflow = "hidden";
+  } else {
+    document.querySelector("body").style.overflow = "auto";
+  }
+});
+
+document.addEventListener("click", function (event) {
+  if (
+    profileMenu.classList.contains("show") &&
+    !event.target.closest(".profile_menu") &&
+    !event.target.closest("#showProfile")
+  ) {
+    profileMenu.classList.remove("show");
+  }
+});
+// testimonials slider
+let testimonials = new Swiper(".testimonilas", {
+  loop: true,
+  spaceBetween: 30,
+  speed: 1000,
+  centeredSlides: true,
+  pagination: {
+    el: ".testimonialsSwiperPagination",
+    clickable: true
+  },
+  autoplay: {
+    delay: 2500
+  },
+  breakpoints: {
+    992: {
+      slidesPerView: 3
+    },
+    768: {
+      slidesPerView: 2
+    },
+    350: {
+      slidesPerView: 1
+    }
+  }
+});
+
+var companies = new Swiper(".companies_grid", {
+  loop: true,
+  spaceBetween: 16,
+  speed: 1000,
+  centeredSlides: true,
+  pagination: {
+    el: ".testimonialsSwiperPagination",
+    clickable: true
+  },
+  autoplay: {
+    delay: 2500
+  },
+  breakpoints: {
+    992: {
+      slidesPerView: 5
+    },
+    768: {
+      slidesPerView: 3
+    },
+    350: {
+      slidesPerView: 2
+    }
+  }
+});
+var categories = new Swiper(".categories_grid", {
+  loop: true,
+  spaceBetween: 16,
+  speed: 1000,
+  centeredSlides: true,
+  pagination: {
+    el: ".testimonialsSwiperPagination",
+    clickable: true
+  },
+  autoplay: {
+    delay: 2500
+  },
+  breakpoints: {
+    992: {
+      slidesPerView: 4
+    },
+    768: {
+      slidesPerView: 3
+    },
+    350: {
+      slidesPerView: 2
+    }
+  }
+});

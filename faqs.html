@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/jquery.ccpicker.css">
 </head>
 
 <body>
@@ -134,42 +133,121 @@
     </header>
     <!-- main wrapper -->
     <main>
-        <section class="auth_section">
-            <div class="container p-0">
-                <div class="row m-0 justify-content-center">
-                    <div class="col-lg-7 col-12 p-2">
-                        <div class="auth_form">
-                            <div class="title">
-                                <h4>Account Type</h4>
-                                <p>select your team size</p>
-                            </div>
-                            <form action="company-signup.html">
-                                <div class="row m-0 mb-4">
-                                    <div class="col-lg-6 col-12 p-2">
-                                        <label for="individual" class="select_type">
-                                            <input type="radio" name="account_type" id="individual" checked>
-                                            <div class="content">
-                                                <img src="assets/images/individual.svg" alt="individual">
-                                                <h6>Individual</h6>
-                                                <p>I’ll manage my account alone</p>
-                                            </div>
-                                        </label>
-                                    </div>
-                                    <div class="col-lg-6 col-12 p-2">
-                                        <label for="company" class="select_type">
-                                            <input type="radio" name="account_type" id="company">
-                                            <div class="content">
-                                                <img src="assets/images/company.svg" alt="individual">
-                                                <h6>Company</h6>
-                                                <p>I have a company for labor recruitment</p>
-                                            </div>
-                                        </label>
+        <section class="faqs">
+            <div class="container">
+                <div class="row align-items-center justify-content-around">
+                    <div class="col-12 p-3 faqs-content">
+                        <h3>Frequently Asked Questions ?</h3>
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        What is "Jobsin Saudia" project exactly?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>
+                                            "Jobsin Saudia" project is an online store that offers high-quality car spare parts,
+                                            car accessories, and car maintenance services with the highest quality. We
+                                            aim to meet the needs of our customers and ensure their satisfaction.
+                                        </p>
                                     </div>
                                 </div>
-                                <button class="save_btn">
-                                    Confirm
-                                </button>
-                            </form>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        What range of products do you offer?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>
+                                            We offer a wide range of car spare parts and accessories, as well as car
+                                            maintenance products such as oils and fluids. You will find everything you
+                                            need to take care of your car.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        What maintenance services do you offer?
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>
+                                            We offer comprehensive maintenance services including periodic inspection,
+                                            oil and fluid changes, and repair of faults. Our team is specialized and
+                                            reliable.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour" aria-expanded="false"
+                                        aria-controls="collapseFour">
+                                        How can I order and purchase from "Jobsin Saudia" project?
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>
+                                            You can easily browse our website and choose the products you need, then add
+                                            them to the shopping cart and follow the steps to complete the order and
+                                            payment.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFive">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFive" aria-expanded="false"
+                                        aria-controls="collapseFive">
+                                        Do you provide delivery service?
+                                    </button>
+                                </h2>
+                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>
+                                            Yes, we provide fast and reliable delivery service to customers. You can
+                                            choose the address to which you want the order to be delivered.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingSix">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                        What should I do if I have additional questions?
+                                    </button>
+                                </h2>
+                                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>
+                                            If you need more information or have any additional inquiries, you can
+                                            contact our customer service team and we will be happy to assist you.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -210,7 +288,8 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="contact-us.html"><span><i class="fa-light fa-arrow-up-right-from-square"></i></span>
+                                <a href="contact-us.html"><span><i
+                                            class="fa-light fa-arrow-up-right-from-square"></i></span>
                                     Contact us
                                 </a>
                             </li>
@@ -220,7 +299,8 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="privacy.html"><span><i class="fa-light fa-arrow-up-right-from-square"></i></span>
+                                <a href="privacy.html"><span><i
+                                            class="fa-light fa-arrow-up-right-from-square"></i></span>
                                     Privacy & Policy
                                 </a>
                             </li>
@@ -273,7 +353,6 @@
                                             App Store
                                         </p>
                                     </div>
-
                                 </a>
                             </li>
                             <li>
@@ -286,7 +365,6 @@
                                             Google Play
                                         </p>
                                     </div>
-
                                 </a>
                             </li>
                         </ul>
