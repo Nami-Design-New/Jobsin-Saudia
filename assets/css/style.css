@@ -1382,6 +1382,7 @@ main .categories_section .categories_grid .swiper-slide {
 }
 main .categories_section .categories_grid .category_card {
   width: 100%;
+  display: block;
   overflow: hidden;
   border-radius: 12px;
   position: relative;
