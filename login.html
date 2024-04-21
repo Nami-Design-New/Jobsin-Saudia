@@ -18,16 +18,38 @@
     <div class="preloader">
         <div class="preloaderImg"></div>
     </div>
+    <!-- search layer -->
+    <div class="layer"></div>
+    <!-- search container -->
+    <div class="search-container">
+        <div class="inner-contianer">
+            <form action="" class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 d-flex justify-content-end">
+                        <a href="javascript: void(0)" class="closeSearch">
+                            <i class="fa-light fa-xmark"></i>
+                        </a>
+                    </div>
+                    <div class="input-field col-lg-8 col-11">
+                        <div class="form">
+                            <input type="text" id="search" name="search" placeholder="SEARCH">
+                            <button type="submit"><i class="fa-light fa-magnifying-glass"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
     <!-- header -->
     <header>
         <!-- nav bar menu -->
         <nav class="container">
             <a href="index.html" class="logo">
-                <img src="assets/images/logo.svg" alt="logo">
+                <img loading="lazy" src="assets/images/logo.svg" alt="logo">
             </a>
             <ul class="nav-links">
                 <li>
-                    <a href="index.html">Home</a>
+                    <a href="index.html" class="active">Home</a>
                 </li>
                 <li>
                     <a href="explore.html">Explore</a>
@@ -41,6 +63,13 @@
             </ul>
             <ul class="util">
                 <li>
+                    <a id="searchOpen">
+                        <span>
+                            <i class="fa-regular fa-magnifying-glass"></i>
+                        </span>
+                    </a>
+                </li>
+                <li>
                     <div id="showNotification">
                         <small class="count">2</small>
                         <span>
@@ -53,7 +82,7 @@
                             <ul>
                                 <li>
                                     <div class="img">
-                                        <img src="assets/images/no1.png" alt="">
+                                        <img loading="lazy" src="assets/images/no1.png" alt="">
                                     </div>
                                     <div class="content">
                                         <h6>System</h6>
@@ -63,7 +92,7 @@
                                 </li>
                                 <li>
                                     <div class="img">
-                                        <img src="assets/images/no1.png" alt="">
+                                        <img loading="lazy" src="assets/images/no1.png" alt="">
                                     </div>
                                     <div class="content">
                                         <h6>System</h6>
@@ -73,7 +102,7 @@
                                 </li>
                                 <li>
                                     <div class="img">
-                                        <img src="assets/images/no1.png" alt="">
+                                        <img loading="lazy" src="assets/images/no1.png" alt="">
                                     </div>
                                     <div class="content">
                                         <h6>System</h6>
@@ -83,7 +112,7 @@
                                 </li>
                                 <li>
                                     <div class="img">
-                                        <img src="assets/images/no1.png" alt="">
+                                        <img loading="lazy" src="assets/images/no1.png" alt="">
                                     </div>
                                     <div class="content">
                                         <h6>System</h6>
@@ -93,7 +122,7 @@
                                 </li>
                                 <li>
                                     <div class="img">
-                                        <img src="assets/images/no1.png" alt="">
+                                        <img loading="lazy" src="assets/images/no1.png" alt="">
                                     </div>
                                     <div class="content">
                                         <h6>System</h6>
@@ -105,10 +134,100 @@
                         </div>
                     </div>
                 </li>
-                <li>
-                    <a href="login.html" class="login">
+                <li id="showProfile">
+                    <a class="login">
                         <i class="fa-duotone fa-user"></i>
                     </a>
+                    <div class="profile_menu">
+                        <!-- individual profile -->
+                        <div class="profile_wrapper">
+                            <div class="profile">
+                                <div class="img">
+                                    <img loading="lazy" src="assets/images/friend-12.jpg" alt="">
+                                </div>
+                                <div class="text">
+                                    <h6>Mahmoud Elkomy</h6>
+                                    <p>+9660123456789</p>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a href="individual-signup.html">
+                                        <div>
+                                            <span>
+                                                <img loading="lazy" src="assets/images/editAccount.svg" alt="edit">
+                                            </span> Edit Account
+                                        </div>
+                                        <i class="fa-light fa-angle-right"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="create-resume.html">
+                                        <div>
+                                            <span>
+                                                <img loading="lazy" src="assets/images/addCv.svg" alt="edit">
+                                            </span> Add Resume
+                                        </div>
+                                        <i class="fa-light fa-angle-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- company profile -->
+                        <div class="profile_wrapper">
+                            <div class="profile">
+                                <div class="img">
+                                    <img loading="lazy" class="logo_contain" src="assets/images/no4.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <h6>Mahmoud Elkomy</h6>
+                                    <p>+9660123456789</p>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a href="company-signup.html">
+                                        <div>
+                                            <span>
+                                                <img loading="lazy" src="assets/images/editAccount.svg" alt="edit">
+                                            </span> Edit Account
+                                        </div>
+                                        <i class="fa-light fa-angle-right"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="resumes.html">
+                                        <div>
+                                            <span>
+                                                <img loading="lazy" src="assets/images/resumes.svg" alt="edit">
+                                            </span> Resumes
+                                        </div>
+                                        <i class="fa-light fa-angle-right"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="create-resume.html">
+                                        <div>
+                                            <span>
+                                                <img loading="lazy" src="assets/images/addCv.svg" alt="edit">
+                                            </span> Add Resume
+                                        </div>
+                                        <i class="fa-light fa-angle-right"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="pricing-plans.html">
+                                        <div>
+                                            <span>
+                                                <img loading="lazy" src="assets/images/plans.svg" alt="plans">
+                                            </span> Pricing Plans
+                                        </div>
+                                        <i class="fa-light fa-angle-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </li>
                 <li class="toggler">
                     <span>
@@ -119,18 +238,18 @@
             </ul>
         </nav>
         <!-- search wrapper -->
-        <div class="search_wrapper">
+        <!-- <div class="search_wrapper">
             <div class="container">
                 <form action="">
                     <div class="search_field">
                         <button>
-                            <img src="assets/images/searchIcon.svg" alt="">
+                            <img loading="lazy" src="assets/images/searchIcon.svg" alt="">
                         </button>
                         <input type="text" placeholder="Search for employees...">
                     </div>
                 </form>
             </div>
-        </div>
+        </div> -->
     </header>
     <!-- main wrapper -->
     <main>
@@ -200,11 +319,11 @@
                                 </div>
                                 <div class="platForms">
                                     <a href="javascript:void(0)">
-                                        <img src="assets/images/google.svg" alt="google">
+                                        <img loading="lazy" src="assets/images/google.svg" alt="google">
                                         <p>Continue with Google </p>
                                     </a>
                                     <a href="javascript:void(0)">
-                                        <img src="assets/images/apple.svg" alt="">
+                                        <img loading="lazy" src="assets/images/apple.svg" alt="">
                                         <p>Continue with Apple </p>
                                     </a>
                                 </div>
@@ -223,7 +342,7 @@
                     <div class="about_company">
                         <div class="logo">
                             <a href="index.html">
-                                <img src="assets/images/logo.svg" alt="logo">
+                                <img loading="lazy" src="assets/images/logo.svg" alt="logo">
                             </a>
                         </div>
                         <div class="text">

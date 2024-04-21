@@ -17,19 +17,41 @@
     <div class="preloader">
         <div class="preloaderImg"></div>
     </div>
+    <!-- search layer -->
+    <div class="layer"></div>
+    <!-- search container -->
+    <div class="search-container">
+        <div class="inner-contianer">
+            <form action="" class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 d-flex justify-content-end">
+                        <a href="javascript: void(0)" class="closeSearch">
+                            <i class="fa-light fa-xmark"></i>
+                        </a>
+                    </div>
+                    <div class="input-field col-lg-8 col-11">
+                        <div class="form">
+                            <input type="text" id="search" name="search" placeholder="SEARCH">
+                            <button type="submit"><i class="fa-light fa-magnifying-glass"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
     <!-- header -->
     <header>
         <!-- nav bar menu -->
         <nav class="container">
             <a href="index.html" class="logo">
-                <img src="assets/images/logo.svg" alt="logo">
+                <img loading="lazy" src="assets/images/logo.svg" alt="logo">
             </a>
             <ul class="nav-links">
                 <li>
-                    <a href="index.html">Home</a>
+                    <a href="index.html" class="active">Home</a>
                 </li>
                 <li>
-                    <a href="explore.html" class="active">Explore</a>
+                    <a href="explore.html">Explore</a>
                 </li>
                 <li>
                     <a href="about-us.html">About Us</a>
@@ -39,6 +61,13 @@
                 </li>
             </ul>
             <ul class="util">
+                <li>
+                    <a id="searchOpen">
+                        <span>
+                            <i class="fa-regular fa-magnifying-glass"></i>
+                        </span>
+                    </a>
+                </li>
                 <li>
                     <div id="showNotification">
                         <small class="count">2</small>
@@ -52,7 +81,7 @@
                             <ul>
                                 <li>
                                     <div class="img">
-                                        <img src="assets/images/no1.png" alt="">
+                                        <img loading="lazy" src="assets/images/no1.png" alt="">
                                     </div>
                                     <div class="content">
                                         <h6>System</h6>
@@ -62,7 +91,7 @@
                                 </li>
                                 <li>
                                     <div class="img">
-                                        <img src="assets/images/no1.png" alt="">
+                                        <img loading="lazy" src="assets/images/no1.png" alt="">
                                     </div>
                                     <div class="content">
                                         <h6>System</h6>
@@ -72,7 +101,7 @@
                                 </li>
                                 <li>
                                     <div class="img">
-                                        <img src="assets/images/no1.png" alt="">
+                                        <img loading="lazy" src="assets/images/no1.png" alt="">
                                     </div>
                                     <div class="content">
                                         <h6>System</h6>
@@ -82,7 +111,7 @@
                                 </li>
                                 <li>
                                     <div class="img">
-                                        <img src="assets/images/no1.png" alt="">
+                                        <img loading="lazy" src="assets/images/no1.png" alt="">
                                     </div>
                                     <div class="content">
                                         <h6>System</h6>
@@ -92,7 +121,7 @@
                                 </li>
                                 <li>
                                     <div class="img">
-                                        <img src="assets/images/no1.png" alt="">
+                                        <img loading="lazy" src="assets/images/no1.png" alt="">
                                     </div>
                                     <div class="content">
                                         <h6>System</h6>
@@ -104,10 +133,100 @@
                         </div>
                     </div>
                 </li>
-                <li>
-                    <a href="login.html" class="login">
+                <li id="showProfile">
+                    <a class="login">
                         <i class="fa-duotone fa-user"></i>
                     </a>
+                    <div class="profile_menu">
+                        <!-- individual profile -->
+                        <div class="profile_wrapper">
+                            <div class="profile">
+                                <div class="img">
+                                    <img loading="lazy" src="assets/images/friend-12.jpg" alt="">
+                                </div>
+                                <div class="text">
+                                    <h6>Mahmoud Elkomy</h6>
+                                    <p>+9660123456789</p>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a href="individual-signup.html">
+                                        <div>
+                                            <span>
+                                                <img loading="lazy" src="assets/images/editAccount.svg" alt="edit">
+                                            </span> Edit Account
+                                        </div>
+                                        <i class="fa-light fa-angle-right"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="create-resume.html">
+                                        <div>
+                                            <span>
+                                                <img loading="lazy" src="assets/images/addCv.svg" alt="edit">
+                                            </span> Add Resume
+                                        </div>
+                                        <i class="fa-light fa-angle-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- company profile -->
+                        <div class="profile_wrapper">
+                            <div class="profile">
+                                <div class="img">
+                                    <img loading="lazy" class="logo_contain" src="assets/images/no4.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <h6>Mahmoud Elkomy</h6>
+                                    <p>+9660123456789</p>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a href="company-signup.html">
+                                        <div>
+                                            <span>
+                                                <img loading="lazy" src="assets/images/editAccount.svg" alt="edit">
+                                            </span> Edit Account
+                                        </div>
+                                        <i class="fa-light fa-angle-right"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="resumes.html">
+                                        <div>
+                                            <span>
+                                                <img loading="lazy" src="assets/images/resumes.svg" alt="edit">
+                                            </span> Resumes
+                                        </div>
+                                        <i class="fa-light fa-angle-right"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="create-resume.html">
+                                        <div>
+                                            <span>
+                                                <img loading="lazy" src="assets/images/addCv.svg" alt="edit">
+                                            </span> Add Resume
+                                        </div>
+                                        <i class="fa-light fa-angle-right"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="pricing-plans.html">
+                                        <div>
+                                            <span>
+                                                <img loading="lazy" src="assets/images/plans.svg" alt="plans">
+                                            </span> Pricing Plans
+                                        </div>
+                                        <i class="fa-light fa-angle-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </li>
                 <li class="toggler">
                     <span>
@@ -118,18 +237,18 @@
             </ul>
         </nav>
         <!-- search wrapper -->
-        <div class="search_wrapper">
+        <!-- <div class="search_wrapper">
             <div class="container">
                 <form action="">
                     <div class="search_field">
                         <button>
-                            <img src="assets/images/searchIcon.svg" alt="">
+                            <img loading="lazy" src="assets/images/searchIcon.svg" alt="">
                         </button>
                         <input type="text" placeholder="Search for employees...">
                     </div>
                 </form>
             </div>
-        </div>
+        </div> -->
     </header>
     <!-- main wrapper -->
     <main>
@@ -260,21 +379,21 @@
                                             <div class="categories">
                                                 <div class="checkBoxField">
                                                     <label for="Engineer">
-                                                        <img src="assets/images/flag.png" alt="">
+                                                        <img loading="lazy" src="assets/images/flag.png" alt="">
                                                         Egypt
                                                     </label>
                                                     <input type="checkbox" id="Engineer">
                                                 </div>
                                                 <div class="checkBoxField">
                                                     <label for="Engineer">
-                                                        <img src="assets/images/flag.png" alt="">
+                                                        <img loading="lazy" src="assets/images/flag.png" alt="">
                                                         Egypt
                                                     </label>
                                                     <input type="checkbox" id="Engineer">
                                                 </div>
                                                 <div class="checkBoxField">
                                                     <label for="Engineer">
-                                                        <img src="assets/images/flag.png" alt="">
+                                                        <img loading="lazy" src="assets/images/flag.png" alt="">
                                                         Egypt
                                                     </label>
                                                     <input type="checkbox" id="Engineer">
@@ -319,7 +438,7 @@
                             <div class="col-lg-6 col-12 p-2">
                                 <a href="profile.html" class="profile_card">
                                     <div class="img">
-                                        <img src="assets/images/friend-7.jpg" alt="">
+                                        <img loading="lazy" src="assets/images/friend-7.jpg" alt="">
                                     </div>
                                     <div class="owner">
                                         <h6>Mahmoud Elkomy</h6>
@@ -333,7 +452,7 @@
                             <div class="col-lg-6 col-12 p-2">
                                 <a href="profile.html" class="profile_card">
                                     <div class="img">
-                                        <img src="assets/images/friend-8.jpg" alt="">
+                                        <img loading="lazy" src="assets/images/friend-8.jpg" alt="">
                                     </div>
                                     <div class="owner">
                                         <h6>Hassan Ibrahim</h6>
@@ -342,7 +461,7 @@
                                             <span>34 years old</span>
                                         </div>
                                         <div class="label">
-                                            <img src="assets/images/no4.png" alt="">
+                                            <img loading="lazy" src="assets/images/no4.png" alt="">
                                             <h6>Rawafed Recruitment Company</h6>
                                         </div>
                                     </div>
@@ -351,7 +470,7 @@
                             <div class="col-lg-6 col-12 p-2">
                                 <a href="profile.html" class="profile_card">
                                     <div class="img">
-                                        <img src="assets/images/friend-12.jpg" alt="">
+                                        <img loading="lazy" src="assets/images/friend-12.jpg" alt="">
                                     </div>
                                     <div class="owner">
                                         <h6>Mahmoud Elkomy</h6>
@@ -365,7 +484,7 @@
                             <div class="col-lg-6 col-12 p-2">
                                 <a href="profile.html" class="profile_card">
                                     <div class="img">
-                                        <img src="assets/images/friend-11.jpg" alt="">
+                                        <img loading="lazy" src="assets/images/friend-11.jpg" alt="">
                                     </div>
                                     <div class="owner">
                                         <h6>Mahmoud Elkomy</h6>
@@ -379,7 +498,7 @@
                             <div class="col-lg-6 col-12 p-2">
                                 <a href="profile.html" class="profile_card">
                                     <div class="img">
-                                        <img src="assets/images/friend-10.jpg" alt="">
+                                        <img loading="lazy" src="assets/images/friend-10.jpg" alt="">
                                     </div>
                                     <div class="owner">
                                         <h6>Hala Hassan</h6>
@@ -393,7 +512,7 @@
                             <div class="col-lg-6 col-12 p-2">
                                 <a href="profile.html" class="profile_card">
                                     <div class="img">
-                                        <img src="assets/images/friend-9.jpg" alt="">
+                                        <img loading="lazy" src="assets/images/friend-9.jpg" alt="">
                                     </div>
                                     <div class="owner">
                                         <h6>Hala Hassan</h6>
@@ -402,7 +521,7 @@
                                             <span>27 years old</span>
                                         </div>
                                         <div class="label">
-                                            <img src="assets/images/no4.png" alt="">
+                                            <img loading="lazy" src="assets/images/no4.png" alt="">
                                             <h6>Platinum Company</h6>
                                         </div>
                                     </div>
@@ -411,7 +530,7 @@
                             <div class="col-lg-6 col-12 p-2">
                                 <a href="profile.html" class="profile_card">
                                     <div class="img">
-                                        <img src="assets/images/friend-5.jpg" alt="">
+                                        <img loading="lazy" src="assets/images/friend-5.jpg" alt="">
                                     </div>
                                     <div class="owner">
                                         <h6>Hala Hassan</h6>
@@ -436,7 +555,7 @@
                     <div class="about_company">
                         <div class="logo">
                             <a href="index.html">
-                                <img src="assets/images/logo.svg" alt="logo">
+                                <img loading="lazy" src="assets/images/logo.svg" alt="logo">
                             </a>
                         </div>
                         <div class="text">
@@ -462,7 +581,8 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="contact-us.html"><span><i class="fa-light fa-arrow-up-right-from-square"></i></span>
+                                <a href="contact-us.html"><span><i
+                                            class="fa-light fa-arrow-up-right-from-square"></i></span>
                                     Contact us
                                 </a>
                             </li>
@@ -472,7 +592,8 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="privacy.html"><span><i class="fa-light fa-arrow-up-right-from-square"></i></span>
+                                <a href="privacy.html"><span><i
+                                            class="fa-light fa-arrow-up-right-from-square"></i></span>
                                     Privacy & Policy
                                 </a>
                             </li>

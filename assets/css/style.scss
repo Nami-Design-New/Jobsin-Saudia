@@ -81,11 +81,9 @@ $inputBg: #f8f8f8;
 $inputStroke: #e9e9e9;
 $transition: all 0.4s ease-in-out;
 $shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-
 // ********************************** //
 // ********************************** //
 // ********************************** //
-
 .preloader {
   background-color: white;
   position: fixed;
@@ -147,12 +145,99 @@ $shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     }
   }
 }
+.layer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(#00000080, #00000080);
+  z-index: -1;
+  opacity: 0;
+  transition: none;
+  &.show {
+    opacity: 1;
+    z-index: 9999999;
+  }
+}
+.search-container {
+  position: fixed;
+  top: -50vh;
+  width: 100%;
+  height: 50vh;
+  transition: $transition;
+  left: 0;
+  z-index: 999999999999;
+  &.show {
+    top: 0;
+  }
+  .inner-contianer {
+    height: 100%;
+    width: 100%;
+    background: $white;
+    .closeSearch {
+      height: 70px;
+      width: 70px;
+      background: none;
+      outline: none;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      i {
+        color: #000;
+        font-size: 30px;
+      }
+    }
+    .input-field {
+      height: calc(50vh - 70px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .form {
+        border-bottom: 1px solid #ccc;
+        height: 70px;
+        display: flex;
+        width: 100%;
+      }
+      input {
+        width: calc(100% - 70px);
+        height: 70px;
+        border: none;
+        outline: none;
+        font-size: 32px;
+        font-weight: bold;
+        background: none;
+        &::placeholder {
+          color: #ccc;
+        }
+        &:focus::placeholder {
+          color: #000;
+        }
+      }
+      button {
+        height: 70px;
+        width: 70px;
+        background: none;
+        outline: none;
+        border: none;
+        color: #ccc;
+        i {
+          font-size: 32px;
+        }
+        transition: .2s ease-in-out;
+        &:hover {
+          color: #000;
+        }
+      }
+    }
+  }
+}
 header {
   transition: $transition;
   background: $white;
   display: flex;
   flex-direction: column;
-
   nav {
     height: 80px;
     @include space-between();
@@ -386,16 +471,124 @@ header {
       display: none;
     }
   }
-  @keyframes sticky {
-    0% {
-      transform: translateY(-100%);
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
 }
 main {
+  .hero_section {
+    padding: 60px 0 20px;
+    @media screen and (max-width: 576px) {
+      padding: 60px 0 0;
+    }
+    background-image: linear-gradient($main5, #fff);
+    .hero_content {
+      display: flex;
+      flex-direction: column;
+      .hint {
+        background: $white;
+        @include centerFlex();
+        padding: 6px 12px;
+        border-radius: 50px;
+        width: fit-content;
+        h6 {
+          color: $main;
+          font-size: 14px;
+          margin: 0;
+        }
+        span {
+          background: $main;
+          border-radius: 50%;
+          width: 24px;
+          height: 24px;
+          @include centerFlex();
+          margin-right: 8px;
+          color: $white;
+        }
+      }
+      h1 {
+        font-size: 54px;
+        font-weight: 700;
+        color: $dark;
+        margin: 16px 0 24px;
+        @media screen and (max-width: 768px) {
+          font-size: 42px;
+        }
+        @media screen and (max-width: 576px) {
+          font-size: 36px;
+          margin: 20px 0 32px;
+        }
+        span {
+          color: $main;
+        }
+      }
+      p {
+        margin-bottom: 16px;
+      }
+      .buttons {
+        display: flex;
+        gap: 16px;
+        .btn1 {
+          @include clearInput();
+          padding: 8px 32px;
+          background: $main;
+          border-radius: 8px;
+          color: $white;
+          box-shadow: rgba(0, 0, 0, 0.05) 0 1em 2em;
+        }
+        .btn2 {
+          @include clearInput();
+          padding: 8px 32px;
+          border-radius: 8px;
+          color: $main;
+          border: 1px solid $main;
+        }
+      }
+    }
+    .banner-imgs {
+      padding: 0px 0px 0px 140px;
+      position: relative;
+      .union-icon {
+        position: absolute;
+        top: 20px;
+        left: 55px;
+      }
+      .congratulation-icon {
+        position: absolute;
+        top: 30%;
+        left: 0;
+      }
+      .docs-icon {
+        position: absolute;
+        top: 85%;
+        left: 40px;
+      }
+      .course-icon {
+        position: absolute;
+        top: 14%;
+        right: -60px;
+      }
+      .tick-icon {
+        position: absolute;
+        top: 80%;
+        right: -60px;
+      }
+      .web-dev-icon {
+        position: absolute;
+        top: 50%;
+        right: -60px;
+      }
+      .shape-1 {
+        animation: hero-thumb-animation 2s linear infinite alternate;
+      }
+      .shape-2 {
+        animation: hero-thumb-sm-animation 4s linear infinite alternate;
+      }
+      .shape-3 {
+        animation: hero-thumb-sm-2-animation 4s linear infinite alternate;
+      }
+      .img-responsive {
+        max-width: 100%;
+      }
+    }
+  }
   .auth_section {
     padding: 60px 4px;
     .auth_form {
@@ -453,7 +646,6 @@ main {
       .tab-content {
         padding: 16px 0 0;
       }
-
       .save_btn {
         @include clearInput();
         width: 100%;
@@ -585,7 +777,6 @@ main {
       .plans {
         margin-bottom: 24px;
         display: flex;
-        overflow: scroll;
         gap: 16px;
         &::-webkit-scrollbar {
           display: none;
@@ -594,7 +785,7 @@ main {
           min-width: 300px;
           padding: 16px 12px;
           border-radius: 12px;
-          border: 1px solid $gray;
+          box-shadow: rgba(0, 0, 0, 0.05) 0 1em 2em;
           .img {
             @include centerFlex();
             gap: 16px;
@@ -785,7 +976,7 @@ main {
     .filter {
       @media screen and (max-width: 768px) {
         position: fixed;
-        bottom: -100%;
+        bottom: -100vh;
         z-index: 9999;
         background: $inputBg;
         display: flex;
@@ -1047,7 +1238,9 @@ main {
     }
     .pl-200 {
       padding-left: 200px !important;
-      padding: 0 30px !important;
+      @media screen and (max-width: 576px) {
+        padding: 0 30px !important;
+      }
     }
     .text-lg {
       font-size: 18px;
@@ -1099,22 +1292,6 @@ main {
         img {
           height: 120px;
         }
-      }
-    }
-    @keyframes hero-thumb-sm-2-animation {
-      0% {
-        transform: translateY(-50px);
-      }
-      100% {
-        transform: translateY(0px);
-      }
-    }
-    @keyframes hero-thumb-sm-animation {
-      0% {
-        transform: translateY(-20px) translateX(50px);
-      }
-      100% {
-        transform: translateY(-20px) translateX(0px);
       }
     }
     .btn-wrapper a {
@@ -1465,6 +1642,237 @@ main {
       }
     }
   }
+  .contact {
+    padding: 60px 0;
+    .send_btn {
+      padding: 8px 32px;
+      @include clearInput();
+      background: $main;
+      color: $white;
+      border-radius: 8px;
+    }
+    form {
+      height: 100%;
+      @include centerFlex();
+      .form {
+        width: 100%;
+      }
+    }
+    h4 {
+      font-size: 40px;
+      color: $main;
+      font-weight: 600;
+    }
+    .animatedMap {
+      width: 100%;
+      @include centerFlex();
+    }
+    .worldMap {
+      width: 500px;
+      height: 500px;
+      order: 2;
+      position: relative;
+      .earth {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 80%;
+        height: 80%;
+        margin: -40%;
+        background: #fff url(../images/map.png) 0 50% repeat-x;
+        background-size: auto 90%;
+        box-shadow: rgba(0, 0, 0, 0.05) 0 1em 2em;
+        border-radius: 100%;
+        overflow: hidden;
+        animation: map linear 90s infinite;
+      }
+      .orbic {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .orbic svg {
+        width: 100%;
+        height: 100%;
+        vertical-align: top;
+      }
+      #orbic_path {
+        fill: none;
+        stroke: rgba(0, 0, 0, 0.1);
+        stroke-linecap: round;
+        stroke-width: 4px;
+        stroke-dasharray: 1 9;
+        -webkit-animation: orbic linear 2s infinite;
+        -moz-animation: orbic linear 2s infinite;
+        animation: orbic linear 2s infinite;
+      }
+      #orbic_dots use {
+        fill: #fff;
+        stroke: rgba(30, 144, 255, 0.25);
+        stroke-width: 4;
+        -webkit-animation: dots ease 1s infinite alternate;
+        -moz-animation: dots ease 1s infinite alternate;
+        animation: dots ease 1s infinite alternate;
+      }
+      #orbic_dot1 {
+        transform: translate(50.4%, 29.6%);
+      }
+      #orbic_dot2 {
+        transform: translate(5%, 62.8%);
+        animation-delay: 0.2s !important;
+      }
+      #orbic_dot3 {
+        transform: translate(97%, 41%);
+        animation-delay: 0.3s !important;
+      }
+      #orbic_dot4 {
+        transform: translate(50%, 70.2%);
+        animation-delay: 0.5s !important;
+      }
+      #orbic_dot5 {
+        transform: translate(31.5%, 51.5%);
+        animation-delay: 0.7s !important;
+      }
+      #orbic_user1 {
+        transform: translate(1%, 40%) scale(0.666667);
+      }
+      #orbic_user2 {
+        transform: translate(18%, 64%) scale(0.666667);
+      }
+      #orbic_user3 {
+        transform: translate(39.5%, 31%) scale(0.666667);
+      }
+      #orbic_user4 {
+        transform: translate(69%, 22%) scale(0.666667);
+      }
+      #orbic_user5 {
+        transform: translate(75%, 53%) scale(0.666667);
+      }
+      @-webkit-keyframes map {
+        100% {
+          background-position: 220% 50%;
+        }
+      }
+      @-moz-keyframes map {
+        100% {
+          background-position: 220% 50%;
+        }
+      }
+      @keyframes map {
+        100% {
+          background-position: 220% 50%;
+        }
+      }
+      @-webkit-keyframes orbic {
+        100% {
+          stroke-dashoffset: 10;
+        }
+      }
+      @-moz-keyframes orbic {
+        100% {
+          stroke-dashoffset: 10;
+        }
+      }
+      @keyframes orbic {
+        100% {
+          stroke-dashoffset: 10;
+        }
+      }
+      @-webkit-keyframes dots {
+        100%,
+        80% {
+          stroke: #1e90ff;
+        }
+      }
+      @-moz-keyframes dots {
+        100%,
+        80% {
+          stroke: #1e90ff;
+        }
+      }
+      @keyframes dots {
+        100%,
+        80% {
+          stroke: #1e90ff;
+        }
+      }
+    }
+    @media only screen and (max-width: 1000px) {
+      .worldMap {
+        width: 100%;
+        order: 2;
+        position: relative;
+        .earth {
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          margin: 0;
+          background-color: transparent;
+          background-size: 100% auto;
+          box-shadow: none;
+          border-radius: 0;
+          -webkit-animation: none;
+          -moz-animation: none;
+          animation: none;
+        }
+      }
+    }
+    @media (max-width: 600px) {
+      .worldMap {
+        height: 300px;
+      }
+    }
+  }
+  .features {
+    padding: 40px 0;
+    background-image: linear-gradient($main20, #fff);
+    border-radius: 30px 30px 0 0;
+    .sec_title {
+      width: min(100% - 24px, 600px);
+      @include centerFlex();
+      margin: 0 auto 40px;
+      h3 {
+        text-align: center;
+        font-size: 32px;
+        color: $dark;
+      }
+    }
+    .service_single_content {
+      position: relative;
+      z-index: 1;
+      padding: 30px 20px;
+      box-shadow: rgba(0, 0, 0, 0.05) 0 1em 2em;
+      background: #fff;
+      margin-bottom: 30px;
+      border-radius: 15px;
+      .service_icon {
+        width: 88px;
+        height: 88px;
+        text-align: center;
+        margin-bottom: 30px;
+        border-radius: 16px;
+        line-height: 88px;
+        background: $main5;
+        position: relative;
+        display: inline-block;
+      }
+      h6 {
+        margin-bottom: 15px;
+        font-weight: bold;
+        font-size: 17px;
+        line-height: 30px;
+        color: $main;
+      }
+      p {
+        font-size: 14px;
+        line-height: 24px;
+        color: $dark;
+      }
+    }
+  }
 }
 .modal {
   .modal-content {
@@ -1623,7 +2031,7 @@ input[type="radio"] {
   }
 }
 .create_resume {
-  padding-top: 60px;
+  padding-top: 30px;
   .wrapper {
     position: relative;
     width: 100%;
@@ -2060,7 +2468,6 @@ input[type="number"]::-webkit-inner-spin-button {
     }
   }
 }
-
 footer {
   border-top: 1px solid $inputStroke;
   padding: 40px 0 0;
@@ -2217,218 +2624,6 @@ footer {
     }
   }
 }
-.contact {
-  padding: 60px 0;
-  .send_btn {
-    padding: 8px 32px;
-    @include clearInput();
-    background: $main;
-    color: $white;
-    border-radius: 8px;
-  }
-  form {
-    height: 100%;
-    @include centerFlex();
-    .form {
-      width: 100%;
-    }
-  }
-  h4 {
-    font-size: 40px;
-    color: $main;
-    font-weight: 600;
-  }
-}
-
-.animatedMap {
-  width: 100%;
-  @include centerFlex();
-}
-.worldMap {
-  width: 500px;
-  height: 500px;
-  order: 2;
-  position: relative;
-
-  .earth {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 80%;
-    height: 80%;
-    margin: -40%;
-    background: #fff url(../images/map.png) 0 50% repeat-x;
-    background-size: auto 90%;
-    box-shadow: rgba(0, 0, 0, 0.05) 0 1em 2em;
-    border-radius: 100%;
-    overflow: hidden;
-    animation: map linear 90s infinite;
-  }
-
-  .orbic {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  .orbic svg {
-    width: 100%;
-    height: 100%;
-    vertical-align: top;
-  }
-
-  #orbic_path {
-    fill: none;
-    stroke: rgba(0, 0, 0, 0.1);
-    stroke-linecap: round;
-    stroke-width: 4px;
-    stroke-dasharray: 1 9;
-    -webkit-animation: orbic linear 2s infinite;
-    -moz-animation: orbic linear 2s infinite;
-    animation: orbic linear 2s infinite;
-  }
-
-  #orbic_dots use {
-    fill: #fff;
-    stroke: rgba(30, 144, 255, 0.25);
-    stroke-width: 4;
-    -webkit-animation: dots ease 1s infinite alternate;
-    -moz-animation: dots ease 1s infinite alternate;
-    animation: dots ease 1s infinite alternate;
-  }
-
-  #orbic_dot1 {
-    transform: translate(50.4%, 29.6%);
-  }
-
-  #orbic_dot2 {
-    transform: translate(5%, 62.8%);
-    animation-delay: 0.2s !important;
-  }
-
-  #orbic_dot3 {
-    transform: translate(97%, 41%);
-    animation-delay: 0.3s !important;
-  }
-
-  #orbic_dot4 {
-    transform: translate(50%, 70.2%);
-    animation-delay: 0.5s !important;
-  }
-
-  #orbic_dot5 {
-    transform: translate(31.5%, 51.5%);
-    animation-delay: 0.7s !important;
-  }
-
-  #orbic_user1 {
-    transform: translate(1%, 40%) scale(0.666667);
-  }
-
-  #orbic_user2 {
-    transform: translate(18%, 64%) scale(0.666667);
-  }
-
-  #orbic_user3 {
-    transform: translate(39.5%, 31%) scale(0.666667);
-  }
-
-  #orbic_user4 {
-    transform: translate(69%, 22%) scale(0.666667);
-  }
-
-  #orbic_user5 {
-    transform: translate(75%, 53%) scale(0.666667);
-  }
-
-  @-webkit-keyframes map {
-    100% {
-      background-position: 220% 50%;
-    }
-  }
-
-  @-moz-keyframes map {
-    100% {
-      background-position: 220% 50%;
-    }
-  }
-
-  @keyframes map {
-    100% {
-      background-position: 220% 50%;
-    }
-  }
-
-  @-webkit-keyframes orbic {
-    100% {
-      stroke-dashoffset: 10;
-    }
-  }
-
-  @-moz-keyframes orbic {
-    100% {
-      stroke-dashoffset: 10;
-    }
-  }
-
-  @keyframes orbic {
-    100% {
-      stroke-dashoffset: 10;
-    }
-  }
-
-  @-webkit-keyframes dots {
-    100%,
-    80% {
-      stroke: #1e90ff;
-    }
-  }
-
-  @-moz-keyframes dots {
-    100%,
-    80% {
-      stroke: #1e90ff;
-    }
-  }
-
-  @keyframes dots {
-    100%,
-    80% {
-      stroke: #1e90ff;
-    }
-  }
-}
-
-@media only screen and (max-width: 1000px) {
-  .worldMap {
-    width: 100%;
-    order: 2;
-    position: relative;
-
-    .earth {
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      margin: 0;
-      background-color: transparent;
-      background-size: 100% auto;
-      box-shadow: none;
-      border-radius: 0;
-      -webkit-animation: none;
-      -moz-animation: none;
-      animation: none;
-    }
-  }
-}
-
-@media (max-width: 600px) {
-  .worldMap {
-    height: 300px;
-  }
-}
 .profile_menu {
   width: 300px;
   height: 100%;
@@ -2513,5 +2708,37 @@ footer {
         }
       }
     }
+  }
+}
+@keyframes hero-thumb-sm-2-animation {
+  0% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes hero-thumb-sm-animation {
+  0% {
+    transform: translateY(-20px) translateX(50px);
+  }
+  100% {
+    transform: translateY(-20px) translateX(0px);
+  }
+}
+@keyframes sticky {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes hero-thumb-animation {
+  0% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
