@@ -781,6 +781,9 @@ main {
         &::-webkit-scrollbar {
           display: none;
         }
+        @media screen and (max-width: 576px) {
+          flex-direction: column;
+        }
         .plan {
           min-width: 300px;
           padding: 16px 12px;

@@ -811,6 +811,11 @@ main .auth_section .auth_form .plans {
 main .auth_section .auth_form .plans::-webkit-scrollbar {
   display: none;
 }
+@media screen and (max-width: 576px) {
+  main .auth_section .auth_form .plans {
+    flex-direction: column;
+  }
+}
 main .auth_section .auth_form .plans .plan {
   min-width: 300px;
   padding: 16px 12px;
