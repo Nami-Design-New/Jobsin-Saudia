@@ -225,7 +225,7 @@ $shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
         i {
           font-size: 32px;
         }
-        transition: .2s ease-in-out;
+        transition: 0.2s ease-in-out;
         &:hover {
           color: #000;
         }
@@ -272,7 +272,7 @@ header {
       li {
         @include centerFlex();
         height: 100%;
-        padding: 0 20px;
+        padding: 0 24px;
         a {
           font-weight: 500;
           font-size: 12px;
@@ -594,10 +594,12 @@ main {
     .auth_form {
       .title {
         display: flex;
-        align-items: center;
-        justify-content: center;
         flex-direction: column;
         margin-bottom: 36px;
+        @media screen and (max-width: 768px) {
+          align-items: center;
+          justify-content: center;
+        }
         h4 {
           font-size: 32px;
           color: $dark;
@@ -605,11 +607,16 @@ main {
         }
         p {
           color: $text;
-          text-align: center;
+          @media screen and (max-width: 768px) {
+            text-align: center;
+          }
           span {
             color: $main;
             font-weight: 500;
           }
+        }
+        &.force_center {
+          @include centerFlex();
         }
       }
       .nav {
@@ -686,10 +693,10 @@ main {
         @include space-between();
         padding: 0 0 24px;
         width: 100%;
-        gap: 8px;
+        gap: 12px;
         .otp-input {
           width: 100%;
-          height: 70px;
+          height: 80px;
           flex: 1;
           border-radius: 4px;
           @media (max-width: 576px) {
@@ -777,6 +784,7 @@ main {
       .plans {
         margin-bottom: 24px;
         display: flex;
+        justify-content: center;
         gap: 16px;
         &::-webkit-scrollbar {
           display: none;
@@ -786,7 +794,7 @@ main {
         }
         .plan {
           min-width: 300px;
-          padding: 16px 12px;
+          padding: 16px;
           border-radius: 12px;
           box-shadow: rgba(0, 0, 0, 0.05) 0 1em 2em;
           .img {
@@ -805,16 +813,26 @@ main {
           }
           ul {
             padding: 16px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
             border-bottom: 1px solid $inputStroke;
             li {
               @include space-between();
+              align-items: baseline;
               .benefit {
                 display: flex;
-                align-items: center;
-                gap: 4px;
+                align-items: baseline;
+                gap: 6px;
+                max-width: 245px;
                 line-height: 24px;
+                font-size: 14px;
                 color: $dark;
                 font-weight: 500;
+                i {
+                  font-size: 14px;
+                  color: $main;
+                }
               }
               span {
                 color: $dark;
@@ -868,9 +886,18 @@ main {
         }
       }
     }
+    .img {
+      width: 100%;
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      img {
+        max-width: 90%;
+      }
+    }
   }
   .explore {
-    padding: 60px 0;
+    padding: 40px 0;
     .asideFilter {
       width: 100%;
       border-radius: 12px;
@@ -1266,6 +1293,7 @@ main {
       position: relative;
       img {
         max-width: 100%;
+        max-height: 480px;
         animation: hero-thumb-sm-2-animation 4s linear infinite alternate;
         border-top-right-radius: 100px;
         border-bottom-left-radius: 100px;
@@ -1458,8 +1486,8 @@ main {
         box-shadow: none !important;
       }
       &::after {
-        content: '\f107';
-        font-family: 'Font Awesome 6 pro';
+        content: "\f107";
+        font-family: "Font Awesome 6 pro";
         background: none;
         display: flex;
         align-items: center;
@@ -1472,7 +1500,7 @@ main {
         color: $main;
         background: none !important;
         &::after {
-          content: '\f106';
+          content: "\f106";
         }
       }
     }
@@ -1498,7 +1526,7 @@ main {
     padding: 60px 0;
     width: 100%;
     background-size: cover;
-    background-image: url('../images/banner_resumes.jpg');
+    background-image: url("../images/banner_resumes.jpg");
     .container {
       position: relative;
       h2 {
@@ -1629,19 +1657,40 @@ main {
       }
       .buttons {
         position: absolute;
-        top: 8px;
+        top: 12px;
         right: 8px;
         display: flex;
         align-items: center;
-        button {
+        button,
+        a {
           width: 25px;
           height: 25px;
+          @include centerFlex();
           img {
             height: 16px;
-            width: 16px;
           }
           @include clearInput();
         }
+      }
+    }
+  }
+  .banner_section {
+    padding: 60px 0;
+    background-image: linear-gradient($main20, #fff);
+    background-size: cover;
+    background-position: center;
+    .content {
+      display: flex;
+      gap: 8px;
+      flex-direction: column;
+      h3 {
+        font-size: 32px;
+        margin: 0;
+      }
+      p {
+        color: $gray;
+        font-size: 16px;
+        margin: 0;
       }
     }
   }
@@ -1664,7 +1713,13 @@ main {
     h4 {
       font-size: 40px;
       color: $main;
+      margin: 0;
       font-weight: 600;
+    }
+    p {
+      font-size: 16px;
+      color: $text;
+      margin-bottom: 24px;
     }
     .animatedMap {
       width: 100%;
@@ -2072,10 +2127,6 @@ input[type="radio"] {
       .avatar {
         height: 100%;
         width: 140px;
-        img {
-          height: 100%;
-          object-fit: contain;
-        }
       }
     }
     .thumb {
@@ -2710,6 +2761,30 @@ footer {
           height: 36px !important;
         }
       }
+    }
+  }
+}
+.modal-body {
+  padding: 24px !important;
+  .buttons {
+    margin-top: 12px;
+    display: flex;
+    gap: 16px;
+    .delete_btn {
+      padding: 8px;
+      @include clearInput();
+      color: $white;
+      border-radius: 8px;
+      width: 100%;
+      background: red;
+    }
+    .cancel_btn {
+      padding: 8px;
+      @include clearInput();
+      color: $dark;
+      border-radius: 8px;
+      width: 100%;
+      border: 1px solid $dark;
     }
   }
 }
