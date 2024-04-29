@@ -215,10 +215,32 @@
                 </div>
             </div>
         </section> -->
-        <div class="home_section">
+        <section class="create_resume">
             <div class="container">
                 <div class="row m-0">
-                    <div class="col-lg-6 col-12 p-2 order-lg-0 order-1">
+                    <div class="col-12 p-2">
+                        <a href="create-resume.html" class="wrapper">
+                            <div class="thumb"></div>
+                            <div class="content">
+                                <div>
+                                    <h1>Easily get job offers</h1>
+                                    <p>
+                                        Create your personal resume now and get job offers.
+                                    </p>
+                                </div>
+                                <div class="avatar">
+                                    <img loading="lazy" src="assets/images/doc 1.svg" alt="">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="home_section">
+            <div class="container">
+                <div class="row m-0 gap-lg-0 gap-2">
+                    <div class="col-lg-7 col-12 p-2 order-lg-0 order-1">
                         <div class="filter">
                             <ul>
                                 <li>
@@ -405,6 +427,72 @@
                                 </li>
                             </ul>
                         </div>
+                        <div class="filter mt-3 pt-3">
+                            <ul>
+                                <li>
+                                    <div class="input_field w-100">
+                                        <label for="phone">Country</label>
+                                        <select name="country" id="country" onfocus="highlight(this)"
+                                            onblur="unhighlight(this)">
+                                            <option value=""></option>
+                                            <option value="Saudai Arabia">Saudai Arabia</option>
+                                            <option value="United Arab Emirates">United Arab Emirates</option>
+                                            <option value="Oman">Oman</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <!-- if country saudia arabia only -->
+                                <li>
+                                    <div class="input_field w-100">
+                                        <label for="city">City</label>
+                                        <select name="city" id="city" onfocus="highlight(this)"
+                                            onblur="unhighlight(this)">
+                                            <option value=""></option>
+                                            <option value="Mecca">Mecca</option>
+                                            <option value="Riyadh">Riyadh</option>
+                                            <option value="Jeddah">Jeddah</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="input_field w-100">
+                                        <label for="age">Age</label>
+                                        <select name="age" id="age" onfocus="highlight(this)"
+                                            onblur="unhighlight(this)">
+                                            <option value=""></option>
+                                            <option value="from 19 to 25"> from 19 to 25 </option>
+                                            <option value="from 26 to 45"> from 26 to 45 </option>
+                                            <option value="from 49 to 65+"> from 49 to 65+ </option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="input_field w-100">
+                                        <label for="gender">Gender</label>
+                                        <select name="gender" id="gender" onfocus="highlight(this)"
+                                            onblur="unhighlight(this)">
+                                            <option value=""></option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li>
+                                    <label for="individual" class="select_type">
+                                        <input type="radio" name="account_type" id="individual" checked>
+                                        <div class="content">
+                                            <h6>Individual Advertiser</h6>
+                                        </div>
+                                    </label>
+                                </li>
+                                <label for="company" class="select_type">
+                                    <input type="radio" name="account_type" id="company">
+                                    <div class="content">
+                                        <h6>Company Advertiser</h6>
+                                    </div>
+                                </label>
+                            </ul>
+                        </div>
                         <div class="row m-0 mt-4">
                             <div class="col-lg-6 col-12 p-2">
                                 <a href="profile.html" class="profile_card">
@@ -490,9 +578,14 @@
                                     </div>
                                 </a>
                             </div>
+                            <div class="col-12 p-2 d-flex justify-content-center">
+                                <a href="explore.html" class="viewMore">
+                                    View More
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-12 p-lg-3 p-2 d-flex align-items-end order-lg-1 order-0">
+                    <div class="col-lg-5 col-12 p-lg-3 p-2 d-flex order-lg-1 order-0">
                         <div class="swiper heroSection">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
@@ -573,28 +666,6 @@
                 </div>
             </div>
 
-        </div>
-        <section class="create_resume">
-            <div class="container">
-                <div class="row m-0">
-                    <div class="col-12 p-2">
-                        <a href="create-resume.html" class="wrapper">
-                            <div class="thumb"></div>
-                            <div class="content">
-                                <div>
-                                    <h1>Easily get job offers</h1>
-                                    <p>
-                                        Create your personal resume now and get job offers.
-                                    </p>
-                                </div>
-                                <div class="avatar">
-                                    <img loading="lazy" src="assets/images/doc 1.svg" alt="">
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
         </section>
         <section class="companies">
             <div class="container">

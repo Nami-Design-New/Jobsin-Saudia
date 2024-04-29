@@ -607,16 +607,11 @@ main .hero_section .banner-imgs .img-responsive {
   max-width: 100%;
 }
 main .home_section {
-  padding: 60px 0 30px;
-}
-@media screen and (max-width: 576px) {
-  main .home_section {
-    padding: 60px 0 0;
-  }
+  padding: 30px 0;
 }
 main .home_section .filter {
   width: 100%;
-  padding-bottom: 4px;
+  padding-bottom: 8px;
   overflow-x: scroll;
 }
 main .home_section .filter::-webkit-scrollbar {
@@ -654,6 +649,52 @@ main .home_section .filter ul li .content.active, main .home_section .filter ul 
 }
 main .home_section .filter ul li .content.active h6, main .home_section .filter ul li .content:hover h6 {
   color: #009640;
+}
+main .home_section .filter ul select {
+  min-width: 120px;
+}
+main .home_section .filter .select_type {
+  height: 100%;
+  cursor: pointer;
+}
+main .home_section .filter .select_type input {
+  display: none;
+}
+main .home_section .filter .select_type input:checked + .content {
+  background: rgba(0, 150, 64, 0.0509803922);
+  border: 1px solid #009640;
+}
+main .home_section .filter .select_type input:checked + .content img {
+  filter: brightness(1) invert(0);
+}
+main .home_section .filter .select_type .content {
+  border: 1px solid #f8f8f8;
+  transition: all 0.4s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #f8f8f8;
+  height: 54px;
+  padding: 0 24px;
+  border-radius: 12px;
+}
+main .home_section .filter .select_type .content h6 {
+  margin: 0;
+  white-space: nowrap;
+  color: #1d1d1b;
+  font-size: 14px;
+  font-weight: 500;
+}
+main .home_section .filter .select_type .content p {
+  font-size: 14px;
+  color: #666b88;
+  line-height: 24px;
+}
+main .home_section .filter .select_type .content img {
+  transition: all 0.4s ease-in-out;
+  margin-bottom: 16px;
+  filter: brightness(0) invert(0);
 }
 main .home_section .profile_card {
   border: 1px solid #e9e9e9;
@@ -737,7 +778,7 @@ main .home_section .swiper.heroSection .img {
   border-radius: 12px;
   position: relative;
   overflow: hidden;
-  aspect-ratio: 3/2;
+  height: 100%;
 }
 main .home_section .swiper.heroSection .img img {
   width: 100%;
@@ -761,6 +802,15 @@ main .home_section .swiper.heroSection .img .content h6 {
   color: #ffffff;
   font-size: 24px;
   margin: 0;
+}
+main .viewMore {
+  padding: 4px 16px;
+  background: #009640;
+  color: #ffffff;
+  border-radius: 100px;
+  display: inline-block;
+  font-size: 14px;
+  margin-top: 12px;
 }
 main .auth_section {
   padding: 60px 4px;
@@ -2640,7 +2690,7 @@ input[type=number]::-webkit-inner-spin-button {
   height: 54px !important;
   border-radius: 12px !important;
   border: 1px solid #e9e9e9 !important;
-  padding: 0 16px !important;
+  padding: 0 24px !important;
   font-size: 14px !important;
   margin: 0 !important;
 }
