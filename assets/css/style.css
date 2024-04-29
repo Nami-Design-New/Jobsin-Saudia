@@ -606,6 +606,162 @@ main .hero_section .banner-imgs .shape-3 {
 main .hero_section .banner-imgs .img-responsive {
   max-width: 100%;
 }
+main .home_section {
+  padding: 60px 0 30px;
+}
+@media screen and (max-width: 576px) {
+  main .home_section {
+    padding: 60px 0 0;
+  }
+}
+main .home_section .filter {
+  width: 100%;
+  padding-bottom: 4px;
+  overflow-x: scroll;
+}
+main .home_section .filter::-webkit-scrollbar {
+  height: 2px;
+}
+main .home_section .filter::-webkit-scrollbar-thumb {
+  background: #e9e9e9;
+  border-radius: 12px;
+}
+main .home_section .filter ul {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+main .home_section .filter ul li .content {
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  gap: 8px;
+  border-radius: 12px;
+  flex-direction: column;
+}
+main .home_section .filter ul li .content h6 {
+  margin: 0;
+  white-space: nowrap;
+  transition: all 0.4s ease-in-out;
+}
+main .home_section .filter ul li .content .img img {
+  height: 32px;
+}
+main .home_section .filter ul li .content.active, main .home_section .filter ul li .content:hover {
+  background: rgba(0, 150, 64, 0.0509803922);
+}
+main .home_section .filter ul li .content.active h6, main .home_section .filter ul li .content:hover h6 {
+  color: #009640;
+}
+main .home_section .profile_card {
+  border: 1px solid #e9e9e9;
+  padding: 4px;
+  gap: 8px;
+  border-radius: 100px 0 0 100px;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+main .home_section .profile_card .img {
+  width: 90px;
+  height: 90px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+main .home_section .profile_card .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .home_section .profile_card .owner h6 {
+  color: #1d1d1b;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+main .home_section .profile_card .owner .title_age {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  color: #666b88;
+  font-size: 12px;
+  font-weight: 400;
+}
+main .home_section .profile_card .owner .label {
+  height: 32px;
+  background: rgba(0, 150, 64, 0.0509803922);
+  padding: 4px 8px;
+  gap: 4px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+main .home_section .profile_card .owner .label img {
+  height: 26px;
+}
+main .home_section .profile_card .owner .label h6 {
+  color: #009640;
+  margin: 0;
+  font-size: 12px;
+}
+main .home_section .profile_card .buttons {
+  position: absolute;
+  top: 12px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+}
+main .home_section .profile_card .buttons button,
+main .home_section .profile_card .buttons a {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  outline: none;
+}
+main .home_section .profile_card .buttons button img,
+main .home_section .profile_card .buttons a img {
+  height: 16px;
+}
+main .home_section .swiper.heroSection {
+  border-radius: 12px;
+}
+main .home_section .swiper.heroSection .img {
+  width: 100%;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3/2;
+}
+main .home_section .swiper.heroSection .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .home_section .swiper.heroSection .img .content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.5019607843);
+}
+main .home_section .swiper.heroSection .img .content h6 {
+  color: #ffffff;
+  font-size: 24px;
+  margin: 0;
+}
 main .auth_section {
   padding: 60px 4px;
 }
@@ -2347,6 +2503,8 @@ input[type=number]::-webkit-inner-spin-button {
   }
 }
 .actitvity_card .content .img {
+  width: -moz-fit-content;
+  width: fit-content;
   display: flex;
   align-items: center;
   justify-content: center;
