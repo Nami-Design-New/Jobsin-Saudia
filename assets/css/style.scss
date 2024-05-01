@@ -3032,15 +3032,19 @@ footer {
   }
 }
 .applyNow {
-  width: min(100%, 450px);
+  width: 240px;
+  @media screen and (max-width: 576px) {
+    width: 100%;
+  }
   height: 54px;
-  margin: 0 auto;
+  margin: 0 0 0 auto;
   border-radius: 8px;
   padding: 12px;
   @include centerFlex();
+  gap: 8px;
   background: $main;
   color: $white;
-  &:hover{
+  &:hover {
     color: $white;
   }
 }

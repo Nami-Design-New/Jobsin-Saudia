@@ -3157,16 +3157,22 @@ footer .copy_rights .social_media ul a:hover svg path {
 }
 
 .applyNow {
-  width: min(100%, 450px);
+  width: 240px;
   height: 54px;
-  margin: 0 auto;
+  margin: 0 0 0 auto;
   border-radius: 8px;
   padding: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
   background: #009640;
   color: #ffffff;
+}
+@media screen and (max-width: 576px) {
+  .applyNow {
+    width: 100%;
+  }
 }
 .applyNow:hover {
   color: #ffffff;
