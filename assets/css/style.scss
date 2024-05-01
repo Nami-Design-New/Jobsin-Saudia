@@ -25,7 +25,8 @@ p {
   margin: 0;
 }
 button,
-a {
+a,
+select {
   color: #000;
 }
 .fancybox__container {
@@ -676,7 +677,7 @@ main {
           }
         }
       }
-      &.bg_light{
+      &.bg_light {
         background: $inputBg;
         border-radius: 12px;
         padding: 8px;
@@ -3028,5 +3029,18 @@ footer {
 .hide-sm {
   @media screen and (max-width: 576px) {
     display: none !important;
+  }
+}
+.applyNow {
+  width: min(100%, 450px);
+  height: 54px;
+  margin: 0 auto;
+  border-radius: 8px;
+  padding: 12px;
+  @include centerFlex();
+  background: $main;
+  color: $white;
+  &:hover{
+    color: $white;
   }
 }
