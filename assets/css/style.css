@@ -393,6 +393,9 @@ header nav .util li .notification_dropDown ul li .content small {
   line-height: 16px;
   color: #777777;
 }
+header nav .util li .lang span {
+  font-weight: bold;
+}
 header nav .util li.toggler {
   display: none;
 }
