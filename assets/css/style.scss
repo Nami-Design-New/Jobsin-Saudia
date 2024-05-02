@@ -259,7 +259,9 @@ header {
         background: $white;
         z-index: 99;
         flex-direction: column;
-        width: 100%;
+        justify-content: flex-start;
+        padding-top: 32px;
+        width: 50%;
         left: 0;
         transform: translateX(-100%);
         transition: $transition;
@@ -267,7 +269,8 @@ header {
           transform: translateX(0);
         }
         li {
-          height: 60px !important;
+          justify-content: flex-start !important;
+          height: 54px !important;
         }
       }
       li {
@@ -2952,7 +2955,7 @@ footer {
     ul {
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 4px;
       li {
         width: 100% !important;
         display: block !important;
@@ -2962,6 +2965,9 @@ footer {
           justify-content: space-between !important;
           color: $dark !important;
           div {
+            color: $dark;
+            font-size: 14px;
+            font-weight: 600;
             display: flex;
             align-items: center;
             gap: 4px;

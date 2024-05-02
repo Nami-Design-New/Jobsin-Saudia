@@ -255,7 +255,9 @@ header nav .nav-links {
     background: #ffffff;
     z-index: 99;
     flex-direction: column;
-    width: 100%;
+    justify-content: flex-start;
+    padding-top: 32px;
+    width: 50%;
     left: 0;
     transform: translateX(-100%);
     transition: all 0.4s ease-in-out;
@@ -264,7 +266,8 @@ header nav .nav-links {
     transform: translateX(0);
   }
   header nav .nav-links li {
-    height: 60px !important;
+    justify-content: flex-start !important;
+    height: 54px !important;
   }
 }
 header nav .nav-links li {
@@ -3070,7 +3073,7 @@ footer .copy_rights .social_media ul a:hover svg path {
 .profile_menu .profile_wrapper ul {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
 }
 .profile_menu .profile_wrapper ul li {
   width: 100% !important;
@@ -3083,6 +3086,9 @@ footer .copy_rights .social_media ul a:hover svg path {
   color: #1d1d1b !important;
 }
 .profile_menu .profile_wrapper ul li a div {
+  color: #1d1d1b;
+  font-size: 14px;
+  font-weight: 600;
   display: flex;
   align-items: center;
   gap: 4px;
