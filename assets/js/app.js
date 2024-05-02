@@ -105,16 +105,19 @@ document.addEventListener("click", function (event) {
   }
 });
 
+let layer = document.querySelector(".layer");
 let toggler = document.querySelector(".toggler");
 let menu = document.querySelector(".nav-links");
 toggler.addEventListener("click", () => {
   toggler.classList.toggle("hihglight");
   menu.classList.toggle("show");
+  layer.classList.toggle("show");
 });
 document.querySelectorAll(".nav-link").forEach((el) => {
   el.addEventListener("click", () => {
     toggler.classList.remove("hihglight");
     menu.classList.remove("show");
+    layer.classList.remove("show");
   });
 });
 document.addEventListener("click", function (event) {
@@ -124,6 +127,7 @@ document.addEventListener("click", function (event) {
     !event.target.closest(".toggler")
   ) {
     menu.classList.remove("show");
+    layer.classList.remove("show");
   }
 });
 // nav bar fixed up
@@ -150,7 +154,6 @@ function unhighlight(el) {
 
 // let searchOpen = document.getElementById("searchOpen");
 // let searchContainer = document.querySelector(".search-container");
-// let layer = document.querySelector(".layer");
 // let closeSearch = document.querySelector(".closeSearch");
 // searchOpen.addEventListener("click", () => {
 //   searchContainer.classList.add("show");
@@ -169,6 +172,7 @@ console.log(showBtn, profileMenu);
 
 showBtn.addEventListener("click", () => {
   profileMenu.classList.toggle("show");
+  layer.classList.toggle("show");
   if (profileMenu.classList.contains("show")) {
     document.querySelector("body").style.overflow = "hidden";
   } else {
@@ -183,5 +187,6 @@ document.addEventListener("click", function (event) {
     !event.target.closest("#showProfile")
   ) {
     profileMenu.classList.remove("show");
+    layer.classList.remove("show");
   }
 });
