@@ -119,7 +119,7 @@ $shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
       z-index: 2;
       background-color: $main;
       transform: translateY(100%);
-      animation: slide-up 2.5s forwards;
+      animation: slide-up .5s forwards;
       @media screen and (max-width: 1024px) {
         width: 80px;
         height: 80px;
@@ -165,20 +165,21 @@ $shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 .promoteModal {
   width: 100%;
   height: 100vh;
-  padding: 16px;
   position: fixed;
   top: 0;
   left: 0;
   background-color: rgb(29, 29, 27, 0.4);
   overflow-y: auto;
   z-index: 999999;
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   transition: 0.3s;
-
+  opacity: 0;
+  visibility: hidden;
   &.show {
-    display: flex;
+    opacity: 1;
+    visibility: visible;
   }
 
   &::-webkit-scrollbar {
@@ -187,64 +188,47 @@ $shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   }
 
   .modalBody {
-    max-width: 500px;
-    aspect-ratio: 1 / 1;
-    padding: 8px 16px;
-    background-color: #fefefe;
+    width: min(100% - 24px , 500px);
     border-radius: 12px;
     box-shadow: 0px 4px 16px 0px #0000001a;
     display: flex;
     flex-direction: column;
     position: relative;
-    gap: 30px;
+    padding: 0;
 
-    .modalHeader {
-      width: 100%;
-      padding: 8px;
+    .closeBtn {
+      width: 30px;
+      height: 30px;
+      border-radius: 12px;
+      position: absolute;
+      top: -15px;
+      right: -15px;
       display: flex;
+      justify-content: center;
       align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-
-      h3 {
-        width: unset;
-        flex: 1 0 0;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        margin: 0;
-      }
-
-      .closeBtn {
-        width: 30px;
-        height: 30px;
-        border-radius: 12px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 2px;
-        background-color: $dark;
-        color: $white;
-        font-weight: bold;
-        cursor: pointer;
-        font-size: 16px;
-      }
+      padding: 2px;
+      background-color: $dark;
+      color: $white;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 16px;
+      z-index: 999;
     }
 
     .modalImgBox {
       width: 100%;
-      flex: 1 0 0;
+      aspect-ratio: 3/2;
       display: flex;
       position: relative;
       overflow: hidden;
       box-shadow: $shadow;
       border-radius: 20px;
-      margin-bottom: 8px !important;
 
       img {
-        padding: 0;
         object-fit: cover;
         width: 100%;
+        height: 100%;
+        padding: 0;
       }
     }
   }
@@ -410,7 +394,7 @@ header {
           font-size: 10px;
         }
         .notification_dropDown {
-          width: 250px;
+          width: 300px;
           height: 0;
           overflow: hidden;
           transition: $transition;
@@ -464,6 +448,7 @@ header {
 
                   img {
                     width: 100%;
+                    aspect-ratio: 3/2;
                     object-fit: cover;
                   }
                 }

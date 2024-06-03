@@ -86,7 +86,7 @@ var heroSwiper = new Swiper(".heroSection", {
 });
 
 $(document).ready(function () {
-  $(".preloader").delay(1200).fadeOut(300);
+  $(".preloader").delay(500).fadeOut(300);
 });
 document
   .getElementById("showNotification")
@@ -189,30 +189,30 @@ document.addEventListener("click", function (event) {
   }
 });
 
-const starterModal = document.querySelector(`.starterModal`);
-const starterModalBody = document.querySelector(`.starterModal`);
-const starterModalCloseBtn = document.querySelector(
-  `.starterModal .modalBody .modalHeader .closeBtn`
+const promoteModal = document.querySelector(`.promoteModal`);
+const promoteModalBody = document.querySelector(`.promoteModal`);
+const promoteModalCloseBtn = document.querySelector(
+  `.promoteModal .modalBody .closeBtn`
 );
 
 window.addEventListener("load", () => {
   setTimeout(function () {
-    starterModal?.classList.add("show");
+    promoteModal?.classList.add("show");
   }, 3000);
 });
 
-starterModalCloseBtn?.addEventListener("click", () => {
-  starterModal?.classList.remove("show");
+promoteModalCloseBtn?.addEventListener("click", () => {
+  promoteModal?.classList.remove("show");
 });
 
 document.addEventListener(
   "click",
   (e) => {
     if (
-      e.target.contains(starterModalBody) &&
-      starterModal?.classList.contains("show")
+      e.target.contains(promoteModalBody) &&
+      promoteModal?.classList.contains("show")
     ) {
-      starterModal?.classList.remove("show");
+      promoteModal?.classList.remove("show");
     }
   },
   true
