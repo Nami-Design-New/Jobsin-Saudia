@@ -1,790 +1,1033 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jobs in saudi</title>
-    <link rel="shortcut icon" href="assets/images/fav.svg" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="assets/images/fav.svg"
+      type="image/x-icon"
+    />
     <!-- css -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
 
-<body>
-  <!-- loader -->
+  <body>
+    <!-- loader -->
     <div class="preloader">
-        <div class="preloaderImg"></div>
+      <div class="preloaderImg"></div>
     </div>
 
     <div class="layer"></div>
     <!-- search container -->
     <div class="search-container">
-        <div class="inner-contianer">
-            <form action="" class="container">
-                <div class="row justify-content-center">
-                    <div class="col-12 d-flex justify-content-end">
-                        <a href="javascript: void(0)" class="closeSearch">
-                            <i class="fa-light fa-xmark"></i>
-                        </a>
-                    </div>
-                    <div class="input-field col-lg-8 col-11">
-                        <div class="form">
-                            <input type="text" id="search" name="search" placeholder="SEARCH">
-                            <button type="submit"><i class="fa-light fa-magnifying-glass"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
+      <div class="inner-contianer">
+        <form action="" class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 d-flex justify-content-end">
+              <a href="javascript: void(0)" class="closeSearch">
+                <i class="fa-light fa-xmark"></i>
+              </a>
+            </div>
+            <div class="input-field col-lg-8 col-11">
+              <div class="form">
+                <input
+                  type="text"
+                  id="search"
+                  name="search"
+                  placeholder="SEARCH"
+                />
+                <button type="submit">
+                  <i class="fa-light fa-magnifying-glass"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
     <!-- header -->
     <header>
-        <!-- nav bar menu -->
-        <nav class="container">
-            <a href="index.html" class="logo">
-                <img loading="lazy" src="assets/images/logo.svg" alt="logo">
+      <!-- nav bar menu -->
+      <nav class="container">
+        <a href="index.html" class="logo">
+          <img loading="lazy" src="assets/images/logo.svg" alt="logo" />
+        </a>
+        <ul class="nav-links">
+          <li>
+            <a href="index.html" class="active">Home</a>
+          </li>
+          <li>
+            <a href="explore.html">Explore</a>
+          </li>
+          <li>
+            <a href="about-us.html">About Us</a>
+          </li>
+          <li>
+            <a href="contact-us.html">Contact Us</a>
+          </li>
+        </ul>
+        <ul class="util">
+          <li>
+            <a class="lang">
+              <span> ع </span>
             </a>
-            <ul class="nav-links">
-                <li>
-                    <a href="index.html" class="active">Home</a>
-                </li>
-                <li>
-                    <a href="explore.html">Explore</a>
-                </li>
-                <li>
-                    <a href="about-us.html">About Us</a>
-                </li>
-                <li>
-                    <a href="contact-us.html">Contact Us</a>
-                </li>
-            </ul>
-            <ul class="util">
-                <li>
-                   <a class="lang">
-                        <span> ع </span>
-                    </a>
-                </li>
-                <li>
-                    <div id="showNotification">
-                        <small class="count">2</small>
-                        <span>
-                            <i class="fa-duotone fa-bell"></i>
-                        </span>
-                    </div>
-                    <div class="notification_dropDown">
-                        <div class="inner">
-                            <h6><i class="fa-duotone fa-bell"></i> Notifications</h6>
-                            <ul>
-                                <li>
-                                    <div class="img">
-                                        <img loading="lazy" src="assets/images/no1.png" alt="">
-                                    </div>
-                                    <div class="content">
-                                        <h6>System</h6>
-                                        <p>Welcome to Jobs in saudi</p>
-                                        <small>1 hour ago</small>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="img">
-                                        <img loading="lazy" src="assets/images/no1.png" alt="">
-                                    </div>
-                                    <div class="content">
-                                        <h6>System</h6>
-                                        <p>Welcome to Jobs in saudi</p>
-                                        <small>1 hour ago</small>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="img">
-                                        <img loading="lazy" src="assets/images/no1.png" alt="">
-                                    </div>
-                                    <div class="content">
-                                        <h6>System</h6>
-                                        <p>Welcome to Jobs in saudi</p>
-                                        <small>1 hour ago</small>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="img">
-                                        <img loading="lazy" src="assets/images/no1.png" alt="">
-                                    </div>
-                                    <div class="content">
-                                        <h6>System</h6>
-                                        <p>Welcome to Jobs in saudi</p>
-                                        <small>1 hour ago</small>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="img">
-                                        <img loading="lazy" src="assets/images/no1.png" alt="">
-                                    </div>
-                                    <div class="content">
-                                        <h6>System</h6>
-                                        <p>Welcome to Jobs in saudi</p>
-                                        <small>1 hour ago</small>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-                <li id="showProfile">
-                    <a class="login">
-                        <i class="fa-duotone fa-user"></i>
-                    </a>
-                    <div class="profile_menu">
-                        <!-- individual profile -->
-                        <div class="profile_wrapper">
-                            <div class="profile">
-                                <div class="img">
-                                    <img loading="lazy" src="assets/images/friend-12.jpg" alt="">
-                                </div>
-                                <div class="text">
-                                    <h6>Mahmoud Elkomy</h6>
-                                    <p>+9660123456789</p>
-                                </div>
-                            </div>
-                            <ul>
-                                <li>
-                                    <a href="individual-signup.html">
-                                        <div>
-                                            <span>
-                                                <img loading="lazy" src="assets/images/editAccount.svg" alt="edit">
-                                            </span> Edit Account
-                                        </div>
-                                        <i class="fa-light fa-angle-right"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="create-resume.html">
-                                        <div>
-                                            <span>
-                                                <img loading="lazy" src="assets/images/addCv.svg" alt="edit">
-                                            </span> Add Resume
-                                        </div>
-                                        <i class="fa-light fa-angle-right"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <div>
-                                            <span>
-                                                <i class="fa-regular fa-arrow-right-from-bracket"></i>
-                                            </span> Log out
-                                        </div>
-                                        <i class="fa-light fa-angle-right"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <div>
-                                            <span>
-                                                <i class="fa-solid fa-user-xmark" style="color: red;"></i>
-                                            </span> Delete Account
-                                        </div>
-                                        <i class="fa-light fa-angle-right"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- company profile -->
-                        <div class="profile_wrapper">
-                            <div class="profile">
-                                <div class="img">
-                                    <img loading="lazy" class="logo_contain" src="assets/images/no4.png" alt="">
-                                </div>
-                                <div class="text">
-                                    <h6>Mahmoud Elkomy</h6>
-                                    <p>+9660123456789</p>
-                                </div>
-                            </div>
-                            <ul>
-                                <li>
-                                    <a href="company-signup.html">
-                                        <div>
-                                            <span>
-                                                <img loading="lazy" src="assets/images/editAccount.svg" alt="edit">
-                                            </span> Edit Account
-                                        </div>
-                                        <i class="fa-light fa-angle-right"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="resumes.html">
-                                        <div>
-                                            <span>
-                                                <img loading="lazy" src="assets/images/resumes.svg" alt="edit">
-                                            </span> Resumes
-                                        </div>
-                                        <i class="fa-light fa-angle-right"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="create-resume.html">
-                                        <div>
-                                            <span>
-                                                <img loading="lazy" src="assets/images/addCv.svg" alt="edit">
-                                            </span> Add Resume
-                                        </div>
-                                        <i class="fa-light fa-angle-right"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="pricing-plans.html">
-                                        <div>
-                                            <span>
-                                                <img loading="lazy" src="assets/images/plans.svg" alt="plans">
-                                            </span> Pricing Plans
-                                        </div>
-                                        <i class="fa-light fa-angle-right"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <div>
-                                            <span>
-                                                <i class="fa-regular fa-arrow-right-from-bracket"></i>
-                                            </span> Log out
-                                        </div>
-                                        <i class="fa-light fa-angle-right"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <div>
-                                            <span>
-                                                <i class="fa-solid fa-user-xmark" style="color: red;"></i>
-                                            </span> Delete Account
-                                        </div>
-                                        <i class="fa-light fa-angle-right"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-                <li class="toggler">
-                    <span>
-                        <small></small>
-                        <small></small>
-                    </span>
-                </li>
-            </ul>
-        </nav>
-        <!-- search wrapper -->
-        <!-- <div class="search_wrapper">
-            <div class="container">
-                <form action="">
-                    <div class="search_field">
-                        <button>
-                            <img loading="lazy" src="assets/images/searchIcon.svg" alt="">
-                        </button>
-                        <input type="text" placeholder="Search for employees...">
-                    </div>
-                </form>
+          </li>
+          <li>
+            <div id="showNotification">
+              <small class="count">2</small>
+              <span>
+                <i class="fa-duotone fa-bell"></i>
+              </span>
             </div>
-        </div> -->
+            <div class="notification_dropDown">
+              <div class="inner">
+                <h6><i class="fa-duotone fa-bell"></i> Notifications</h6>
+                <ul>
+                  <li class="promoteNotification">
+                    <a
+                      href="company-profile.html"
+                      class="promoteNotificationLink"
+                    >
+                      <img
+                        loading="lazy"
+                        src="assets/images/banner_resumes.jpg"
+                        alt="promote image"
+                      />
+                    </a>
+                  </li>
+                  <li>
+                    <div class="img">
+                      <img loading="lazy" src="assets/images/no1.png" alt="" />
+                    </div>
+                    <div class="content">
+                      <h6>System</h6>
+                      <p>Welcome to Jobs in saudi</p>
+                      <small>1 hour ago</small>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="img">
+                      <img loading="lazy" src="assets/images/no1.png" alt="" />
+                    </div>
+                    <div class="content">
+                      <h6>System</h6>
+                      <p>Welcome to Jobs in saudi</p>
+                      <small>1 hour ago</small>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="img">
+                      <img loading="lazy" src="assets/images/no1.png" alt="" />
+                    </div>
+                    <div class="content">
+                      <h6>System</h6>
+                      <p>Welcome to Jobs in saudi</p>
+                      <small>1 hour ago</small>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="img">
+                      <img loading="lazy" src="assets/images/no1.png" alt="" />
+                    </div>
+                    <div class="content">
+                      <h6>System</h6>
+                      <p>Welcome to Jobs in saudi</p>
+                      <small>1 hour ago</small>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="img">
+                      <img loading="lazy" src="assets/images/no1.png" alt="" />
+                    </div>
+                    <div class="content">
+                      <h6>System</h6>
+                      <p>Welcome to Jobs in saudi</p>
+                      <small>1 hour ago</small>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li id="showProfile">
+            <a class="login">
+              <i class="fa-duotone fa-user"></i>
+            </a>
+            <div class="profile_menu">
+              <!-- individual profile -->
+              <div class="profile_wrapper">
+                <div class="profile">
+                  <div class="img">
+                    <img
+                      loading="lazy"
+                      src="assets/images/friend-12.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="text">
+                    <h6>Mahmoud Elkomy</h6>
+                    <p>+9660123456789</p>
+                  </div>
+                </div>
+                <ul>
+                  <li>
+                    <a href="individual-signup.html">
+                      <div>
+                        <span>
+                          <img
+                            loading="lazy"
+                            src="assets/images/editAccount.svg"
+                            alt="edit"
+                          />
+                        </span>
+                        Edit Account
+                      </div>
+                      <i class="fa-light fa-angle-right"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="create-resume.html">
+                      <div>
+                        <span>
+                          <img
+                            loading="lazy"
+                            src="assets/images/addCv.svg"
+                            alt="edit"
+                          />
+                        </span>
+                        Add Resume
+                      </div>
+                      <i class="fa-light fa-angle-right"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <div>
+                        <span>
+                          <i class="fa-regular fa-arrow-right-from-bracket"></i>
+                        </span>
+                        Log out
+                      </div>
+                      <i class="fa-light fa-angle-right"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <div>
+                        <span>
+                          <i
+                            class="fa-solid fa-user-xmark"
+                            style="color: red"
+                          ></i>
+                        </span>
+                        Delete Account
+                      </div>
+                      <i class="fa-light fa-angle-right"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- company profile -->
+              <div class="profile_wrapper">
+                <div class="profile">
+                  <div class="img">
+                    <img
+                      loading="lazy"
+                      class="logo_contain"
+                      src="assets/images/no4.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="text">
+                    <h6>Mahmoud Elkomy</h6>
+                    <p>+9660123456789</p>
+                  </div>
+                </div>
+                <ul>
+                  <li>
+                    <a href="company-signup.html">
+                      <div>
+                        <span>
+                          <img
+                            loading="lazy"
+                            src="assets/images/editAccount.svg"
+                            alt="edit"
+                          />
+                        </span>
+                        Edit Account
+                      </div>
+                      <i class="fa-light fa-angle-right"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="resumes.html">
+                      <div>
+                        <span>
+                          <img
+                            loading="lazy"
+                            src="assets/images/resumes.svg"
+                            alt="edit"
+                          />
+                        </span>
+                        Resumes
+                      </div>
+                      <i class="fa-light fa-angle-right"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="create-resume.html">
+                      <div>
+                        <span>
+                          <img
+                            loading="lazy"
+                            src="assets/images/addCv.svg"
+                            alt="edit"
+                          />
+                        </span>
+                        Add Resume
+                      </div>
+                      <i class="fa-light fa-angle-right"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="add-promote.html">
+                      <div>
+                        <span>
+                          <img
+                            loading="lazy"
+                            src="assets/images/prmote.svg"
+                            alt="add promote"
+                          />
+                        </span>
+                        Add Promote
+                      </div>
+                      <i class="fa-light fa-angle-right"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="pricing-plans.html">
+                      <div>
+                        <span>
+                          <img
+                            loading="lazy"
+                            src="assets/images/plans.svg"
+                            alt="plans"
+                          />
+                        </span>
+                        Pricing Plans
+                      </div>
+                      <i class="fa-light fa-angle-right"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <div>
+                        <span>
+                          <i class="fa-regular fa-arrow-right-from-bracket"></i>
+                        </span>
+                        Log out
+                      </div>
+                      <i class="fa-light fa-angle-right"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <div>
+                        <span>
+                          <i
+                            class="fa-solid fa-user-xmark"
+                            style="color: red"
+                          ></i>
+                        </span>
+                        Delete Account
+                      </div>
+                      <i class="fa-light fa-angle-right"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="toggler">
+            <span>
+              <small></small>
+              <small></small>
+            </span>
+          </li>
+        </ul>
+      </nav>
+      <!-- search wrapper -->
+      <!-- <div class="search_wrapper">
+              <div class="container">
+                  <form action="">
+                      <div class="search_field">
+                          <button>
+                              <img loading="lazy" src="assets/images/searchIcon.svg" alt="">
+                          </button>
+                          <input type="text" placeholder="Search for employees...">
+                      </div>
+                  </form>
+              </div>
+          </div> -->
     </header>
     <!-- main wrapper -->
     <main>
-        <section class="company_profile">
-            <div class="container p-0">
-                <div class="row m-0">
-                    <div class="col-12 p-2">
-                        <div class="profile_card">
-                            <div class="img">
-                                <img loading="lazy" src="assets/images/no4.png" alt="">
-                            </div>
-                            <div class="content">
-                                <h6>PLATINUM</h6>
-                                <p>
-                                    <img loading="lazy" src="assets/images/pin.svg" alt="pin"> King Abdullah Dt., Riyadh 12426, Saudi
-                                    Arabi
-                                </p>
-                                <div class="call">
-                                    <a href="tel:+971 4 322 2222">
-                                        <img loading="lazy" src="assets/images/call.svg" alt="">
-                                        Call
-                                    </a>
-                                    <a href="https://wa.me/+971 4 322 2222">
-                                        <img loading="lazy" src="assets/images/whatsapp.svg" alt="">
-                                        WhatsApp
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 p-2">
-                        <div class="bio_card">
-                            <h6>Bio</h6>
-                            <p>
-                                Platinum Office for Domestic Labor Recruitment Services launched with a global vision,
-                                driven by the ambition to create new and easy mechanisms to access safe and highly
-                                qualified labor in order to provide recruitment solutions to find the most appropriate
-                                domestic labor for our clients
-                            </p>
-                        </div>
-                    </div>
+      <section class="company_profile">
+        <div class="container p-0">
+          <div class="row m-0">
+            <div class="col-12 p-2">
+              <div class="profile_card">
+                <div class="img">
+                  <img loading="lazy" src="assets/images/no4.png" alt="" />
                 </div>
-            </div>
-        </section>
-        <section class="explore explore_inCompany">
-            <div class="container p-0">
-                <div class="row m-0">
-                    <div class="col-lg-4 col-12 p-2 filter" id="filter">
-                        <button class="closeFilter" id="closefilter">
-                            <i class="fa-regular fa-x"></i>
-                        </button>
-                        <aside class="asideFilter">
-                            <div class="accordion" id="accordionExample">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingOne">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseOne" aria-expanded="true"
-                                            aria-controls="collapseOne">
-                                            Category
-                                        </button>
-                                    </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse show"
-                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            <div class="categories">
-                                                <div class="checkBoxField">
-                                                    <label for="Engineer">Engineer</label>
-                                                    <input type="checkbox" id="Engineer">
-                                                </div>
-                                                <div class="checkBoxField">
-                                                    <label for="Engineer">Engineer</label>
-                                                    <input type="checkbox" id="Engineer">
-                                                </div>
-                                                <div class="checkBoxField">
-                                                    <label for="Engineer">Engineer</label>
-                                                    <input type="checkbox" id="Engineer">
-                                                </div>
-                                                <div class="checkBoxField">
-                                                    <label for="Engineer">Engineer</label>
-                                                    <input type="checkbox" id="Engineer">
-                                                </div>
-                                                <div class="checkBoxField">
-                                                    <label for="Engineer">Engineer</label>
-                                                    <input type="checkbox" id="Engineer">
-                                                </div>
-                                                <div class="checkBoxField">
-                                                    <label for="Engineer">Engineer</label>
-                                                    <input type="checkbox" id="Engineer">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingTwo">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                                            aria-expanded="false" aria-controls="collapseTwo">
-                                            Job
-                                        </button>
-                                    </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse"
-                                        aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            <div class="categories">
-                                                <div class="checkBoxField">
-                                                    <label for="Engineer">Engineer</label>
-                                                    <input type="checkbox" id="Engineer">
-                                                </div>
-                                                <div class="checkBoxField">
-                                                    <label for="Engineer">Engineer</label>
-                                                    <input type="checkbox" id="Engineer">
-                                                </div>
-                                                <div class="checkBoxField">
-                                                    <label for="Engineer">Engineer</label>
-                                                    <input type="checkbox" id="Engineer">
-                                                </div>
-                                                <div class="checkBoxField">
-                                                    <label for="Engineer">Engineer</label>
-                                                    <input type="checkbox" id="Engineer">
-                                                </div>
-                                                <div class="checkBoxField">
-                                                    <label for="Engineer">Engineer</label>
-                                                    <input type="checkbox" id="Engineer">
-                                                </div>
-                                                <div class="checkBoxField">
-                                                    <label for="Engineer">Engineer</label>
-                                                    <input type="checkbox" id="Engineer">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingThree">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                                            aria-expanded="false" aria-controls="collapseThree">
-                                            Offers Type
-                                        </button>
-                                    </h2>
-                                    <div id="collapseThree" class="accordion-collapse collapse"
-                                        aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            <div class="categories">
-                                                <div class="checkBoxField">
-                                                    <label for="individual">Individual</label>
-                                                    <input type="radio" id="individual" name="offerTupe" checked>
-                                                </div>
-                                                <div class="checkBoxField">
-                                                    <label for="company">Company</label>
-                                                    <input type="radio" id="company" name="offerTupe">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingFour">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseFour"
-                                            aria-expanded="false" aria-controls="collapseFour">
-                                            Nationality
-                                        </button>
-                                    </h2>
-                                    <div id="collapseFour" class="accordion-collapse collapse"
-                                        aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            <div class="categories">
-                                                <div class="checkBoxField">
-                                                    <label for="Engineer">
-                                                        <img loading="lazy" src="assets/images/flag.png" alt="">
-                                                        Egypt
-                                                    </label>
-                                                    <input type="checkbox" id="Engineer">
-                                                </div>
-                                                <div class="checkBoxField">
-                                                    <label for="Engineer">
-                                                        <img loading="lazy" src="assets/images/flag.png" alt="">
-                                                        Egypt
-                                                    </label>
-                                                    <input type="checkbox" id="Engineer">
-                                                </div>
-                                                <div class="checkBoxField">
-                                                    <label for="Engineer">
-                                                        <img loading="lazy" src="assets/images/flag.png" alt="">
-                                                        Egypt
-                                                    </label>
-                                                    <input type="checkbox" id="Engineer">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingFive">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseFive"
-                                            aria-expanded="false" aria-controls="collapseFive">
-                                            Gender
-                                        </button>
-                                    </h2>
-                                    <div id="collapseFive" class="accordion-collapse collapse"
-                                        aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            <div class="categories">
-                                                <div class="checkBoxField">
-                                                    <label for="male">Male</label>
-                                                    <input type="radio" id="male" name="gender" checked>
-                                                </div>
-                                                <div class="checkBoxField">
-                                                    <label for="female">Female</label>
-                                                    <input type="radio" id="female" name="gender">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </aside>
-                    </div>
-                    <div class="col-lg-8 col-12 p-2">
-                        <div class="row m-0">
-                            <div class="col-12 p-2 sortBy" id="openfilter">
-                                <i class="fa-solid fa-arrow-down-wide-short"></i>
-                                <span>Sort By</span>
-                            </div>
-                            <div class="col-lg-6 col-12 p-2">
-                                <a href="profile.html" class="profile_card">
-                                    <div class="img">
-                                        <img loading="lazy" src="assets/images/friend-7.jpg" alt="">
-                                    </div>
-                                    <div class="owner">
-                                        <h6>Mahmoud Elkomy</h6>
-                                        <div class="title_age">
-                                            <span>Senior UI/UX</span>
-                                            <span>27 years old</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-lg-6 col-12 p-2">
-                                <a href="profile.html" class="profile_card">
-                                    <div class="img">
-                                        <img loading="lazy" src="assets/images/friend-8.jpg" alt="">
-                                    </div>
-                                    <div class="owner">
-                                        <h6>Hassan Ibrahim</h6>
-                                        <div class="title_age">
-                                            <span>Project Manager</span>
-                                            <span>34 years old</span>
-                                        </div>
-                                        <div class="label">
-                                            <img loading="lazy" src="assets/images/no4.png" alt="">
-                                            <h6>Rawafed Recruitment Company</h6>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-lg-6 col-12 p-2">
-                                <a href="profile.html" class="profile_card">
-                                    <div class="img">
-                                        <img loading="lazy" src="assets/images/friend-12.jpg" alt="">
-                                    </div>
-                                    <div class="owner">
-                                        <h6>Mahmoud Elkomy</h6>
-                                        <div class="title_age">
-                                            <span>Senior UI/UX</span>
-                                            <span>27 years old</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-lg-6 col-12 p-2">
-                                <a href="profile.html" class="profile_card">
-                                    <div class="img">
-                                        <img loading="lazy" src="assets/images/friend-11.jpg" alt="">
-                                    </div>
-                                    <div class="owner">
-                                        <h6>Mahmoud Elkomy</h6>
-                                        <div class="title_age">
-                                            <span>Senior UI/UX</span>
-                                            <span>27 years old</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-lg-6 col-12 p-2">
-                                <a href="profile.html" class="profile_card">
-                                    <div class="img">
-                                        <img loading="lazy" src="assets/images/friend-10.jpg" alt="">
-                                    </div>
-                                    <div class="owner">
-                                        <h6>Hala Hassan</h6>
-                                        <div class="title_age">
-                                            <span>Senior UI/UX</span>
-                                            <span>27 years old</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-lg-6 col-12 p-2">
-                                <a href="profile.html" class="profile_card">
-                                    <div class="img">
-                                        <img loading="lazy" src="assets/images/friend-9.jpg" alt="">
-                                    </div>
-                                    <div class="owner">
-                                        <h6>Hala Hassan</h6>
-                                        <div class="title_age">
-                                            <span>Senior UI/UX</span>
-                                            <span>27 years old</span>
-                                        </div>
-                                        <div class="label">
-                                            <img loading="lazy" src="assets/images/no4.png" alt="">
-                                            <h6>Platinum Company</h6>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-lg-6 col-12 p-2">
-                                <a href="profile.html" class="profile_card">
-                                    <div class="img">
-                                        <img loading="lazy" src="assets/images/friend-5.jpg" alt="">
-                                    </div>
-                                    <div class="owner">
-                                        <h6>Hala Hassan</h6>
-                                        <div class="title_age">
-                                            <span>Senior UI/UX</span>
-                                            <span>27 years old</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="content">
+                  <h6>PLATINUM</h6>
+                  <p>
+                    <img loading="lazy" src="assets/images/pin.svg" alt="pin" />
+                    King Abdullah Dt., Riyadh 12426, Saudi Arabi
+                  </p>
+                  <div class="call">
+                    <a href="tel:+971 4 322 2222">
+                      <img loading="lazy" src="assets/images/call.svg" alt="" />
+                      Call
+                    </a>
+                    <a href="https://wa.me/+971 4 322 2222">
+                      <img
+                        loading="lazy"
+                        src="assets/images/whatsapp.svg"
+                        alt=""
+                      />
+                      WhatsApp
+                    </a>
+                  </div>
                 </div>
+              </div>
             </div>
-        </section>
+            <div class="col-12 p-2">
+              <div class="bio_card">
+                <h6>Bio</h6>
+                <p>
+                  Platinum Office for Domestic Labor Recruitment Services
+                  launched with a global vision, driven by the ambition to
+                  create new and easy mechanisms to access safe and highly
+                  qualified labor in order to provide recruitment solutions to
+                  find the most appropriate domestic labor for our clients
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="explore explore_inCompany">
+        <div class="container p-0">
+          <div class="row m-0">
+            <div class="col-lg-4 col-12 p-2 filter" id="filter">
+              <button class="closeFilter" id="closefilter">
+                <i class="fa-regular fa-x"></i>
+              </button>
+              <aside class="asideFilter">
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        Category
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseOne"
+                      class="accordion-collapse collapse show"
+                      aria-labelledby="headingOne"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <div class="categories">
+                          <div class="checkBoxField">
+                            <label for="Engineer">Engineer</label>
+                            <input type="checkbox" id="Engineer" />
+                          </div>
+                          <div class="checkBoxField">
+                            <label for="Engineer">Engineer</label>
+                            <input type="checkbox" id="Engineer" />
+                          </div>
+                          <div class="checkBoxField">
+                            <label for="Engineer">Engineer</label>
+                            <input type="checkbox" id="Engineer" />
+                          </div>
+                          <div class="checkBoxField">
+                            <label for="Engineer">Engineer</label>
+                            <input type="checkbox" id="Engineer" />
+                          </div>
+                          <div class="checkBoxField">
+                            <label for="Engineer">Engineer</label>
+                            <input type="checkbox" id="Engineer" />
+                          </div>
+                          <div class="checkBoxField">
+                            <label for="Engineer">Engineer</label>
+                            <input type="checkbox" id="Engineer" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        Job
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseTwo"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingTwo"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <div class="categories">
+                          <div class="checkBoxField">
+                            <label for="Engineer">Engineer</label>
+                            <input type="checkbox" id="Engineer" />
+                          </div>
+                          <div class="checkBoxField">
+                            <label for="Engineer">Engineer</label>
+                            <input type="checkbox" id="Engineer" />
+                          </div>
+                          <div class="checkBoxField">
+                            <label for="Engineer">Engineer</label>
+                            <input type="checkbox" id="Engineer" />
+                          </div>
+                          <div class="checkBoxField">
+                            <label for="Engineer">Engineer</label>
+                            <input type="checkbox" id="Engineer" />
+                          </div>
+                          <div class="checkBoxField">
+                            <label for="Engineer">Engineer</label>
+                            <input type="checkbox" id="Engineer" />
+                          </div>
+                          <div class="checkBoxField">
+                            <label for="Engineer">Engineer</label>
+                            <input type="checkbox" id="Engineer" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                      >
+                        Offers Type
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseThree"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingThree"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <div class="categories">
+                          <div class="checkBoxField">
+                            <label for="individual">Individual</label>
+                            <input
+                              type="radio"
+                              id="individual"
+                              name="offerTupe"
+                              checked
+                            />
+                          </div>
+                          <div class="checkBoxField">
+                            <label for="company">Company</label>
+                            <input type="radio" id="company" name="offerTupe" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour"
+                        aria-expanded="false"
+                        aria-controls="collapseFour"
+                      >
+                        Nationality
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseFour"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingFour"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <div class="categories">
+                          <div class="checkBoxField">
+                            <label for="Engineer">
+                              <img
+                                loading="lazy"
+                                src="assets/images/flag.png"
+                                alt=""
+                              />
+                              Egypt
+                            </label>
+                            <input type="checkbox" id="Engineer" />
+                          </div>
+                          <div class="checkBoxField">
+                            <label for="Engineer">
+                              <img
+                                loading="lazy"
+                                src="assets/images/flag.png"
+                                alt=""
+                              />
+                              Egypt
+                            </label>
+                            <input type="checkbox" id="Engineer" />
+                          </div>
+                          <div class="checkBoxField">
+                            <label for="Engineer">
+                              <img
+                                loading="lazy"
+                                src="assets/images/flag.png"
+                                alt=""
+                              />
+                              Egypt
+                            </label>
+                            <input type="checkbox" id="Engineer" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFive"
+                        aria-expanded="false"
+                        aria-controls="collapseFive"
+                      >
+                        Gender
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseFive"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingFive"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <div class="categories">
+                          <div class="checkBoxField">
+                            <label for="male">Male</label>
+                            <input
+                              type="radio"
+                              id="male"
+                              name="gender"
+                              checked
+                            />
+                          </div>
+                          <div class="checkBoxField">
+                            <label for="female">Female</label>
+                            <input type="radio" id="female" name="gender" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </aside>
+            </div>
+            <div class="col-lg-8 col-12 p-2">
+              <div class="row m-0">
+                <div class="col-12 p-2 sortBy" id="openfilter">
+                  <i class="fa-solid fa-arrow-down-wide-short"></i>
+                  <span>Sort By</span>
+                </div>
+                <div class="col-lg-6 col-12 p-2">
+                  <a href="profile.html" class="profile_card">
+                    <div class="img">
+                      <img
+                        loading="lazy"
+                        src="assets/images/friend-7.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="owner">
+                      <h6>Mahmoud Elkomy</h6>
+                      <div class="title_age">
+                        <span>Senior UI/UX</span>
+                        <span>27 years old</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-6 col-12 p-2">
+                  <a href="profile.html" class="profile_card">
+                    <div class="img">
+                      <img
+                        loading="lazy"
+                        src="assets/images/friend-8.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="owner">
+                      <h6>Hassan Ibrahim</h6>
+                      <div class="title_age">
+                        <span>Project Manager</span>
+                        <span>34 years old</span>
+                      </div>
+                      <div class="label">
+                        <img
+                          loading="lazy"
+                          src="assets/images/no4.png"
+                          alt=""
+                        />
+                        <h6>Rawafed Recruitment Company</h6>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-6 col-12 p-2">
+                  <a href="profile.html" class="profile_card">
+                    <div class="img">
+                      <img
+                        loading="lazy"
+                        src="assets/images/friend-12.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="owner">
+                      <h6>Mahmoud Elkomy</h6>
+                      <div class="title_age">
+                        <span>Senior UI/UX</span>
+                        <span>27 years old</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-6 col-12 p-2">
+                  <a href="profile.html" class="profile_card">
+                    <div class="img">
+                      <img
+                        loading="lazy"
+                        src="assets/images/friend-11.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="owner">
+                      <h6>Mahmoud Elkomy</h6>
+                      <div class="title_age">
+                        <span>Senior UI/UX</span>
+                        <span>27 years old</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-6 col-12 p-2">
+                  <a href="profile.html" class="profile_card">
+                    <div class="img">
+                      <img
+                        loading="lazy"
+                        src="assets/images/friend-10.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="owner">
+                      <h6>Hala Hassan</h6>
+                      <div class="title_age">
+                        <span>Senior UI/UX</span>
+                        <span>27 years old</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-6 col-12 p-2">
+                  <a href="profile.html" class="profile_card">
+                    <div class="img">
+                      <img
+                        loading="lazy"
+                        src="assets/images/friend-9.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="owner">
+                      <h6>Hala Hassan</h6>
+                      <div class="title_age">
+                        <span>Senior UI/UX</span>
+                        <span>27 years old</span>
+                      </div>
+                      <div class="label">
+                        <img
+                          loading="lazy"
+                          src="assets/images/no4.png"
+                          alt=""
+                        />
+                        <h6>Platinum Company</h6>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-6 col-12 p-2">
+                  <a href="profile.html" class="profile_card">
+                    <div class="img">
+                      <img
+                        loading="lazy"
+                        src="assets/images/friend-5.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="owner">
+                      <h6>Hala Hassan</h6>
+                      <div class="title_age">
+                        <span>Senior UI/UX</span>
+                        <span>27 years old</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- footer -->
     <footer>
-        <div class="container">
-            <div class="row m-0">
-                <div class="col-lg-4 col-12 p-2">
-                    <div class="about_company">
-                        <div class="logo">
-                            <a href="index.html">
-                                <img loading="lazy" src="assets/images/logo.svg" alt="logo">
-                            </a>
-                        </div>
-                        <div class="text">
-                            <p>
-                                Jobsin saudi is the heart of the design community and the best resource to discover and
-                                connect with designers and jobs worldwide.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12 p-2">
-                    <div class="col">
-                        <h3>Company</h3>
-                        <ul>
-                            <li>
-                                <a href="about-us.html">
-                                    <span><i class="fa-light fa-arrow-up-right-from-square"></i></span> About us
-                                </a>
-                            </li>
-                            <li>
-                                <a href="faqs.html"><span><i class="fa-light fa-arrow-up-right-from-square"></i></span>
-                                    FAQs
-                                </a>
-                            </li>
-                            <li>
-                                <a href="contact-us.html"><span><i class="fa-light fa-arrow-up-right-from-square"></i></span>
-                                    Contact us
-                                </a>
-                            </li>
-                            <li>
-                                <a href="terms.html"><span><i class="fa-light fa-arrow-up-right-from-square"></i></span>
-                                    Terms & Conditions
-                                </a>
-                            </li>
-                            <li>
-                                <a href="privacy.html"><span><i class="fa-light fa-arrow-up-right-from-square"></i></span>
-                                    Privacy & Policy
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12 p-2">
-                    <div class="col">
-                        <h3>popular categories</h3>
-                        <ul>
-                            <li>
-                                <a href="index.html">
-                                    <span><i class="fa-light fa-arrow-up-right-from-square"></i></span> Engineer
-                                </a>
-                            </li>
-                            <li>
-                                <a href="index.html"><span><i class="fa-light fa-arrow-up-right-from-square"></i></span>
-                                    baby sitter
-                                </a>
-                            </li>
-                            <li>
-                                <a href="index.html"><span><i class="fa-light fa-arrow-up-right-from-square"></i></span>
-                                    Carpenter
-                                </a>
-                            </li>
-                            <li>
-                                <a href="index.html"><span><i class="fa-light fa-arrow-up-right-from-square"></i></span>
-                                    Cook
-                                </a>
-                            </li>
-                            <li>
-                                <a href="index.html"><span><i class="fa-light fa-arrow-up-right-from-square"></i></span>
-                                    Mechanic
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-12 p-2">
-                    <div class="col">
-                        <h3>Download App</h3>
-                        <ul class="download-app">
-                            <li>
-                                <a href="#">
-                                    <div class="icon">
-                                        <i class="fa-brands fa-apple"></i>
-                                    </div>
-                                    <div class="text">
-                                        <p>
-                                            App Store
-                                        </p>
-                                    </div>
-
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div class="icon">
-                                        <i class="fa-brands fa-google-play"></i>
-                                    </div>
-                                    <div class="text">
-                                        <p>
-                                            Google Play
-                                        </p>
-                                    </div>
-
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-12 p-2">
-                    <div class="copy_rights">
-                        <p>Copyright &copy;  <script>document.write(new Date().getFullYear())</script>. All Rights Reserved to <a href="index.html">Jobs in saudi</a></p>
-                        <div class="social_media">
-                            <ul>
-                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                                <li>
-                                    <a href="#">
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" x="0"
-                                            y="0" viewBox="0 0 1226.37 1226.37"
-                                            style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
-                                            <g>
-                                                <path
-                                                    d="M727.348 519.284 1174.075 0h-105.86L680.322 450.887 370.513 0H13.185l468.492 681.821L13.185 1226.37h105.866l409.625-476.152 327.181 476.152h357.328L727.322 519.284zM582.35 687.828l-47.468-67.894-377.686-540.24H319.8l304.797 435.991 47.468 67.894 396.2 566.721H905.661L582.35 687.854z"
-                                                    fill="#aaaaaa" opacity="1" data-original="#aaaaaa" class=""></path>
-                                            </g>
-                                        </svg>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row m-0">
+          <div class="col-lg-4 col-12 p-2">
+            <div class="about_company">
+              <div class="logo">
+                <a href="index.html">
+                  <img loading="lazy" src="assets/images/logo.svg" alt="logo" />
+                </a>
+              </div>
+              <div class="text">
+                <p>
+                  Jobsin saudi is the heart of the design community and the best
+                  resource to discover and connect with designers and jobs
+                  worldwide.
+                </p>
+              </div>
             </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-12 p-2">
+            <div class="col">
+              <h3>Company</h3>
+              <ul>
+                <li>
+                  <a href="about-us.html">
+                    <span
+                      ><i class="fa-light fa-arrow-up-right-from-square"></i
+                    ></span>
+                    About us
+                  </a>
+                </li>
+                <li>
+                  <a href="faqs.html"
+                    ><span
+                      ><i class="fa-light fa-arrow-up-right-from-square"></i
+                    ></span>
+                    FAQs
+                  </a>
+                </li>
+                <li>
+                  <a href="contact-us.html"
+                    ><span
+                      ><i class="fa-light fa-arrow-up-right-from-square"></i
+                    ></span>
+                    Contact us
+                  </a>
+                </li>
+                <li>
+                  <a href="terms.html"
+                    ><span
+                      ><i class="fa-light fa-arrow-up-right-from-square"></i
+                    ></span>
+                    Terms & Conditions
+                  </a>
+                </li>
+                <li>
+                  <a href="privacy.html"
+                    ><span
+                      ><i class="fa-light fa-arrow-up-right-from-square"></i
+                    ></span>
+                    Privacy & Policy
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-12 p-2">
+            <div class="col">
+              <h3>popular categories</h3>
+              <ul>
+                <li>
+                  <a href="index.html">
+                    <span
+                      ><i class="fa-light fa-arrow-up-right-from-square"></i
+                    ></span>
+                    Engineer
+                  </a>
+                </li>
+                <li>
+                  <a href="index.html"
+                    ><span
+                      ><i class="fa-light fa-arrow-up-right-from-square"></i
+                    ></span>
+                    baby sitter
+                  </a>
+                </li>
+                <li>
+                  <a href="index.html"
+                    ><span
+                      ><i class="fa-light fa-arrow-up-right-from-square"></i
+                    ></span>
+                    Carpenter
+                  </a>
+                </li>
+                <li>
+                  <a href="index.html"
+                    ><span
+                      ><i class="fa-light fa-arrow-up-right-from-square"></i
+                    ></span>
+                    Cook
+                  </a>
+                </li>
+                <li>
+                  <a href="index.html"
+                    ><span
+                      ><i class="fa-light fa-arrow-up-right-from-square"></i
+                    ></span>
+                    Mechanic
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-2 col-12 p-2">
+            <div class="col">
+              <h3>Download App</h3>
+              <ul class="download-app">
+                <li>
+                  <a href="#">
+                    <div class="icon">
+                      <i class="fa-brands fa-apple"></i>
+                    </div>
+                    <div class="text">
+                      <p>App Store</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="icon">
+                      <i class="fa-brands fa-google-play"></i>
+                    </div>
+                    <div class="text">
+                      <p>Google Play</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 p-2">
+            <div class="copy_rights">
+              <p>
+                Copyright &copy;
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                . All Rights Reserved to <a href="index.html">Jobs in saudi</a>
+              </p>
+              <div class="social_media">
+                <ul>
+                  <li>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        version="1.1"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        width="14"
+                        height="14"
+                        x="0"
+                        y="0"
+                        viewBox="0 0 1226.37 1226.37"
+                        style="enable-background: new 0 0 512 512"
+                        xml:space="preserve"
+                        class=""
+                      >
+                        <g>
+                          <path
+                            d="M727.348 519.284 1174.075 0h-105.86L680.322 450.887 370.513 0H13.185l468.492 681.821L13.185 1226.37h105.866l409.625-476.152 327.181 476.152h357.328L727.322 519.284zM582.35 687.828l-47.468-67.894-377.686-540.24H319.8l304.797 435.991 47.468 67.894 396.2 566.721H905.661L582.35 687.854z"
+                            fill="#aaaaaa"
+                            opacity="1"
+                            data-original="#aaaaaa"
+                            class=""
+                          ></path>
+                        </g>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </footer>
     <!-- js -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/app.js"></script>
     <script>
-        let openFilter = document.getElementById("openfilter");
-        let closeFilter = document.getElementById("closefilter");
-        let filter = document.getElementById("filter");
-        openfilter.addEventListener("click", () => {
-            filter.classList.add("active");
-        });
-        closefilter.addEventListener("click", () => {
-            filter.classList.remove("active");
-        });
+      let openFilter = document.getElementById("openfilter");
+      let closeFilter = document.getElementById("closefilter");
+      let filter = document.getElementById("filter");
+      openfilter.addEventListener("click", () => {
+        filter.classList.add("active");
+      });
+      closefilter.addEventListener("click", () => {
+        filter.classList.remove("active");
+      });
     </script>
-</body>
-
+  </body>
 </html>

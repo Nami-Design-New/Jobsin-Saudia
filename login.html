@@ -1,548 +1,728 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jobs in saudi</title>
-    <link rel="shortcut icon" href="assets/images/fav.svg" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="assets/images/fav.svg"
+      type="image/x-icon"
+    />
     <!-- css -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/jquery.ccpicker.css">
-</head>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/jquery.ccpicker.css" />
+  </head>
 
-<body>
+  <body>
     <!-- loader -->
     <div class="preloader">
-        <div class="preloaderImg"></div>
+      <div class="preloaderImg"></div>
     </div>
 
     <div class="layer"></div>
     <!-- search container -->
     <div class="search-container">
-        <div class="inner-contianer">
-            <form action="" class="container">
-                <div class="row justify-content-center">
-                    <div class="col-12 d-flex justify-content-end">
-                        <a href="javascript: void(0)" class="closeSearch">
-                            <i class="fa-light fa-xmark"></i>
-                        </a>
-                    </div>
-                    <div class="input-field col-lg-8 col-11">
-                        <div class="form">
-                            <input type="text" id="search" name="search" placeholder="SEARCH">
-                            <button type="submit"><i class="fa-light fa-magnifying-glass"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
+      <div class="inner-contianer">
+        <form action="" class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 d-flex justify-content-end">
+              <a href="javascript: void(0)" class="closeSearch">
+                <i class="fa-light fa-xmark"></i>
+              </a>
+            </div>
+            <div class="input-field col-lg-8 col-11">
+              <div class="form">
+                <input
+                  type="text"
+                  id="search"
+                  name="search"
+                  placeholder="SEARCH"
+                />
+                <button type="submit">
+                  <i class="fa-light fa-magnifying-glass"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
     <!-- header -->
     <header>
-        <!-- nav bar menu -->
-        <nav class="container">
-            <a href="index.html" class="logo">
-                <img loading="lazy" src="assets/images/logo.svg" alt="logo">
+      <!-- nav bar menu -->
+      <nav class="container">
+        <a href="index.html" class="logo">
+          <img loading="lazy" src="assets/images/logo.svg" alt="logo" />
+        </a>
+        <ul class="nav-links">
+          <li>
+            <a href="index.html" class="active">Home</a>
+          </li>
+          <li>
+            <a href="explore.html">Explore</a>
+          </li>
+          <li>
+            <a href="about-us.html">About Us</a>
+          </li>
+          <li>
+            <a href="contact-us.html">Contact Us</a>
+          </li>
+        </ul>
+        <ul class="util">
+          <li>
+            <a class="lang">
+              <span> ع </span>
             </a>
-            <ul class="nav-links">
-                <li>
-                    <a href="index.html" class="active">Home</a>
-                </li>
-                <li>
-                    <a href="explore.html">Explore</a>
-                </li>
-                <li>
-                    <a href="about-us.html">About Us</a>
-                </li>
-                <li>
-                    <a href="contact-us.html">Contact Us</a>
-                </li>
-            </ul>
-            <ul class="util">
-                <li>
-                   <a class="lang">
-                        <span> ع </span>
-                    </a>
-                </li>
-                <li>
-                    <div id="showNotification">
-                        <small class="count">2</small>
-                        <span>
-                            <i class="fa-duotone fa-bell"></i>
-                        </span>
-                    </div>
-                    <div class="notification_dropDown">
-                        <div class="inner">
-                            <h6><i class="fa-duotone fa-bell"></i> Notifications</h6>
-                            <ul>
-                                <li>
-                                    <div class="img">
-                                        <img loading="lazy" src="assets/images/no1.png" alt="">
-                                    </div>
-                                    <div class="content">
-                                        <h6>System</h6>
-                                        <p>Welcome to Jobs in saudi</p>
-                                        <small>1 hour ago</small>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="img">
-                                        <img loading="lazy" src="assets/images/no1.png" alt="">
-                                    </div>
-                                    <div class="content">
-                                        <h6>System</h6>
-                                        <p>Welcome to Jobs in saudi</p>
-                                        <small>1 hour ago</small>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="img">
-                                        <img loading="lazy" src="assets/images/no1.png" alt="">
-                                    </div>
-                                    <div class="content">
-                                        <h6>System</h6>
-                                        <p>Welcome to Jobs in saudi</p>
-                                        <small>1 hour ago</small>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="img">
-                                        <img loading="lazy" src="assets/images/no1.png" alt="">
-                                    </div>
-                                    <div class="content">
-                                        <h6>System</h6>
-                                        <p>Welcome to Jobs in saudi</p>
-                                        <small>1 hour ago</small>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="img">
-                                        <img loading="lazy" src="assets/images/no1.png" alt="">
-                                    </div>
-                                    <div class="content">
-                                        <h6>System</h6>
-                                        <p>Welcome to Jobs in saudi</p>
-                                        <small>1 hour ago</small>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-                <li id="showProfile">
-                    <a class="login">
-                        <i class="fa-duotone fa-user"></i>
-                    </a>
-                    <div class="profile_menu">
-                        <!-- individual profile -->
-                        <div class="profile_wrapper">
-                            <div class="profile">
-                                <div class="img">
-                                    <img loading="lazy" src="assets/images/friend-12.jpg" alt="">
-                                </div>
-                                <div class="text">
-                                    <h6>Mahmoud Elkomy</h6>
-                                    <p>+9660123456789</p>
-                                </div>
-                            </div>
-                            <ul>
-                                <li>
-                                    <a href="individual-signup.html">
-                                        <div>
-                                            <span>
-                                                <img loading="lazy" src="assets/images/editAccount.svg" alt="edit">
-                                            </span> Edit Account
-                                        </div>
-                                        <i class="fa-light fa-angle-right"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="create-resume.html">
-                                        <div>
-                                            <span>
-                                                <img loading="lazy" src="assets/images/addCv.svg" alt="edit">
-                                            </span> Add Resume
-                                        </div>
-                                        <i class="fa-light fa-angle-right"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <div>
-                                            <span>
-                                                <i class="fa-regular fa-arrow-right-from-bracket"></i>
-                                            </span> Log out
-                                        </div>
-                                        <i class="fa-light fa-angle-right"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <div>
-                                            <span>
-                                                <i class="fa-solid fa-user-xmark" style="color: red;"></i>
-                                            </span> Delete Account
-                                        </div>
-                                        <i class="fa-light fa-angle-right"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- company profile -->
-                        <div class="profile_wrapper">
-                            <div class="profile">
-                                <div class="img">
-                                    <img loading="lazy" class="logo_contain" src="assets/images/no4.png" alt="">
-                                </div>
-                                <div class="text">
-                                    <h6>Mahmoud Elkomy</h6>
-                                    <p>+9660123456789</p>
-                                </div>
-                            </div>
-                            <ul>
-                                <li>
-                                    <a href="company-signup.html">
-                                        <div>
-                                            <span>
-                                                <img loading="lazy" src="assets/images/editAccount.svg" alt="edit">
-                                            </span> Edit Account
-                                        </div>
-                                        <i class="fa-light fa-angle-right"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="resumes.html">
-                                        <div>
-                                            <span>
-                                                <img loading="lazy" src="assets/images/resumes.svg" alt="edit">
-                                            </span> Resumes
-                                        </div>
-                                        <i class="fa-light fa-angle-right"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="create-resume.html">
-                                        <div>
-                                            <span>
-                                                <img loading="lazy" src="assets/images/addCv.svg" alt="edit">
-                                            </span> Add Resume
-                                        </div>
-                                        <i class="fa-light fa-angle-right"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="pricing-plans.html">
-                                        <div>
-                                            <span>
-                                                <img loading="lazy" src="assets/images/plans.svg" alt="plans">
-                                            </span> Pricing Plans
-                                        </div>
-                                        <i class="fa-light fa-angle-right"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <div>
-                                            <span>
-                                                <i class="fa-regular fa-arrow-right-from-bracket"></i>
-                                            </span> Log out
-                                        </div>
-                                        <i class="fa-light fa-angle-right"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <div>
-                                            <span>
-                                                <i class="fa-solid fa-user-xmark" style="color: red;"></i>
-                                            </span> Delete Account
-                                        </div>
-                                        <i class="fa-light fa-angle-right"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-                <li class="toggler">
-                    <span>
-                        <small></small>
-                        <small></small>
-                    </span>
-                </li>
-            </ul>
-        </nav>
-        <!-- search wrapper -->
-        <!-- <div class="search_wrapper">
-            <div class="container">
-                <form action="">
-                    <div class="search_field">
-                        <button>
-                            <img loading="lazy" src="assets/images/searchIcon.svg" alt="">
-                        </button>
-                        <input type="text" placeholder="Search for employees...">
-                    </div>
-                </form>
+          </li>
+          <li>
+            <div id="showNotification">
+              <small class="count">2</small>
+              <span>
+                <i class="fa-duotone fa-bell"></i>
+              </span>
             </div>
-        </div> -->
+            <div class="notification_dropDown">
+              <div class="inner">
+                <h6><i class="fa-duotone fa-bell"></i> Notifications</h6>
+                <ul>
+                    <li class="promoteNotification">
+                      <a
+                        href="company-profile.html"
+                        class="promoteNotificationLink"
+                      >
+                        <img
+                          loading="lazy"
+                          src="assets/images/banner_resumes.jpg"
+                          alt="promote image"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <div class="img">
+                        <img loading="lazy" src="assets/images/no1.png" alt="" />
+                      </div>
+                      <div class="content">
+                        <h6>System</h6>
+                        <p>Welcome to Jobs in saudi</p>
+                        <small>1 hour ago</small>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="img">
+                        <img loading="lazy" src="assets/images/no1.png" alt="" />
+                      </div>
+                      <div class="content">
+                        <h6>System</h6>
+                        <p>Welcome to Jobs in saudi</p>
+                        <small>1 hour ago</small>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="img">
+                        <img loading="lazy" src="assets/images/no1.png" alt="" />
+                      </div>
+                      <div class="content">
+                        <h6>System</h6>
+                        <p>Welcome to Jobs in saudi</p>
+                        <small>1 hour ago</small>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="img">
+                        <img loading="lazy" src="assets/images/no1.png" alt="" />
+                      </div>
+                      <div class="content">
+                        <h6>System</h6>
+                        <p>Welcome to Jobs in saudi</p>
+                        <small>1 hour ago</small>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="img">
+                        <img loading="lazy" src="assets/images/no1.png" alt="" />
+                      </div>
+                      <div class="content">
+                        <h6>System</h6>
+                        <p>Welcome to Jobs in saudi</p>
+                        <small>1 hour ago</small>
+                      </div>
+                    </li>
+                  </ul>
+              </div>
+            </div>
+          </li>
+          <li id="showProfile">
+            <a class="login">
+              <i class="fa-duotone fa-user"></i>
+            </a>
+            <div class="profile_menu">
+              <!-- individual profile -->
+              <div class="profile_wrapper">
+                <div class="profile">
+                  <div class="img">
+                    <img
+                      loading="lazy"
+                      src="assets/images/friend-12.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="text">
+                    <h6>Mahmoud Elkomy</h6>
+                    <p>+9660123456789</p>
+                  </div>
+                </div>
+                <ul>
+                  <li>
+                    <a href="individual-signup.html">
+                      <div>
+                        <span>
+                          <img
+                            loading="lazy"
+                            src="assets/images/editAccount.svg"
+                            alt="edit"
+                          />
+                        </span>
+                        Edit Account
+                      </div>
+                      <i class="fa-light fa-angle-right"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="create-resume.html">
+                      <div>
+                        <span>
+                          <img
+                            loading="lazy"
+                            src="assets/images/addCv.svg"
+                            alt="edit"
+                          />
+                        </span>
+                        Add Resume
+                      </div>
+                      <i class="fa-light fa-angle-right"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <div>
+                        <span>
+                          <i class="fa-regular fa-arrow-right-from-bracket"></i>
+                        </span>
+                        Log out
+                      </div>
+                      <i class="fa-light fa-angle-right"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <div>
+                        <span>
+                          <i
+                            class="fa-solid fa-user-xmark"
+                            style="color: red"
+                          ></i>
+                        </span>
+                        Delete Account
+                      </div>
+                      <i class="fa-light fa-angle-right"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- company profile -->
+              <div class="profile_wrapper">
+                <div class="profile">
+                  <div class="img">
+                    <img
+                      loading="lazy"
+                      class="logo_contain"
+                      src="assets/images/no4.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="text">
+                    <h6>Mahmoud Elkomy</h6>
+                    <p>+9660123456789</p>
+                  </div>
+                </div>
+                <ul>
+                  <li>
+                    <a href="company-signup.html">
+                      <div>
+                        <span>
+                          <img
+                            loading="lazy"
+                            src="assets/images/editAccount.svg"
+                            alt="edit"
+                          />
+                        </span>
+                        Edit Account
+                      </div>
+                      <i class="fa-light fa-angle-right"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="resumes.html">
+                      <div>
+                        <span>
+                          <img
+                            loading="lazy"
+                            src="assets/images/resumes.svg"
+                            alt="edit"
+                          />
+                        </span>
+                        Resumes
+                      </div>
+                      <i class="fa-light fa-angle-right"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="create-resume.html">
+                      <div>
+                        <span>
+                          <img
+                            loading="lazy"
+                            src="assets/images/addCv.svg"
+                            alt="edit"
+                          />
+                        </span>
+                        Add Resume
+                      </div>
+                      <i class="fa-light fa-angle-right"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="add-promote.html">
+                      <div>
+                        <span>
+                          <img
+                            loading="lazy"
+                            src="assets/images/prmote.svg"
+                            alt="add promote"
+                          />
+                        </span>
+                        Add Promote
+                      </div>
+                      <i class="fa-light fa-angle-right"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="pricing-plans.html">
+                      <div>
+                        <span>
+                          <img
+                            loading="lazy"
+                            src="assets/images/plans.svg"
+                            alt="plans"
+                          />
+                        </span>
+                        Pricing Plans
+                      </div>
+                      <i class="fa-light fa-angle-right"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <div>
+                        <span>
+                          <i class="fa-regular fa-arrow-right-from-bracket"></i>
+                        </span>
+                        Log out
+                      </div>
+                      <i class="fa-light fa-angle-right"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <div>
+                        <span>
+                          <i
+                            class="fa-solid fa-user-xmark"
+                            style="color: red"
+                          ></i>
+                        </span>
+                        Delete Account
+                      </div>
+                      <i class="fa-light fa-angle-right"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="toggler">
+            <span>
+              <small></small>
+              <small></small>
+            </span>
+          </li>
+        </ul>
+      </nav>
+      <!-- search wrapper -->
+      <!-- <div class="search_wrapper">
+              <div class="container">
+                  <form action="">
+                      <div class="search_field">
+                          <button>
+                              <img loading="lazy" src="assets/images/searchIcon.svg" alt="">
+                          </button>
+                          <input type="text" placeholder="Search for employees...">
+                      </div>
+                  </form>
+              </div>
+          </div> -->
     </header>
     <!-- main wrapper -->
     <main>
-        <section class="banner_section">
-            <div class="container">
-                <div class="content">
-                    <h3>Sign In</h3>
-                    <p>Unlock exclusive access to your account</p>
+      <section class="banner_section">
+        <div class="container">
+          <div class="content">
+            <h3>Sign In</h3>
+            <p>Unlock exclusive access to your account</p>
+          </div>
+        </div>
+      </section>
+      <section class="auth_section">
+        <div class="container">
+          <div class="row m-0 justify-content-center">
+            <div class="col-lg-7 col-12 p-2">
+              <div class="auth_form">
+                <div class="title">
+                  <h4>Welcome Back</h4>
+                  <p>
+                    Please enter your mobile number or email to complete the
+                    login process.
+                  </p>
                 </div>
-            </div>
-        </section>
-        <section class="auth_section">
-            <div class="container">
-                <div class="row m-0 justify-content-center">
-                    <div class="col-lg-7 col-12 p-2">
-                        <div class="auth_form">
-                            <div class="title">
-                                <h4>Welcome Back</h4>
-                                <p>Please enter your mobile number or email to complete the login process.</p>
-                            </div>
-                            <form action="otp.html">
-                                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link active" id="pills-phone-tab" data-bs-toggle="pill"
-                                            data-bs-target="#pills-phone" type="button" role="tab"
-                                            aria-controls="pills-phone" aria-selected="true">
-                                            Phone Number
-                                        </button>
-                                    </li>
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link" id="pills-email-tab" data-bs-toggle="pill"
-                                            data-bs-target="#pills-email" type="button" role="tab"
-                                            aria-controls="pills-email" aria-selected="false">
-                                            Email Address
-                                        </button>
-                                    </li>
-                                </ul>
-                                <div class="tab-content" id="pills-tabContent">
-                                    <div class="tab-pane fade show active" id="pills-phone" role="tabpanel"
-                                        aria-labelledby="pills-phone-tab">
-                                        <div class="d-flex gap-2">
-                                            <div class="input_field">
-                                                <div class="country_code_select">
-                                                    <label for="country" class="h">Country</label>
-                                                    <input type="text" id="phoneField1" name="countryPicker"
-                                                        class="country-picker">
-                                                </div>
-                                            </div>
-                                            <div class="input_field w-100">
-                                                <label for="phone"> Phone Number</label>
-                                                <input type="tel" id="phone" name="phone" onfocus="highlight(this)"
-                                                    onblur="unhighlight(this)">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade" id="pills-email" role="tabpanel"
-                                        aria-labelledby="pills-email-tab">
-                                        <div class="input_field">
-                                            <label for="email">Email Address</label>
-                                            <input type="email" id="email" name="email" onfocus="highlight(this)"
-                                                onblur="unhighlight(this)">
-                                        </div>
-                                    </div>
-                                </div>
-                                <p class="continue">
-                                    By continuing, you agree to the
-                                    <a href="terms.html">terms of use</a>
-                                    and
-                                    <a href="privacy.html">privacy policy</a>
-                                    of the application
-                                </p>
-                                <button class="save_btn">Login</button>
-                                <div class="orSignwith">
-                                    <span>or sign with</span>
-                                </div>
-                                <div class="platForms">
-                                    <a href="javascript:void(0)">
-                                        <img loading="lazy" src="assets/images/google.svg" alt="google">
-                                        <p>Continue with Google </p>
-                                    </a>
-                                    <a href="javascript:void(0)">
-                                        <img loading="lazy" src="assets/images/apple.svg" alt="">
-                                        <p>Continue with Apple </p>
-                                    </a>
-                                </div>
-                            </form>
+                <form action="otp.html">
+                  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link active"
+                        id="pills-phone-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-phone"
+                        type="button"
+                        role="tab"
+                        aria-controls="pills-phone"
+                        aria-selected="true"
+                      >
+                        Phone Number
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link"
+                        id="pills-email-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-email"
+                        type="button"
+                        role="tab"
+                        aria-controls="pills-email"
+                        aria-selected="false"
+                      >
+                        Email Address
+                      </button>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="pills-tabContent">
+                    <div
+                      class="tab-pane fade show active"
+                      id="pills-phone"
+                      role="tabpanel"
+                      aria-labelledby="pills-phone-tab"
+                    >
+                      <div class="d-flex gap-2">
+                        <div class="input_field">
+                          <div class="country_code_select">
+                            <label for="country" class="h">Country</label>
+                            <input
+                              type="text"
+                              id="phoneField1"
+                              name="countryPicker"
+                              class="country-picker"
+                            />
+                          </div>
                         </div>
-                    </div>
-                    <div class="col-lg-5 col-12 p-2 d-lg-block d-none">
-                        <div class="img">
-                            <img src="assets/images/login.svg" alt="login">
+                        <div class="input_field w-100">
+                          <label for="phone"> Phone Number</label>
+                          <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            onfocus="highlight(this)"
+                            onblur="unhighlight(this)"
+                          />
                         </div>
+                      </div>
                     </div>
-                </div>
+                    <div
+                      class="tab-pane fade"
+                      id="pills-email"
+                      role="tabpanel"
+                      aria-labelledby="pills-email-tab"
+                    >
+                      <div class="input_field">
+                        <label for="email">Email Address</label>
+                        <input
+                          type="email"
+                          id="email"
+                          name="email"
+                          onfocus="highlight(this)"
+                          onblur="unhighlight(this)"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <p class="continue">
+                    By continuing, you agree to the
+                    <a href="terms.html">terms of use</a>
+                    and
+                    <a href="privacy.html">privacy policy</a>
+                    of the application
+                  </p>
+                  <button class="save_btn">Login</button>
+                  <div class="orSignwith">
+                    <span>or sign with</span>
+                  </div>
+                  <div class="platForms">
+                    <a href="javascript:void(0)">
+                      <img
+                        loading="lazy"
+                        src="assets/images/google.svg"
+                        alt="google"
+                      />
+                      <p>Continue with Google</p>
+                    </a>
+                    <a href="javascript:void(0)">
+                      <img
+                        loading="lazy"
+                        src="assets/images/apple.svg"
+                        alt=""
+                      />
+                      <p>Continue with Apple</p>
+                    </a>
+                  </div>
+                </form>
+              </div>
             </div>
-        </section>
+            <div class="col-lg-5 col-12 p-2 d-lg-block d-none">
+              <div class="img">
+                <img src="assets/images/login.svg" alt="login" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- footer -->
     <footer>
-        <div class="container">
-            <div class="row m-0">
-                <div class="col-lg-4 col-12 p-2">
-                    <div class="about_company">
-                        <div class="logo">
-                            <a href="index.html">
-                                <img loading="lazy" src="assets/images/logo.svg" alt="logo">
-                            </a>
-                        </div>
-                        <div class="text">
-                            <p>
-                                Jobsin saudi is the heart of the design community and the best resource to discover and
-                                connect with designers and jobs worldwide.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12 p-2">
-                    <div class="col">
-                        <h3>Company</h3>
-                        <ul>
-                            <li>
-                                <a href="about-us.html">
-                                    <span><i class="fa-light fa-arrow-up-right-from-square"></i></span> About us
-                                </a>
-                            </li>
-                            <li>
-                                <a href="faqs.html"><span><i class="fa-light fa-arrow-up-right-from-square"></i></span>
-                                    FAQs
-                                </a>
-                            </li>
-                            <li>
-                                <a href="contact-us.html"><span><i
-                                            class="fa-light fa-arrow-up-right-from-square"></i></span>
-                                    Contact us
-                                </a>
-                            </li>
-                            <li>
-                                <a href="terms.html"><span><i class="fa-light fa-arrow-up-right-from-square"></i></span>
-                                    Terms & Conditions
-                                </a>
-                            </li>
-                            <li>
-                                <a href="privacy.html"><span><i
-                                            class="fa-light fa-arrow-up-right-from-square"></i></span>
-                                    Privacy & Policy
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12 p-2">
-                    <div class="col">
-                        <h3>popular categories</h3>
-                        <ul>
-                            <li>
-                                <a href="index.html">
-                                    <span><i class="fa-light fa-arrow-up-right-from-square"></i></span> Engineer
-                                </a>
-                            </li>
-                            <li>
-                                <a href="index.html"><span><i class="fa-light fa-arrow-up-right-from-square"></i></span>
-                                    baby sitter
-                                </a>
-                            </li>
-                            <li>
-                                <a href="index.html"><span><i class="fa-light fa-arrow-up-right-from-square"></i></span>
-                                    Carpenter
-                                </a>
-                            </li>
-                            <li>
-                                <a href="index.html"><span><i class="fa-light fa-arrow-up-right-from-square"></i></span>
-                                    Cook
-                                </a>
-                            </li>
-                            <li>
-                                <a href="index.html"><span><i class="fa-light fa-arrow-up-right-from-square"></i></span>
-                                    Mechanic
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-12 p-2">
-                    <div class="col">
-                        <h3>Download App</h3>
-                        <ul class="download-app">
-                            <li>
-                                <a href="#">
-                                    <div class="icon">
-                                        <i class="fa-brands fa-apple"></i>
-                                    </div>
-                                    <div class="text">
-                                        <p>
-                                            App Store
-                                        </p>
-                                    </div>
-
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div class="icon">
-                                        <i class="fa-brands fa-google-play"></i>
-                                    </div>
-                                    <div class="text">
-                                        <p>
-                                            Google Play
-                                        </p>
-                                    </div>
-
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-12 p-2">
-                    <div class="copy_rights">
-                        <p>Copyright &copy;  <script>document.write(new Date().getFullYear())</script>. All Rights Reserved to <a href="index.html">Jobs in saudi</a></p>
-                        <div class="social_media">
-                            <ul>
-                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                                <li>
-                                    <a href="#">
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" x="0"
-                                            y="0" viewBox="0 0 1226.37 1226.37"
-                                            style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
-                                            <g>
-                                                <path
-                                                    d="M727.348 519.284 1174.075 0h-105.86L680.322 450.887 370.513 0H13.185l468.492 681.821L13.185 1226.37h105.866l409.625-476.152 327.181 476.152h357.328L727.322 519.284zM582.35 687.828l-47.468-67.894-377.686-540.24H319.8l304.797 435.991 47.468 67.894 396.2 566.721H905.661L582.35 687.854z"
-                                                    fill="#aaaaaa" opacity="1" data-original="#aaaaaa" class=""></path>
-                                            </g>
-                                        </svg>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row m-0">
+          <div class="col-lg-4 col-12 p-2">
+            <div class="about_company">
+              <div class="logo">
+                <a href="index.html">
+                  <img loading="lazy" src="assets/images/logo.svg" alt="logo" />
+                </a>
+              </div>
+              <div class="text">
+                <p>
+                  Jobsin saudi is the heart of the design community and the best
+                  resource to discover and connect with designers and jobs
+                  worldwide.
+                </p>
+              </div>
             </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-12 p-2">
+            <div class="col">
+              <h3>Company</h3>
+              <ul>
+                <li>
+                  <a href="about-us.html">
+                    <span
+                      ><i class="fa-light fa-arrow-up-right-from-square"></i
+                    ></span>
+                    About us
+                  </a>
+                </li>
+                <li>
+                  <a href="faqs.html"
+                    ><span
+                      ><i class="fa-light fa-arrow-up-right-from-square"></i
+                    ></span>
+                    FAQs
+                  </a>
+                </li>
+                <li>
+                  <a href="contact-us.html"
+                    ><span
+                      ><i class="fa-light fa-arrow-up-right-from-square"></i
+                    ></span>
+                    Contact us
+                  </a>
+                </li>
+                <li>
+                  <a href="terms.html"
+                    ><span
+                      ><i class="fa-light fa-arrow-up-right-from-square"></i
+                    ></span>
+                    Terms & Conditions
+                  </a>
+                </li>
+                <li>
+                  <a href="privacy.html"
+                    ><span
+                      ><i class="fa-light fa-arrow-up-right-from-square"></i
+                    ></span>
+                    Privacy & Policy
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-12 p-2">
+            <div class="col">
+              <h3>popular categories</h3>
+              <ul>
+                <li>
+                  <a href="index.html">
+                    <span
+                      ><i class="fa-light fa-arrow-up-right-from-square"></i
+                    ></span>
+                    Engineer
+                  </a>
+                </li>
+                <li>
+                  <a href="index.html"
+                    ><span
+                      ><i class="fa-light fa-arrow-up-right-from-square"></i
+                    ></span>
+                    baby sitter
+                  </a>
+                </li>
+                <li>
+                  <a href="index.html"
+                    ><span
+                      ><i class="fa-light fa-arrow-up-right-from-square"></i
+                    ></span>
+                    Carpenter
+                  </a>
+                </li>
+                <li>
+                  <a href="index.html"
+                    ><span
+                      ><i class="fa-light fa-arrow-up-right-from-square"></i
+                    ></span>
+                    Cook
+                  </a>
+                </li>
+                <li>
+                  <a href="index.html"
+                    ><span
+                      ><i class="fa-light fa-arrow-up-right-from-square"></i
+                    ></span>
+                    Mechanic
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-2 col-12 p-2">
+            <div class="col">
+              <h3>Download App</h3>
+              <ul class="download-app">
+                <li>
+                  <a href="#">
+                    <div class="icon">
+                      <i class="fa-brands fa-apple"></i>
+                    </div>
+                    <div class="text">
+                      <p>App Store</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="icon">
+                      <i class="fa-brands fa-google-play"></i>
+                    </div>
+                    <div class="text">
+                      <p>Google Play</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 p-2">
+            <div class="copy_rights">
+              <p>
+                Copyright &copy;
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                . All Rights Reserved to <a href="index.html">Jobs in saudi</a>
+              </p>
+              <div class="social_media">
+                <ul>
+                  <li>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        version="1.1"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        width="14"
+                        height="14"
+                        x="0"
+                        y="0"
+                        viewBox="0 0 1226.37 1226.37"
+                        style="enable-background: new 0 0 512 512"
+                        xml:space="preserve"
+                        class=""
+                      >
+                        <g>
+                          <path
+                            d="M727.348 519.284 1174.075 0h-105.86L680.322 450.887 370.513 0H13.185l468.492 681.821L13.185 1226.37h105.866l409.625-476.152 327.181 476.152h357.328L727.322 519.284zM582.35 687.828l-47.468-67.894-377.686-540.24H319.8l304.797 435.991 47.468 67.894 396.2 566.721H905.661L582.35 687.854z"
+                            fill="#aaaaaa"
+                            opacity="1"
+                            data-original="#aaaaaa"
+                            class=""
+                          ></path>
+                        </g>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </footer>
     <!-- js -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/jquery.ccpicker.min.js"></script>
     <script src="assets/js/app.js"></script>
     <script>
-        // country code picker
-        $(document).ready(function () {
-            $("#phoneField1").CcPicker();
-            $("#phoneField1").CcPicker("setCountryByCode", "sa");
-        });
+      // country code picker
+      $(document).ready(function () {
+        $("#phoneField1").CcPicker();
+        $("#phoneField1").CcPicker("setCountryByCode", "sa");
+      });
     </script>
-</body>
-
+  </body>
 </html>

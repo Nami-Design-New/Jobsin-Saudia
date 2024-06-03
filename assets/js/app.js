@@ -6,22 +6,22 @@ let testimonials = new Swiper(".testimonilas", {
   centeredSlides: true,
   pagination: {
     el: ".testimonialsSwiperPagination",
-    clickable: true
+    clickable: true,
   },
   autoplay: {
-    delay: 2500
+    delay: 2500,
   },
   breakpoints: {
     992: {
-      slidesPerView: 3
+      slidesPerView: 3,
     },
     768: {
-      slidesPerView: 2
+      slidesPerView: 2,
     },
     350: {
-      slidesPerView: 1
-    }
-  }
+      slidesPerView: 1,
+    },
+  },
 });
 
 var companies = new Swiper(".companies_grid", {
@@ -31,22 +31,22 @@ var companies = new Swiper(".companies_grid", {
   centeredSlides: true,
   pagination: {
     el: ".testimonialsSwiperPagination",
-    clickable: true
+    clickable: true,
   },
   autoplay: {
-    delay: 2500
+    delay: 2500,
   },
   breakpoints: {
     992: {
-      slidesPerView: 5
+      slidesPerView: 5,
     },
     768: {
-      slidesPerView: 3
+      slidesPerView: 3,
     },
     350: {
-      slidesPerView: 2
-    }
-  }
+      slidesPerView: 2,
+    },
+  },
 });
 var categories = new Swiper(".categories_grid", {
   loop: true,
@@ -55,22 +55,22 @@ var categories = new Swiper(".categories_grid", {
   centeredSlides: true,
   pagination: {
     el: ".testimonialsSwiperPagination",
-    clickable: true
+    clickable: true,
   },
   autoplay: {
-    delay: 2500
+    delay: 2500,
   },
   breakpoints: {
     992: {
-      slidesPerView: 4
+      slidesPerView: 4,
     },
     768: {
-      slidesPerView: 3
+      slidesPerView: 3,
     },
     350: {
-      slidesPerView: 2
-    }
-  }
+      slidesPerView: 2,
+    },
+  },
 });
 var heroSwiper = new Swiper(".heroSection", {
   loop: true,
@@ -78,11 +78,11 @@ var heroSwiper = new Swiper(".heroSection", {
   speed: 1000,
   pagination: {
     el: ".heroSwiperPagination",
-    clickable: true
+    clickable: true,
   },
   autoplay: {
-    delay: 2500
-  }
+    delay: 2500,
+  },
 });
 
 $(document).ready(function () {
@@ -168,9 +168,7 @@ function unhighlight(el) {
 let showBtn = document.getElementById("showProfile");
 let profileMenu = document.querySelector(".profile_menu");
 
-console.log(showBtn, profileMenu);
-
-showBtn.addEventListener("click", () => {
+showBtn?.addEventListener("click", () => {
   profileMenu.classList.toggle("show");
   layer.classList.toggle("show");
   if (profileMenu.classList.contains("show")) {
@@ -190,3 +188,32 @@ document.addEventListener("click", function (event) {
     layer.classList.remove("show");
   }
 });
+
+const starterModal = document.querySelector(`.starterModal`);
+const starterModalBody = document.querySelector(`.starterModal`);
+const starterModalCloseBtn = document.querySelector(
+  `.starterModal .modalBody .modalHeader .closeBtn`
+);
+
+window.addEventListener("load", () => {
+  setTimeout(function () {
+    starterModal?.classList.add("show");
+  }, 3000);
+});
+
+starterModalCloseBtn?.addEventListener("click", () => {
+  starterModal?.classList.remove("show");
+});
+
+document.addEventListener(
+  "click",
+  (e) => {
+    if (
+      e.target.contains(starterModalBody) &&
+      starterModal?.classList.contains("show")
+    ) {
+      starterModal?.classList.remove("show");
+    }
+  },
+  true
+);

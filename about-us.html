@@ -1,680 +1,885 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jobs in saudi</title>
-    <link rel="shortcut icon" href="assets/images/fav.svg" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="assets/images/fav.svg"
+      type="image/x-icon"
+    />
     <!-- css -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
 
-<body>
+  <body>
     <!-- loader -->
     <div class="preloader">
-        <div class="preloaderImg"></div>
+      <div class="preloaderImg"></div>
     </div>
 
     <div class="layer"></div>
     <!-- search container -->
     <div class="search-container">
-        <div class="inner-contianer">
-            <form action="" class="container">
-                <div class="row justify-content-center">
-                    <div class="col-12 d-flex justify-content-end">
-                        <a href="javascript: void(0)" class="closeSearch">
-                            <i class="fa-light fa-xmark"></i>
-                        </a>
-                    </div>
-                    <div class="input-field col-lg-8 col-11">
-                        <div class="form">
-                            <input type="text" id="search" name="search" placeholder="SEARCH">
-                            <button type="submit"><i class="fa-light fa-magnifying-glass"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
+      <div class="inner-contianer">
+        <form action="" class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 d-flex justify-content-end">
+              <a href="javascript: void(0)" class="closeSearch">
+                <i class="fa-light fa-xmark"></i>
+              </a>
+            </div>
+            <div class="input-field col-lg-8 col-11">
+              <div class="form">
+                <input
+                  type="text"
+                  id="search"
+                  name="search"
+                  placeholder="SEARCH"
+                />
+                <button type="submit">
+                  <i class="fa-light fa-magnifying-glass"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
     <!-- header -->
     <header>
-        <!-- nav bar menu -->
-        <nav class="container">
-            <a href="index.html" class="logo">
-                <img loading="lazy" src="assets/images/logo.svg" alt="logo">
+      <!-- nav bar menu -->
+      <nav class="container">
+        <a href="index.html" class="logo">
+          <img loading="lazy" src="assets/images/logo.svg" alt="logo" />
+        </a>
+        <ul class="nav-links">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="explore.html">Explore</a>
+          </li>
+          <li>
+            <a href="about-us.html" class="active">About Us</a>
+          </li>
+          <li>
+            <a href="contact-us.html">Contact Us</a>
+          </li>
+        </ul>
+        <ul class="util">
+          <li>
+            <a class="lang">
+              <span> ع </span>
             </a>
-            <ul class="nav-links">
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="explore.html">Explore</a>
-                </li>
-                <li>
-                    <a href="about-us.html" class="active">About Us</a>
-                </li>
-                <li>
-                    <a href="contact-us.html">Contact Us</a>
-                </li>
-            </ul>
-            <ul class="util">
-                <li>
-                   <a class="lang">
-                        <span> ع </span>
-                    </a>
-                </li>
-                <li>
-                    <div id="showNotification">
-                        <small class="count">2</small>
-                        <span>
-                            <i class="fa-duotone fa-bell"></i>
-                        </span>
-                    </div>
-                    <div class="notification_dropDown">
-                        <div class="inner">
-                            <h6><i class="fa-duotone fa-bell"></i> Notifications</h6>
-                            <ul>
-                                <li>
-                                    <div class="img">
-                                        <img loading="lazy" src="assets/images/no1.png" alt="">
-                                    </div>
-                                    <div class="content">
-                                        <h6>System</h6>
-                                        <p>Welcome to Jobs in saudi</p>
-                                        <small>1 hour ago</small>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="img">
-                                        <img loading="lazy" src="assets/images/no1.png" alt="">
-                                    </div>
-                                    <div class="content">
-                                        <h6>System</h6>
-                                        <p>Welcome to Jobs in saudi</p>
-                                        <small>1 hour ago</small>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="img">
-                                        <img loading="lazy" src="assets/images/no1.png" alt="">
-                                    </div>
-                                    <div class="content">
-                                        <h6>System</h6>
-                                        <p>Welcome to Jobs in saudi</p>
-                                        <small>1 hour ago</small>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="img">
-                                        <img loading="lazy" src="assets/images/no1.png" alt="">
-                                    </div>
-                                    <div class="content">
-                                        <h6>System</h6>
-                                        <p>Welcome to Jobs in saudi</p>
-                                        <small>1 hour ago</small>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="img">
-                                        <img loading="lazy" src="assets/images/no1.png" alt="">
-                                    </div>
-                                    <div class="content">
-                                        <h6>System</h6>
-                                        <p>Welcome to Jobs in saudi</p>
-                                        <small>1 hour ago</small>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-                <li id="showProfile">
-                    <a class="login">
-                        <i class="fa-duotone fa-user"></i>
-                    </a>
-                    <div class="profile_menu">
-                        <!-- individual profile -->
-                        <div class="profile_wrapper">
-                            <div class="profile">
-                                <div class="img">
-                                    <img loading="lazy" src="assets/images/friend-12.jpg" alt="">
-                                </div>
-                                <div class="text">
-                                    <h6>Mahmoud Elkomy</h6>
-                                    <p>+9660123456789</p>
-                                </div>
-                            </div>
-                            <ul>
-                                <li>
-                                    <a href="individual-signup.html">
-                                        <div>
-                                            <span>
-                                                <img loading="lazy" src="assets/images/editAccount.svg" alt="edit">
-                                            </span> Edit Account
-                                        </div>
-                                        <i class="fa-light fa-angle-right"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="create-resume.html">
-                                        <div>
-                                            <span>
-                                                <img loading="lazy" src="assets/images/addCv.svg" alt="edit">
-                                            </span> Add Resume
-                                        </div>
-                                        <i class="fa-light fa-angle-right"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <div>
-                                            <span>
-                                                <i class="fa-regular fa-arrow-right-from-bracket"></i>
-                                            </span> Log out
-                                        </div>
-                                        <i class="fa-light fa-angle-right"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <div>
-                                            <span>
-                                                <i class="fa-solid fa-user-xmark" style="color: red;"></i>
-                                            </span> Delete Account
-                                        </div>
-                                        <i class="fa-light fa-angle-right"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- company profile -->
-                        <div class="profile_wrapper">
-                            <div class="profile">
-                                <div class="img">
-                                    <img loading="lazy" class="logo_contain" src="assets/images/no4.png" alt="">
-                                </div>
-                                <div class="text">
-                                    <h6>Mahmoud Elkomy</h6>
-                                    <p>+9660123456789</p>
-                                </div>
-                            </div>
-                            <ul>
-                                <li>
-                                    <a href="company-signup.html">
-                                        <div>
-                                            <span>
-                                                <img loading="lazy" src="assets/images/editAccount.svg" alt="edit">
-                                            </span> Edit Account
-                                        </div>
-                                        <i class="fa-light fa-angle-right"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="resumes.html">
-                                        <div>
-                                            <span>
-                                                <img loading="lazy" src="assets/images/resumes.svg" alt="edit">
-                                            </span> Resumes
-                                        </div>
-                                        <i class="fa-light fa-angle-right"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="create-resume.html">
-                                        <div>
-                                            <span>
-                                                <img loading="lazy" src="assets/images/addCv.svg" alt="edit">
-                                            </span> Add Resume
-                                        </div>
-                                        <i class="fa-light fa-angle-right"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="pricing-plans.html">
-                                        <div>
-                                            <span>
-                                                <img loading="lazy" src="assets/images/plans.svg" alt="plans">
-                                            </span> Pricing Plans
-                                        </div>
-                                        <i class="fa-light fa-angle-right"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <div>
-                                            <span>
-                                                <i class="fa-regular fa-arrow-right-from-bracket"></i>
-                                            </span> Log out
-                                        </div>
-                                        <i class="fa-light fa-angle-right"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <div>
-                                            <span>
-                                                <i class="fa-solid fa-user-xmark" style="color: red;"></i>
-                                            </span> Delete Account
-                                        </div>
-                                        <i class="fa-light fa-angle-right"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-                <li class="toggler">
-                    <span>
-                        <small></small>
-                        <small></small>
-                    </span>
-                </li>
-            </ul>
-        </nav>
-        <!-- search wrapper -->
-        <!-- <div class="search_wrapper">
-            <div class="container">
-                <form action="">
-                    <div class="search_field">
-                        <button>
-                            <img loading="lazy" src="assets/images/searchIcon.svg" alt="">
-                        </button>
-                        <input type="text" placeholder="Search for employees...">
-                    </div>
-                </form>
+          </li>
+          <li>
+            <div id="showNotification">
+              <small class="count">2</small>
+              <span>
+                <i class="fa-duotone fa-bell"></i>
+              </span>
             </div>
-        </div> -->
+            <div class="notification_dropDown">
+              <div class="inner">
+                <h6><i class="fa-duotone fa-bell"></i> Notifications</h6>
+                <ul>
+                  <li class="promoteNotification">
+                    <a
+                      href="company-profile.html"
+                      class="promoteNotificationLink"
+                    >
+                      <img
+                        loading="lazy"
+                        src="assets/images/banner_resumes.jpg"
+                        alt="promote image"
+                      />
+                    </a>
+                  </li>
+                  <li>
+                    <div class="img">
+                      <img loading="lazy" src="assets/images/no1.png" alt="" />
+                    </div>
+                    <div class="content">
+                      <h6>System</h6>
+                      <p>Welcome to Jobs in saudi</p>
+                      <small>1 hour ago</small>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="img">
+                      <img loading="lazy" src="assets/images/no1.png" alt="" />
+                    </div>
+                    <div class="content">
+                      <h6>System</h6>
+                      <p>Welcome to Jobs in saudi</p>
+                      <small>1 hour ago</small>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="img">
+                      <img loading="lazy" src="assets/images/no1.png" alt="" />
+                    </div>
+                    <div class="content">
+                      <h6>System</h6>
+                      <p>Welcome to Jobs in saudi</p>
+                      <small>1 hour ago</small>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="img">
+                      <img loading="lazy" src="assets/images/no1.png" alt="" />
+                    </div>
+                    <div class="content">
+                      <h6>System</h6>
+                      <p>Welcome to Jobs in saudi</p>
+                      <small>1 hour ago</small>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="img">
+                      <img loading="lazy" src="assets/images/no1.png" alt="" />
+                    </div>
+                    <div class="content">
+                      <h6>System</h6>
+                      <p>Welcome to Jobs in saudi</p>
+                      <small>1 hour ago</small>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li id="showProfile">
+            <a class="login">
+              <i class="fa-duotone fa-user"></i>
+            </a>
+            <div class="profile_menu">
+              <!-- individual profile -->
+              <div class="profile_wrapper">
+                <div class="profile">
+                  <div class="img">
+                    <img
+                      loading="lazy"
+                      src="assets/images/friend-12.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="text">
+                    <h6>Mahmoud Elkomy</h6>
+                    <p>+9660123456789</p>
+                  </div>
+                </div>
+                <ul>
+                  <li>
+                    <a href="individual-signup.html">
+                      <div>
+                        <span>
+                          <img
+                            loading="lazy"
+                            src="assets/images/editAccount.svg"
+                            alt="edit"
+                          />
+                        </span>
+                        Edit Account
+                      </div>
+                      <i class="fa-light fa-angle-right"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="create-resume.html">
+                      <div>
+                        <span>
+                          <img
+                            loading="lazy"
+                            src="assets/images/addCv.svg"
+                            alt="edit"
+                          />
+                        </span>
+                        Add Resume
+                      </div>
+                      <i class="fa-light fa-angle-right"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <div>
+                        <span>
+                          <i class="fa-regular fa-arrow-right-from-bracket"></i>
+                        </span>
+                        Log out
+                      </div>
+                      <i class="fa-light fa-angle-right"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <div>
+                        <span>
+                          <i
+                            class="fa-solid fa-user-xmark"
+                            style="color: red"
+                          ></i>
+                        </span>
+                        Delete Account
+                      </div>
+                      <i class="fa-light fa-angle-right"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- company profile -->
+              <div class="profile_wrapper">
+                <div class="profile">
+                  <div class="img">
+                    <img
+                      loading="lazy"
+                      class="logo_contain"
+                      src="assets/images/no4.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="text">
+                    <h6>Mahmoud Elkomy</h6>
+                    <p>+9660123456789</p>
+                  </div>
+                </div>
+                <ul>
+                  <li>
+                    <a href="company-signup.html">
+                      <div>
+                        <span>
+                          <img
+                            loading="lazy"
+                            src="assets/images/editAccount.svg"
+                            alt="edit"
+                          />
+                        </span>
+                        Edit Account
+                      </div>
+                      <i class="fa-light fa-angle-right"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="resumes.html">
+                      <div>
+                        <span>
+                          <img
+                            loading="lazy"
+                            src="assets/images/resumes.svg"
+                            alt="edit"
+                          />
+                        </span>
+                        Resumes
+                      </div>
+                      <i class="fa-light fa-angle-right"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="create-resume.html">
+                      <div>
+                        <span>
+                          <img
+                            loading="lazy"
+                            src="assets/images/addCv.svg"
+                            alt="edit"
+                          />
+                        </span>
+                        Add Resume
+                      </div>
+                      <i class="fa-light fa-angle-right"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="add-promote.html">
+                      <div>
+                        <span>
+                          <img
+                            loading="lazy"
+                            src="assets/images/prmote.svg"
+                            alt="add promote"
+                          />
+                        </span>
+                        Add Promote
+                      </div>
+                      <i class="fa-light fa-angle-right"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="pricing-plans.html">
+                      <div>
+                        <span>
+                          <img
+                            loading="lazy"
+                            src="assets/images/plans.svg"
+                            alt="plans"
+                          />
+                        </span>
+                        Pricing Plans
+                      </div>
+                      <i class="fa-light fa-angle-right"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <div>
+                        <span>
+                          <i class="fa-regular fa-arrow-right-from-bracket"></i>
+                        </span>
+                        Log out
+                      </div>
+                      <i class="fa-light fa-angle-right"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <div>
+                        <span>
+                          <i
+                            class="fa-solid fa-user-xmark"
+                            style="color: red"
+                          ></i>
+                        </span>
+                        Delete Account
+                      </div>
+                      <i class="fa-light fa-angle-right"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="toggler">
+            <span>
+              <small></small>
+              <small></small>
+            </span>
+          </li>
+        </ul>
+      </nav>
+      <!-- search wrapper -->
+      <!-- <div class="search_wrapper">
+              <div class="container">
+                  <form action="">
+                      <div class="search_field">
+                          <button>
+                              <img loading="lazy" src="assets/images/searchIcon.svg" alt="">
+                          </button>
+                          <input type="text" placeholder="Search for employees...">
+                      </div>
+                  </form>
+              </div>
+          </div> -->
     </header>
     <!-- main wrapper -->
     <main>
-        <section class="banner_section">
-            <div class="container">
-                <div class="content">
-                    <h3>Discover Our Story</h3>
-                    <p>Unveil the narratives behind exceptional talent and expertise</p>
-                </div>
+      <section class="banner_section">
+        <div class="container">
+          <div class="content">
+            <h3>Discover Our Story</h3>
+            <p>Unveil the narratives behind exceptional talent and expertise</p>
+          </div>
+        </div>
+      </section>
+      <section class="about_us">
+        <div class="container">
+          <div class="row m-0">
+            <div
+              class="col-lg-5 col-md-12 col-sm-12 col-12 d-flex flex-column justify-content-center"
+            >
+              <span class="text-lg text-brand">find you dream job</span>
+              <h3>Easily get job offers</h3>
+              <p>
+                Introducing "Jobs In Saudi" - the game-changing app for job
+                seekers in Saudi Arabia. Find your dream job with ease, stay
+                updated with the latest listings, and kickstart your career
+                journey like never before. Join us today and unlock endless
+                possibilities.
+              </p>
+              <div class="btn-wrapper">
+                <a href="explore.html" class="btn btn-default"
+                  >Explore Resumes</a
+                >
+              </div>
             </div>
-        </section>
-        <section class="about_us">
-            <div class="container">
-                <div class="row m-0">
-                    <div class="col-lg-5 col-md-12 col-sm-12 col-12 d-flex flex-column justify-content-center">
-                        <span class="text-lg text-brand">find you dream job</span>
-                        <h3>
-                            Easily get job offers
-                        </h3>
-                        <p>
-                            Introducing "Jobs In Saudi" - the game-changing app for job seekers in Saudi Arabia.
-                            Find your dream job with ease, stay updated with the latest listings, and kickstart your
-                            career
-                            journey like never before. Join us today and unlock endless possibilities.
+            <div class="col-lg-7 col-md-12 col-sm-12 col-12 pl-200">
+              <div class="banner-imgs banner-imgs-about">
+                <img
+                  loading="lazy"
+                  alt="jobhub"
+                  src="assets/images/banner-online-marketing.png"
+                  class="img-responsive main-banner shape-3"
+                />
+                <span class="banner-sm-4"
+                  ><img
+                    loading="lazy"
+                    alt="jobhub"
+                    src="assets/images/congratulation.svg"
+                    class="img-responsive shape-2"
+                /></span>
+                <span class="banner-sm-5"
+                  ><img
+                    loading="lazy"
+                    alt="jobhub"
+                    src="assets/images/web-dev.svg"
+                    class="img-responsive shape-1"
+                /></span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="testmonials">
+              <h3 class="title">Listen To What Our Clients Say</h3>
+              <p class="desc">
+                When it comes to choosing the right web hosting provider, we
+                know how easy it is to get overwhelmed with the number.
+              </p>
+              <div class="swiper testimonilas">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="testmional-card">
+                      <img
+                        loading="lazy"
+                        src="assets/images/left-quotes.svg"
+                        alt="quotes"
+                      />
+                      <div class="d-flex flex-column gap-2">
+                        <div class="rate">
+                          <ul>
+                            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+                            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+                            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+                            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+                            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+                          </ul>
+                        </div>
+                        <p class="opinion">
+                          "My experience on this website was excellent! I found
+                          many talented professionals who helped me complete my
+                          projects with quality and professionalism. I highly
+                          recommend it!"
                         </p>
-                        <div class="btn-wrapper">
-                            <a href="explore.html" class="btn btn-default">Explore Resumes</a>
+                      </div>
+                      <div class="owner">
+                        <div class="d-flex flex-column">
+                          <h6>Mohammed Ridwan</h6>
                         </div>
+                        <span>May 9, 2023</span>
+                      </div>
                     </div>
-                    <div class="col-lg-7 col-md-12 col-sm-12 col-12 pl-200">
-                        <div class="banner-imgs banner-imgs-about">
-                            <img loading="lazy" alt="jobhub" src="assets/images/banner-online-marketing.png"
-                                class="img-responsive main-banner shape-3">
-                            <span class="banner-sm-4"><img loading="lazy" alt="jobhub"
-                                    src="assets/images/congratulation.svg" class="img-responsive shape-2"></span>
-                            <span class="banner-sm-5"><img loading="lazy" alt="jobhub" src="assets/images/web-dev.svg"
-                                    class="img-responsive shape-1"></span>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="testmional-card">
+                      <img
+                        loading="lazy"
+                        src="assets/images/left-quotes.svg"
+                        alt="quotes"
+                      />
+                      <div class="d-flex flex-column gap-2">
+                        <div class="rate">
+                          <ul>
+                            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+                            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+                            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+                            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+                            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+                          </ul>
                         </div>
+                        <p class="opinion">
+                          "Thanks to this wonderful website! I found an amazing
+                          community of professionals and buyers here. I have
+                          benefited greatly from the opportunities provided to
+                          me by this website."
+                        </p>
+                      </div>
+                      <div class="owner">
+                        <div class="d-flex flex-column">
+                          <h6>Mohamed El-Ashry</h6>
+                        </div>
+                        <span>Mar 10, 2023</span>
+                      </div>
                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="testmional-card">
+                      <img
+                        loading="lazy"
+                        src="assets/images/left-quotes.svg"
+                        alt="quotes"
+                      />
+                      <div class="d-flex flex-column gap-2">
+                        <div class="rate">
+                          <ul>
+                            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+                            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+                            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+                            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+                            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+                          </ul>
+                        </div>
+                        <p class="opinion">
+                          "This website is one of the best platforms for buying
+                          and selling freelance services. It helped me expand my
+                          business and achieve additional profits easily and
+                          smoothly. Excellent experience!"
+                        </p>
+                      </div>
+                      <div class="owner">
+                        <div class="d-flex flex-column">
+                          <h6>Mahmoud El-Koumi</h6>
+                        </div>
+                        <span>Dec 9, 2022</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="testmional-card">
+                      <img
+                        loading="lazy"
+                        src="assets/images/left-quotes.svg"
+                        alt="quotes"
+                      />
+                      <div class="d-flex flex-column gap-2">
+                        <div class="rate">
+                          <ul>
+                            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+                            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+                            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+                            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+                            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+                          </ul>
+                        </div>
+                        <p class="opinion">
+                          "I can only commend the quality of services I found
+                          here. It is a reliable and very useful platform for
+                          anyone looking for help or wanting to offer their
+                          services."
+                        </p>
+                      </div>
+                      <div class="owner">
+                        <div class="d-flex flex-column">
+                          <h6>Ahmed Mustafa</h6>
+                        </div>
+                        <span>May 22, 2022</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="row">
-                    <div class="testmonials">
-                        <h3 class="title">Listen To What Our Clients Say</h3>
-                        <p class="desc">When it comes to choosing the right web hosting provider, we know how easy it is
-                            to get
-                            overwhelmed with the number.</p>
-                        <div class="swiper testimonilas">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="testmional-card">
-                                        <img loading="lazy" src="assets/images/left-quotes.svg" alt="quotes">
-                                        <div class="d-flex flex-column gap-2">
-                                            <div class="rate">
-                                                <ul>
-                                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                </ul>
-                                            </div>
-                                            <p class="opinion">
-                                                "My experience on this website was excellent! I found many talented
-                                                professionals who helped me complete my projects with quality and
-                                                professionalism. I highly recommend it!"
-                                            </p>
-                                        </div>
-                                        <div class="owner">
-                                            <div class="d-flex flex-column">
-                                                <h6>Mohammed Ridwan</h6>
-                                            </div>
-                                            <span>May 9, 2023</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="testmional-card">
-                                        <img loading="lazy" src="assets/images/left-quotes.svg" alt="quotes">
-                                        <div class="d-flex flex-column gap-2">
-                                            <div class="rate">
-                                                <ul>
-                                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                </ul>
-                                            </div>
-                                            <p class="opinion">
-                                                "Thanks to this wonderful website! I found an amazing community of
-                                                professionals and buyers here. I have benefited greatly from the
-                                                opportunities provided to me by this website."
-                                            </p>
-                                        </div>
-                                        <div class="owner">
-                                            <div class="d-flex flex-column">
-                                                <h6>Mohamed El-Ashry</h6>
-                                            </div>
-                                            <span>Mar 10, 2023</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="testmional-card">
-                                        <img loading="lazy" src="assets/images/left-quotes.svg" alt="quotes">
-                                        <div class="d-flex flex-column gap-2">
-                                            <div class="rate">
-                                                <ul>
-                                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                </ul>
-                                            </div>
-                                            <p class="opinion">
-                                                "This website is one of the best platforms for buying and selling
-                                                freelance services. It helped me expand my business and achieve
-                                                additional profits easily and smoothly. Excellent experience!"
-                                            </p>
-                                        </div>
-                                        <div class="owner">
-                                            <div class="d-flex flex-column">
-                                                <h6>Mahmoud El-Koumi</h6>
-                                            </div>
-                                            <span>Dec 9, 2022</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="testmional-card">
-                                        <img loading="lazy" src="assets/images/left-quotes.svg" alt="quotes">
-                                        <div class="d-flex flex-column gap-2">
-                                            <div class="rate">
-                                                <ul>
-                                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                </ul>
-                                            </div>
-                                            <p class="opinion">
-                                                "I can only commend the quality of services I found here. It is a
-                                                reliable and very useful platform for anyone looking for help or wanting
-                                                to offer their services."
-                                            </p>
-                                        </div>
-                                        <div class="owner">
-                                            <div class="d-flex flex-column">
-                                                <h6>Ahmed Mustafa</h6>
-                                            </div>
-                                            <span>May 22, 2022</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="testimonialsSwiperPagination"></div>
-                        </div>
-                    </div>
-                </div>
+                <div class="testimonialsSwiperPagination"></div>
+              </div>
             </div>
-        </section>
-        <section class="features">
-            <div class="container">
-                <div class="row m-0">
-                    <div class="col-12 p-2">
-                        <div class="sec_title">
-                            <h3>expose your skills and experience to employers in Saudi Arabia</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <!-- Content -->
-                        <div class="service_single_content wow fadeInUp" data-wow-delay="0.2s">
-                            <!-- Icon -->
-                            <div class="service_icon">
-                                <img loading="lazy" src="assets/images/1.svg" alt="">
-                            </div>
-                            <h6>Proven CV Templates to increase Hiring Chance</h6>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla neque quam ipsum.</p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <!-- Content -->
-                        <div class="service_single_content wow wow fadeInUp" data-wow-delay="0.3s">
-                            <!-- Icon -->
-                            <div class="service_icon">
-                                <img loading="lazy" src="assets/images/2.svg" alt="">
-                            </div>
-                            <h6>Creative, Modern and Clean Templates Design</h6>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla neque quam ipsum.</p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <!-- Content -->
-                        <div class="service_single_content wow fadeInUp" data-wow-delay="0.4s">
-                            <!-- Icon -->
-                            <div class="service_icon">
-                                <img loading="lazy" src="assets/images/3.svg" alt="">
-                            </div>
-                            <h6>Easy and Intuitive Online CV and Resume Builder </h6>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla neque quam ipsum.</p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <!-- Content -->
-                        <div class="service_single_content wow fadeInUp" data-wow-delay="0.5s">
-                            <!-- Icon -->
-                            <div class="service_icon">
-                                <img loading="lazy" src="assets/images/4.svg" alt="">
-                            </div>
-                            <h6>Free to use. Developed by hiring professionals.</h6>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla neque quam ipsum.</p>
-                        </div>
-                    </div>
-                </div>
+          </div>
+        </div>
+      </section>
+      <section class="features">
+        <div class="container">
+          <div class="row m-0">
+            <div class="col-12 p-2">
+              <div class="sec_title">
+                <h3>
+                  expose your skills and experience to employers in Saudi Arabia
+                </h3>
+              </div>
             </div>
-        </section>
-        <section class="downloadApp">
-            <div class="container">
-                <h2>Exceptional Experience with the App</h2>
+          </div>
+          <div class="row">
+            <div class="col-12 col-sm-6 col-lg-3">
+              <!-- Content -->
+              <div
+                class="service_single_content wow fadeInUp"
+                data-wow-delay="0.2s"
+              >
+                <!-- Icon -->
+                <div class="service_icon">
+                  <img loading="lazy" src="assets/images/1.svg" alt="" />
+                </div>
+                <h6>Proven CV Templates to increase Hiring Chance</h6>
                 <p>
-                    Would you like to enjoy an enhanced experience on the go? Download our app now to access exclusive
-                    services and offers.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                  neque quam ipsum.
                 </p>
-                <div class="btns">
-                    <a href="#">
-                        <img loading="lazy" src="assets/images/app-store.svg" alt="app-store">
-                    </a>
-                    <a href="#">
-                        <img loading="lazy" src="assets/images/google-play.svg" alt="google-play">
-                    </a>
-                </div>
+              </div>
             </div>
-        </section>
+            <div class="col-12 col-sm-6 col-lg-3">
+              <!-- Content -->
+              <div
+                class="service_single_content wow wow fadeInUp"
+                data-wow-delay="0.3s"
+              >
+                <!-- Icon -->
+                <div class="service_icon">
+                  <img loading="lazy" src="assets/images/2.svg" alt="" />
+                </div>
+                <h6>Creative, Modern and Clean Templates Design</h6>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                  neque quam ipsum.
+                </p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+              <!-- Content -->
+              <div
+                class="service_single_content wow fadeInUp"
+                data-wow-delay="0.4s"
+              >
+                <!-- Icon -->
+                <div class="service_icon">
+                  <img loading="lazy" src="assets/images/3.svg" alt="" />
+                </div>
+                <h6>Easy and Intuitive Online CV and Resume Builder</h6>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                  neque quam ipsum.
+                </p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+              <!-- Content -->
+              <div
+                class="service_single_content wow fadeInUp"
+                data-wow-delay="0.5s"
+              >
+                <!-- Icon -->
+                <div class="service_icon">
+                  <img loading="lazy" src="assets/images/4.svg" alt="" />
+                </div>
+                <h6>Free to use. Developed by hiring professionals.</h6>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                  neque quam ipsum.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="downloadApp">
+        <div class="container">
+          <h2>Exceptional Experience with the App</h2>
+          <p>
+            Would you like to enjoy an enhanced experience on the go? Download
+            our app now to access exclusive services and offers.
+          </p>
+          <div class="btns">
+            <a href="#">
+              <img
+                loading="lazy"
+                src="assets/images/app-store.svg"
+                alt="app-store"
+              />
+            </a>
+            <a href="#">
+              <img
+                loading="lazy"
+                src="assets/images/google-play.svg"
+                alt="google-play"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- footer -->
     <footer>
-        <div class="container">
-            <div class="row m-0">
-                <div class="col-lg-4 col-12 p-2">
-                    <div class="about_company">
-                        <div class="logo">
-                            <a href="index.html">
-                                <img loading="lazy" src="assets/images/logo.svg" alt="logo">
-                            </a>
-                        </div>
-                        <div class="text">
-                            <p>
-                                Jobsin saudi is the heart of the design community and the best resource to discover and
-                                connect with designers and jobs worldwide.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12 p-2">
-                    <div class="col">
-                        <h3>Company</h3>
-                        <ul>
-                            <li>
-                                <a href="about-us.html">
-                                    <span><i class="fa-light fa-arrow-up-right-from-square"></i></span> About us
-                                </a>
-                            </li>
-                            <li>
-                                <a href="faqs.html"><span><i class="fa-light fa-arrow-up-right-from-square"></i></span>
-                                    FAQs
-                                </a>
-                            </li>
-                            <li>
-                                <a href="contact-us.html"><span><i
-                                            class="fa-light fa-arrow-up-right-from-square"></i></span>
-                                    Contact us
-                                </a>
-                            </li>
-                            <li>
-                                <a href="terms.html"><span><i class="fa-light fa-arrow-up-right-from-square"></i></span>
-                                    Terms & Conditions
-                                </a>
-                            </li>
-                            <li>
-                                <a href="privacy.html"><span><i
-                                            class="fa-light fa-arrow-up-right-from-square"></i></span>
-                                    Privacy & Policy
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12 p-2">
-                    <div class="col">
-                        <h3>popular categories</h3>
-                        <ul>
-                            <li>
-                                <a href="index.html">
-                                    <span><i class="fa-light fa-arrow-up-right-from-square"></i></span> Engineer
-                                </a>
-                            </li>
-                            <li>
-                                <a href="index.html"><span><i class="fa-light fa-arrow-up-right-from-square"></i></span>
-                                    baby sitter
-                                </a>
-                            </li>
-                            <li>
-                                <a href="index.html"><span><i class="fa-light fa-arrow-up-right-from-square"></i></span>
-                                    Carpenter
-                                </a>
-                            </li>
-                            <li>
-                                <a href="index.html"><span><i class="fa-light fa-arrow-up-right-from-square"></i></span>
-                                    Cook
-                                </a>
-                            </li>
-                            <li>
-                                <a href="index.html"><span><i class="fa-light fa-arrow-up-right-from-square"></i></span>
-                                    Mechanic
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-12 p-2">
-                    <div class="col">
-                        <h3>Download App</h3>
-                        <ul class="download-app">
-                            <li>
-                                <a href="#">
-                                    <div class="icon">
-                                        <i class="fa-brands fa-apple"></i>
-                                    </div>
-                                    <div class="text">
-                                        <p>
-                                            App Store
-                                        </p>
-                                    </div>
-
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div class="icon">
-                                        <i class="fa-brands fa-google-play"></i>
-                                    </div>
-                                    <div class="text">
-                                        <p>
-                                            Google Play
-                                        </p>
-                                    </div>
-
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-12 p-2">
-                    <div class="copy_rights">
-                        <p>Copyright &copy;  <script>document.write(new Date().getFullYear())</script>. All Rights Reserved to <a href="index.html">Jobs in saudi</a></p>
-                        <div class="social_media">
-                            <ul>
-                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                                <li>
-                                    <a href="#">
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" x="0"
-                                            y="0" viewBox="0 0 1226.37 1226.37"
-                                            style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
-                                            <g>
-                                                <path
-                                                    d="M727.348 519.284 1174.075 0h-105.86L680.322 450.887 370.513 0H13.185l468.492 681.821L13.185 1226.37h105.866l409.625-476.152 327.181 476.152h357.328L727.322 519.284zM582.35 687.828l-47.468-67.894-377.686-540.24H319.8l304.797 435.991 47.468 67.894 396.2 566.721H905.661L582.35 687.854z"
-                                                    fill="#aaaaaa" opacity="1" data-original="#aaaaaa" class=""></path>
-                                            </g>
-                                        </svg>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row m-0">
+          <div class="col-lg-4 col-12 p-2">
+            <div class="about_company">
+              <div class="logo">
+                <a href="index.html">
+                  <img loading="lazy" src="assets/images/logo.svg" alt="logo" />
+                </a>
+              </div>
+              <div class="text">
+                <p>
+                  Jobsin saudi is the heart of the design community and the best
+                  resource to discover and connect with designers and jobs
+                  worldwide.
+                </p>
+              </div>
             </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-12 p-2">
+            <div class="col">
+              <h3>Company</h3>
+              <ul>
+                <li>
+                  <a href="about-us.html">
+                    <span
+                      ><i class="fa-light fa-arrow-up-right-from-square"></i
+                    ></span>
+                    About us
+                  </a>
+                </li>
+                <li>
+                  <a href="faqs.html"
+                    ><span
+                      ><i class="fa-light fa-arrow-up-right-from-square"></i
+                    ></span>
+                    FAQs
+                  </a>
+                </li>
+                <li>
+                  <a href="contact-us.html"
+                    ><span
+                      ><i class="fa-light fa-arrow-up-right-from-square"></i
+                    ></span>
+                    Contact us
+                  </a>
+                </li>
+                <li>
+                  <a href="terms.html"
+                    ><span
+                      ><i class="fa-light fa-arrow-up-right-from-square"></i
+                    ></span>
+                    Terms & Conditions
+                  </a>
+                </li>
+                <li>
+                  <a href="privacy.html"
+                    ><span
+                      ><i class="fa-light fa-arrow-up-right-from-square"></i
+                    ></span>
+                    Privacy & Policy
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-12 p-2">
+            <div class="col">
+              <h3>popular categories</h3>
+              <ul>
+                <li>
+                  <a href="index.html">
+                    <span
+                      ><i class="fa-light fa-arrow-up-right-from-square"></i
+                    ></span>
+                    Engineer
+                  </a>
+                </li>
+                <li>
+                  <a href="index.html"
+                    ><span
+                      ><i class="fa-light fa-arrow-up-right-from-square"></i
+                    ></span>
+                    baby sitter
+                  </a>
+                </li>
+                <li>
+                  <a href="index.html"
+                    ><span
+                      ><i class="fa-light fa-arrow-up-right-from-square"></i
+                    ></span>
+                    Carpenter
+                  </a>
+                </li>
+                <li>
+                  <a href="index.html"
+                    ><span
+                      ><i class="fa-light fa-arrow-up-right-from-square"></i
+                    ></span>
+                    Cook
+                  </a>
+                </li>
+                <li>
+                  <a href="index.html"
+                    ><span
+                      ><i class="fa-light fa-arrow-up-right-from-square"></i
+                    ></span>
+                    Mechanic
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-2 col-12 p-2">
+            <div class="col">
+              <h3>Download App</h3>
+              <ul class="download-app">
+                <li>
+                  <a href="#">
+                    <div class="icon">
+                      <i class="fa-brands fa-apple"></i>
+                    </div>
+                    <div class="text">
+                      <p>App Store</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="icon">
+                      <i class="fa-brands fa-google-play"></i>
+                    </div>
+                    <div class="text">
+                      <p>Google Play</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 p-2">
+            <div class="copy_rights">
+              <p>
+                Copyright &copy;
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                . All Rights Reserved to <a href="index.html">Jobs in saudi</a>
+              </p>
+              <div class="social_media">
+                <ul>
+                  <li>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        version="1.1"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        width="14"
+                        height="14"
+                        x="0"
+                        y="0"
+                        viewBox="0 0 1226.37 1226.37"
+                        style="enable-background: new 0 0 512 512"
+                        xml:space="preserve"
+                        class=""
+                      >
+                        <g>
+                          <path
+                            d="M727.348 519.284 1174.075 0h-105.86L680.322 450.887 370.513 0H13.185l468.492 681.821L13.185 1226.37h105.866l409.625-476.152 327.181 476.152h357.328L727.322 519.284zM582.35 687.828l-47.468-67.894-377.686-540.24H319.8l304.797 435.991 47.468 67.894 396.2 566.721H905.661L582.35 687.854z"
+                            fill="#aaaaaa"
+                            opacity="1"
+                            data-original="#aaaaaa"
+                            class=""
+                          ></path>
+                        </g>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </footer>
     <!-- js -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/app.js"></script>
-</body>
-
+  </body>
 </html>
