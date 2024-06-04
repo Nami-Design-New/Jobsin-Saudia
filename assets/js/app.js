@@ -217,3 +217,23 @@ document.addEventListener(
   },
   true
 );
+
+
+
+
+// profile Image Input
+$(document).ready(function () {
+  $(".profileImageInput").on("change", function (event) {
+    const file = event.target.files[0];
+    const $preview = $(this)
+      .siblings(".profileImageLabel")
+      .find(".profileImagePreview");
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        $preview.attr("src", e.target.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+});

@@ -3286,4 +3286,63 @@ footer .copy_rights .social_media ul a:hover svg path {
 }
 .applyNow:hover {
   color: #ffffff;
+}
+
+.profileImage {
+  position: relative;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profileImage .profileImageLabel {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.profileImage .profileImageLabel img {
+  display: block;
+  width: 150px;
+  aspect-ratio: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100%;
+  background-color: #f1f1f1;
+  border: 1px solid #f1f1f1;
+}
+.profileImage span {
+  position: absolute;
+  bottom: 4px;
+  left: 12px;
+  background-color: var(--whiteColor);
+  border-radius: 100%;
+  pointer-events: none;
+}
+.profileImage span img {
+  width: 32px;
+  height: 32px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.profileImage input {
+  display: none;
+}
+.profileImage.wide {
+  margin: unset;
+}
+.profileImage.wide .profileImageLabel {
+  cursor: pointer;
+}
+.profileImage.wide .profileImageLabel img {
+  width: 100%;
+  border-radius: 12px;
+  aspect-ratio: 3/2;
+  max-height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.profileImage.wide span {
+  bottom: -4px;
+  left: -4px;
 }/*# sourceMappingURL=style.css.map */

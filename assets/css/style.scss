@@ -3167,3 +3167,61 @@ footer {
     color: $white;
   }
 }
+
+
+
+.profileImage {
+  position: relative;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .profileImageLabel {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    img {
+      display: block;
+      width: 150px;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 100%;
+      background-color: #f1f1f1;
+      border: 1px solid #f1f1f1;
+    }
+  }
+  span {
+    position: absolute;
+    bottom: 4px;
+    left: 12px;
+    background-color: var(--whiteColor);
+    border-radius: 100%;
+    pointer-events: none;
+    img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+    }
+  }
+  input {
+    display: none;
+  }
+  &.wide {
+    margin: unset;
+    .profileImageLabel {
+      cursor: pointer;
+      img {
+        width: 100%;
+        border-radius: 12px;
+        aspect-ratio: 3/2;
+        max-height: 300px;
+        object-fit: cover;
+      }
+    }
+    span {
+      bottom: -4px;
+      left: -4px;
+    }
+  }
+}
